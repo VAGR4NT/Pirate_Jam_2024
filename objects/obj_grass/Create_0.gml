@@ -4,3 +4,5 @@
 // Is path?
 
 
+passable = true;
+path = false;

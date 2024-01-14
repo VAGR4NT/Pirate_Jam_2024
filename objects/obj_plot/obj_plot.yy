@@ -13,8 +13,8 @@
     "path": "folders/Objects/Land Management.yy",
   },
   "parentObjectId": {
-    "name": "obj_grass",
-    "path": "objects/obj_grass/obj_grass.yy",
+    "name": "obj_parent_solid",
+    "path": "objects/obj_parent_solid/obj_parent_solid.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

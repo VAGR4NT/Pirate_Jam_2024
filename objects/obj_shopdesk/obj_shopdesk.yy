@@ -9,7 +9,10 @@
     "name": "Structures",
     "path": "folders/Objects/Structures.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parent_solid",
+    "path": "objects/obj_parent_solid/obj_parent_solid.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_well",
+    "path": "sprites/spr_well/spr_well.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -40,6 +40,7 @@
     "IDEVersion": "2023.11.1.129",
   },
   "resources": [
+    {"id":{"name":"spr_well","path":"sprites/spr_well/spr_well.yy",},},
     {"id":{"name":"spr_Bush","path":"sprites/spr_Bush/spr_Bush.yy",},},
     {"id":{"name":"obj_flower","path":"objects/obj_flower/obj_flower.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
@@ -47,6 +48,7 @@
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_park","path":"objects/obj_park/obj_park.yy",},},
     {"id":{"name":"obj_tree","path":"objects/obj_tree/obj_tree.yy",},},
+    {"id":{"name":"obj_parent_solid","path":"objects/obj_parent_solid/obj_parent_solid.yy",},},
     {"id":{"name":"obj_constant","path":"objects/obj_constant/obj_constant.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"spr_Tree","path":"sprites/spr_Tree/spr_Tree.yy",},},

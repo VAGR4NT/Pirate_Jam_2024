@@ -8,10 +8,10 @@ y_speed = _y_input * move_spd;
 
 if can_move{ //toggle to false for cutscenes
 	//Horizontal Collisions
-	if (place_meeting(x + x_speed,y, obj_grass))
+	if (place_meeting(x + x_speed,y, obj_parent_solid))
 	{
 	
-		var _wall = instance_place(x + x_speed, y,obj_grass);
+		var _wall = instance_place(x + x_speed, y,obj_parent_solid);
 		if _wall.passable == false
 		{
 			var _one_step_distance = sign(x_speed)
@@ -26,10 +26,10 @@ if can_move{ //toggle to false for cutscenes
 
 
 	//Vertical Collisions
-	if (place_meeting(x,y + y_speed, obj_grass))
+	if (place_meeting(x,y + y_speed, obj_parent_solid))
 	{
 	
-		var _wall = instance_place(x, y  + y_speed,obj_grass);
+		var _wall = instance_place(x, y  + y_speed,obj_parent_solid);
 		if _wall.passable == false
 		{
 			var _one_step_distance = sign(y_speed)

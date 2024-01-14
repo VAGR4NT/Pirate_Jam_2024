@@ -1,1 +1,0 @@
-plant_object = 1;

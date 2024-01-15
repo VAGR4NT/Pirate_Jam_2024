@@ -6,7 +6,7 @@ function ProgressDay(){
 	num_planted = array_length(planted);
 	for (var _i = 0; _i < num_planted; _i++)
 	{
-		with (planted[_i])
+		with ( layer_instance_get_instance(planted[_i]) )
 		{
 			#region Progresses Plant Age
 			if(age == PLANT_AGE.SAPLING && days_survived >= germ_day && status == PLANT_STATE.HEALTHY )

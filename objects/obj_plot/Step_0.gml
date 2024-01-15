@@ -1,4 +1,4 @@
-/// @description Change Plant Stats
+/// @description Change Plot Stats
 
 // If plot has a plant on it then it is no longer passable.
 var _is_pass = !occupied || (occupied && occupied_by == "flower");
@@ -32,7 +32,7 @@ if (occupied_by == "bush" && !occupied)
 		_near_plots[2] = instance_place(x + 32, y, obj_plot);
 			for (var _i = 0; _i < array_length(_near_plots); _i++)
 			{
-				with (_near_plots[_i])
+				with ( _near_plots[_i])
 				{
 					occupied = true;
 					passable = false;
@@ -65,6 +65,7 @@ if (occupied_by == "tree" && !occupied)
 			with (_near_plots[_i])
 				{
 					occupied = true;
+					passable = false;
 					occupied_by = "tree";
 					has_sprite = false;
 					next_to_sprite = true;

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_plot",
+  "name": "obj_outline",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -10,13 +10,10 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Land Management",
-    "path": "folders/Objects/Structures/Land Management.yy",
+    "name": "Utility Objects",
+    "path": "folders/Objects/Utility Objects.yy",
   },
-  "parentObjectId": {
-    "name": "obj_parent_solid",
-    "path": "objects/obj_parent_solid/obj_parent_solid.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -33,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_plot",
-    "path": "sprites/spr_plot/spr_plot.yy",
+    "name": "spr_outline",
+    "path": "sprites/spr_outline/spr_outline.yy",
   },
   "spriteMaskId": null,
   "visible": true,

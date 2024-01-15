@@ -9,3 +9,4 @@ if object_sprite == -1
 	draw_text(global.mouse_gui_x + 20, global.mouse_gui_y + 20,quantity);
 }
 
+draw_text(x+ 50, y, show_outline);

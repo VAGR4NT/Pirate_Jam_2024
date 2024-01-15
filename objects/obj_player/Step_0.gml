@@ -14,7 +14,7 @@ if can_move{ //toggle to false for cutscenes
 		var _wall = instance_place(x + x_speed, y,obj_parent_solid);
 		if _wall.passable == false
 		{
-			var _one_step_distance = sign(x_speed)
+			var _one_step_distance = sign(x_speed);
 			while(!place_meeting(x + _one_step_distance, y, _wall))
 			{
 				x += _one_step_distance;
@@ -32,7 +32,7 @@ if can_move{ //toggle to false for cutscenes
 		var _wall = instance_place(x, y  + y_speed,obj_parent_solid);
 		if _wall.passable == false
 		{
-			var _one_step_distance = sign(y_speed)
+			var _one_step_distance = sign(y_speed);
 			while(!place_meeting(x, y + _one_step_distance, _wall))
 			{
 				y += _one_step_distance;

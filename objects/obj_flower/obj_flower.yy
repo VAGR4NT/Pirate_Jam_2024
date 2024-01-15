@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Flower",
+    "path": "sprites/spr_Flower/spr_Flower.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

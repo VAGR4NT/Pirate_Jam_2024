@@ -9,7 +9,10 @@
     "name": "Plants",
     "path": "folders/Objects/Plants.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_plant",
+    "path": "objects/obj_plant/obj_plant.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Flower",
+    "path": "sprites/spr_Flower/spr_Flower.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -13,6 +13,7 @@ green_space = 0; // Variable the brings more npc's into the park
 happiness_rate = 0; //Tracks rate of happiness change in NPCs
 
 // Daily Stat Trackers
+curr_day = 0; //Number of days the park has existed
 daily_npc = 0; //Number of NPCs 
 daily_planted = 0; //Number of things planted
 daily_matured = 0; //Number of plants that growed to maturity today

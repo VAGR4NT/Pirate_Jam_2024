@@ -1,20 +1,66 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+/// @desc Progresses the day count and updates all the states that progress with the day/night cycle
 function ProgressDay(){
 	
-	// Update Plant Ages
+	// Update Plant Information For All Plotted Plants
 	planted = layer_get_all_elements("Plants");
 	num_planted = array_length(planted);
 	for (var _i = 0; _i < num_planted; _i++)
 	{
 		with (planted[_i])
 		{
-			day_survived++;
+			#region Progresses Plant Age
+			if(age == PLANT_AGE.SAPLING && days_survived >= germ_day && status == PLANT_STATE.HEALTHY )
+			{
+				age = PLANT_AGE.MATURE;
+			}
+			
+			if(age == PLANT_AGE.SEED && days_survived >= germ_day && status == PLANT_STATE.HEALTHY )
+			{
+				age = PLANT_AGE.SAPLING;
+			}
+			#endregion
+			
+			#region Updates EOD Plant Status Effects
+			if (status = PLANT_STATE.WITHERED)
+			{
+				if (watered_perc < withering_threshold)
+				{
+					plant_health -= wither_rate;
+				}
+				else
+				{
+					plant_health += heal_rate;
+				}
+			}
+			
+			
+			if (days_survived > age_threshold || plant_health <= 0)
+			{
+				plant_health = 0;
+				status = PLANT_STATE.DEAD;
+				if ( day_deceased == -1)
+				{
+					day_deceased = obj_park.park_stats.curr_day; 
+				}
+			}
+			else if (watered_perc < withering_threshold || plant_health < (withering_threshold*max_plant_health))
+			{
+				status = PLANT_STATE.WITHERED;
+				days_survived++;
+			}
+			else 
+			{
+				status = PLANT_STATE.HEALTHY;
+				days_survived++;
+			}
+			#endregion
 		}
 	}
-	// Update Park Stats and NPC Behaviour For the Day (TO DO LATER)
+	// Update Park Stats 
 	with (obj_park)
 	{
-		curr_day++;
+		
+		all_days[park_stats.curr_day++] = park_stats;
+		park_stats.curr_day++;
 	}
 }

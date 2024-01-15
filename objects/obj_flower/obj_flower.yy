@@ -9,7 +9,10 @@
     "name": "Plants",
     "path": "folders/Objects/Plants.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_plant",
+    "path": "objects/obj_plant/obj_plant.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

@@ -2,7 +2,7 @@
 
 plant_health = 10.0; // Health points of the plant
 watered_perc = 0.0; // Watered Percentage
-day_planted = 0; // Tracks the day planted
+day_planted = obj_park.curr_day; // Tracks the day planted
 days_survived = 0; // Tracks the number of days
 day_deceased = -1; // Tracks day plant dies
 

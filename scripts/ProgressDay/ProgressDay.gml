@@ -13,4 +13,8 @@ function ProgressDay(){
 		}
 	}
 	// Update Park Stats and NPC Behaviour For the Day (TO DO LATER)
+	with (obj_park)
+	{
+		curr_day++;
+	}
 }

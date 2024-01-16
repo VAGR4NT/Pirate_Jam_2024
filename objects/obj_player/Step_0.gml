@@ -8,21 +8,56 @@ y_speed = _y_input * move_spd;
 
 if can_move{ //toggle to false for cutscenes
 	//Horizontal Collisions
-	if (place_meeting(x + x_speed,y, obj_parent_solid))
-	{
+	//if (place_meeting(x + x_speed,y, obj_parent_solid))
+	//{
 	
-		var _wall = instance_place(x + x_speed, y,obj_parent_solid);
-		if _wall.passable == false
-		{
-			var _one_step_distance = sign(x_speed);
-			while(!place_meeting(x + _one_step_distance, y, _wall))
-			{
-				x += _one_step_distance;
+	//	var _wall = instance_place(x + x_speed, y,obj_parent_solid);
+		
+		#region attempt 1
+		//var _list = ds_list_create();
+		//var _num = instance_place_list(x + x_speed, y, obj_parent_solid, _list, false);
+		//var _horiz_check = true;
+		//if _num > 0
+		//{
+		//    for (var i = 0; i < _num; ++i;)
+		//    {
+		//        if _list[| i].passable = false{
+		//			_horiz_check = false;
+		//		}
+		//    }
+		//}
+		#endregion attempt 2
+		
+		#region attempt 2
+		
+		if (place_meeting(x+x_speed,y,obj_parent_solid)){
+			var _wall = instance_place(x+x_speed, y, obj_parent_solid)
+			if _wall != noone{
+				if _wall.passable == false{
+					var onepixel = sign(x_speed);
+					while (!place_meeting(x+onepixel,y,_wall)) {
+						x += onepixel;
+					}
+					x_speed = 0;
+				}
 			}
-			x_speed = 0;
-		}	
-	}
-	x += x_speed;
+		}
+	//}
+		x += x_speed;
+		
+		#endregion attempt 2
+		
+		
+	//	if _wall.passable == false		
+	//		var _one_step_distance = sign(x_speed);
+	//		while(!place_meeting(x + _one_step_distance, y, _wall))
+	//		{
+	//			x += _one_step_distance;
+	//		}
+	//		x_speed = 0;
+	//	}
+	//}
+	//x += x_speed;
 
 
 	//Vertical Collisions
@@ -42,6 +77,7 @@ if can_move{ //toggle to false for cutscenes
 	}
 	y += y_speed;
 }
+
 
 //look where you are moving
 if _x_input != 0{

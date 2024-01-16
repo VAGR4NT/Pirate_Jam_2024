@@ -1,6 +1,10 @@
 /// @description change plant stats
 
-if plant_object == noone or plant_object == -1{
+if occupied_by != ""{
+	occupied = true;
+}
+
+if occupied = false or occupied_by == "flower"{
 	passable = true;
 } else {
 	passable = false;

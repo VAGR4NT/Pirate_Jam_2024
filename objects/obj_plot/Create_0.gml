@@ -4,3 +4,4 @@
 event_inherited();
 occupied = false;
 plant_object = -1;
+occupied_by = "";

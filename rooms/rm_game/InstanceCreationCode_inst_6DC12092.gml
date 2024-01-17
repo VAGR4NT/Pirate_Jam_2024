@@ -1,0 +1,1 @@
+text = "flower"; //flower, bush, tree

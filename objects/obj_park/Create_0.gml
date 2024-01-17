@@ -11,6 +11,11 @@ num_flowers = 0; // Increase happiness disprotportionaly
 num_bushes = 0; // Increases revenue for the day
 num_trees = 0; // Increase Green Space more
 
+// Inventory Trackers
+flower_seeds = 1;
+bush_seeds = 2;
+tree_saplings = 3;
+
 // NPC Effect Trackers
 green_space = 0; // Variable the brings more npc's into the park
 happiness_rate = 0; //Tracks rate of happiness change in NPCs

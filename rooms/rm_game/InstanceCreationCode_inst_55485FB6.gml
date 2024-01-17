@@ -1,0 +1,1 @@
+occupied_by = "tree";

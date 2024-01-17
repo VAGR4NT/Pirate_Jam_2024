@@ -1,6 +1,10 @@
 /// @description Tracks Park Stats + Spawns things
 //Tracks park states like day/night, number of NPC's visiting, tracks green space number, and spawns NPCs
 
+//Number of Plots
+park_plots = layer_get_all_elements("Plots");
+num_plots = array_length(park_plots);
+
 // Plant Trackers
 total_plants = 0;
 num_flowers = 0; // Increase happiness disprotportionaly
@@ -13,16 +17,19 @@ bush_seeds = 2;
 tree_saplings = 3;
 
 // NPC Effect Trackers
-num_total_plots = 0; // Number of plots occupied
 green_space = 0; // Variable the brings more npc's into the park
 happiness_rate = 0; //Tracks rate of happiness change in NPCs
 
 // Daily Stat Trackers
-daily_npc = 0; //Number of NPCs 
-daily_planted = 0; //Number of things planted
-daily_matured = 0; //Number of plants that growed to maturity today
-daily_sold = 0; //Number of plants sold
-daily_lost = 0; //Number of plants lost to enemies
+park_stats = 
+{
+	curr_day : 0, //Number of days the park has existed
+	daily_npc : 0, //Number of NPCs 
+	daily_planted : 0, //Number of things planted
+	daily_matured : 0,//Number of plants that growed to maturity today
+	daily_sold : 0, //Number of plants sold
+	daily_died : 0 //Number of plants that died
+};
 
-//Make Array of yesterdays data to compare
-
+//Make Array of previous days data to compare
+all_days = array_create(99);

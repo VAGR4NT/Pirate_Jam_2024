@@ -33,6 +33,7 @@
     {"name":"obj_constant","order":1,"path":"objects/obj_constant/obj_constant.yy",},
     {"name":"spr_Tree","order":2,"path":"sprites/spr_Tree/spr_Tree.yy",},
     {"name":"obj_shopdesk","order":3,"path":"objects/obj_shopdesk/obj_shopdesk.yy",},
+    {"name":"Sprite9","order":1,"path":"sprites/Sprite9/Sprite9.yy",},
     {"name":"obj_hotbar","order":4,"path":"objects/obj_hotbar/obj_hotbar.yy",},
     {"name":"spr_plot","order":2,"path":"sprites/spr_plot/spr_plot.yy",},
     {"name":"spr_wall","order":3,"path":"sprites/spr_wall/spr_wall.yy",},

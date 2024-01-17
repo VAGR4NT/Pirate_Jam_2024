@@ -10,14 +10,14 @@ Enum BUTTON_TYPE{
 }
 */
 text = ""; //flower, bush, tree
-
-x_start = -1;
-y_buff = -1;
-button_index = 0;
-y_start = -1;
+state = VISUAL_STATE.ACTIVE;
+//x_start = -1;
+//y_buff = -1;
+//button_index = 0;
+//y_start = -1;
 
 button_sprite = spr_grass;//spr_button;
-width = sprite_get_width(button_sprite);
-height = sprite_get_height(button_sprite);
+//width = sprite_get_width(button_sprite);
+//height = sprite_get_height(button_sprite);
 
 button_image_index = 0;

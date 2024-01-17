@@ -25,5 +25,5 @@ var _xstart = 10;
 //_index ++;
 //draw_text(_xstart, _ystart + (_buff * _index),"global.mouse_gui_y: " + string(global.mouse_gui_y));
 //_index ++;
-draw_text(_xstart, _ystart + (_buff * _index),"global.fullscreen: " + string(global.fullscreen));
-_index ++;
+//draw_text(_xstart, _ystart + (_buff * _index),"global.fullscreen: " + string(global.fullscreen));
+//_index ++;

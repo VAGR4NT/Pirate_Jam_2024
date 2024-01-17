@@ -29,7 +29,7 @@ function CanPlaceSeed(_num_plots){
 	}
 				
 	if _issue == false{ //if no issues are found, you can place
-		Print(string(!_issue))
+		//Print(string(!_issue))
 		return !_issue;
 		
 	}

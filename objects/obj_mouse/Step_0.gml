@@ -1,4 +1,5 @@
-if mouse_check_button(mb_right){
+if mouse_check_button(mb_right)
+{
 	//deselect seed
 	object_held = "";
 	object_sprite = -1;
@@ -15,21 +16,27 @@ switch(object_held)
 	
 	case "bush":
 		//object_sprite = spr_bush_button;
-		quantity = obj_park.flower_seeds;
+		quantity = obj_park.bush_seeds;
 	break;
 	
 	case "tree":
 		//object_sprite = spr_seed_button;
-		quantity = obj_park.flower_seeds;
+		quantity = obj_park.tree_saplings;
 	break;
 	
 }
 
+if quantity <= 0
+{
+	object_held = "";
+	object_sprite = -1;
+}
 
 #region Outline
-if instance_exists(obj_plot){
+if instance_exists(obj_plot)
+{
 	var _plot = instance_place(x,y,obj_plot);
-	if _plot != noone and object_held != ""
+	if _plot != noone and object_held != ""// and quantity > 0
 	{
 		show_outline = true;
 		outline_obj.target = _plot;	
@@ -66,14 +73,20 @@ if instance_exists(obj_plot){
 				}
 			break;
 		}
-		if outline_obj.player_contact{
+		if outline_obj.player_contact
+		{
 			can_place = false;
 		}
 		
-		if can_place and mouse_check_button(mb_left){
+		if can_place and mouse_check_button_pressed(mb_left)
+		{
 			_plot.occupied = true;
 			_plot.occupied_by = object_held;
 			ConvertEmptyPlots(plots_needed);
+			if object_held == "flower" obj_park.flower_seeds--;
+			if object_held == "bush" obj_park.bush_seeds--;
+			if object_held == "tree" obj_park.tree_saplings--;
+			
 			Print("Planted: " + string(object_held));
 		}
 		
@@ -84,7 +97,8 @@ if instance_exists(obj_plot){
 	}
 }
 
-if can_place{
+if can_place
+{
 	outline_obj.image_blend = c_green;
 } else {
 	outline_obj.image_blend = c_red;

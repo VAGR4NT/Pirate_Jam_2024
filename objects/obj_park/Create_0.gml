@@ -8,9 +8,9 @@ num_bushes = 0; // Increases revenue for the day
 num_trees = 0; // Increase Green Space more
 
 // Inventory Trackers
-flower_seeds = -1;
-bush_seeds = -2;
-tree_saplings = -3;
+flower_seeds = 1;
+bush_seeds = 2;
+tree_saplings = 3;
 
 // NPC Effect Trackers
 num_total_plots = 0; // Number of plots occupied

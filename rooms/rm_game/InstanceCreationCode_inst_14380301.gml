@@ -1,1 +1,0 @@
-occupied_by = "bush";

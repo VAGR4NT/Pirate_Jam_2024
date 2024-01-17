@@ -1,2 +1,2 @@
+sprite_index = spr_bush_button;
 text = "bush"; //flower, bush, tree
-button_index = 3;

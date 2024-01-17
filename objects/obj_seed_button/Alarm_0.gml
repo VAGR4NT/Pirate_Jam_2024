@@ -1,8 +1,9 @@
 /// @description init and update vars
-switch(text){
+switch(text)
+{
 	case "flower":
 		//sprite_index = spr_flower_seed_button;
-		button_sprite = spr_seed_button; //spr_flower_seed_button; //spr_plot//
+		button_sprite = spr_flower_button; //spr_flower_seed_button; //spr_plot//
 		
 		if instance_exists(obj_park)
 		{
@@ -31,9 +32,9 @@ switch(text){
 	break;
 }
 
-y_start = global.window_height - (y_buff + (80 * button_index));
-x_start = 10
-width = sprite_get_width(button_sprite);
-height = sprite_get_height(button_sprite);
+//y_start = global.window_height - (y_buff + (80 * button_index));
+//x_start = 10
+//width = sprite_get_width(button_sprite);
+//height = sprite_get_height(button_sprite);
 
 alarm[0] = 10;

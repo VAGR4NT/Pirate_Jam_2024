@@ -10,10 +10,10 @@ function GUIMouseDetection(){
 	var y1 = argument2;
 	var y2 = argument3;
 	
-	if  global.mouse_gui_x > x1 
-	and global.mouse_gui_x	< x2
-	and global.mouse_gui_y > y1
-	and global.mouse_gui_y	< y2
+	if  MOUSE_GUI_X > x1 
+	and MOUSE_GUI_X	< x2
+	and MOUSE_GUI_Y > y1
+	and MOUSE_GUI_Y	< y2
 	{
 		return true;
 	} else {

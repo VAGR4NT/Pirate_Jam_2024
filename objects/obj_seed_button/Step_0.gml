@@ -2,13 +2,14 @@
 event_inherited();
 
 if mouse_hover == true{
-	if mouse_check_button(mb_left)
+	if mouse_check_button_pressed(mb_left)
 	{
 		switch(type)
 		{
 			case BUTTON_TYPE.SEED:
 				if instance_exists(obj_mouse)
 				{
+					Print(string(text) + " clicked");
 					if obj_mouse.object_held != text
 					{
 						var _can_pickup = false;
@@ -31,3 +32,5 @@ if mouse_hover == true{
 } else {
 	button_image_index = 0;
 }
+
+sprite_index = button_sprite;

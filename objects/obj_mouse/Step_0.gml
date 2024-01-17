@@ -1,3 +1,4 @@
+#region Clear held item
 if mouse_check_button(mb_right)
 {
 	//deselect seed
@@ -6,6 +7,7 @@ if mouse_check_button(mb_right)
 	
 	//sell plant with right click held interaction will be taken care of inside of the plants themselves
 }
+#endregion Clear held item
 
 switch(object_held)
 {

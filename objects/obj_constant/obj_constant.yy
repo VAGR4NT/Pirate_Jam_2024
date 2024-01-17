@@ -33,7 +33,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_constant",
+    "path": "sprites/spr_constant/spr_constant.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

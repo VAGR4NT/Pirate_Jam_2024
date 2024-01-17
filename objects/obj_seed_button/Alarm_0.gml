@@ -2,8 +2,7 @@
 switch(text)
 {
 	case "flower":
-		//sprite_index = spr_flower_seed_button;
-		button_sprite = spr_flower_button; //spr_flower_seed_button; //spr_plot//
+		button_sprite = spr_flower_button; 
 		
 		if instance_exists(obj_park)
 		{

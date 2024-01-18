@@ -1,6 +1,7 @@
 /// @description Controls savefiles, games state, windowed/fullscreen, GUI
 //global.mouse_gui_x = window_mouse_get_x();
 //global.mouse_gui_y = window_mouse_get_y();
+layer_set_visible("UI", true);
 
 global.window_width = window_get_width();
 global.window_height = window_get_height();
@@ -26,6 +27,8 @@ enum BUTTON_TYPE{
 	//PAUSE,
 	//EXIT
 }
+
+menus_array = array_create(0);
 
 //enum SEED_TYPE{
 //	FLOWER,

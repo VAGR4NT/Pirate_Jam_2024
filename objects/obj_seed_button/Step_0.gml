@@ -28,9 +28,8 @@ if mouse_hover == true{
 			break;
 		}
 	}
-	button_image_index = 1;
-} else {
-	button_image_index = 0;
-}
+	
+} 
 
+image_index = mouse_hover;
 sprite_index = button_sprite;

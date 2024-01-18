@@ -5,8 +5,16 @@ if instance_exists(obj_player)
 		image_blend = c_grey;
 		if keyboard_check_pressed(ord("E"))
 		{//sleep prompt appears
-			//while prompt is open, in_use = true, obj_player.can_move = false;
-			Print("using bed");
+			if instance_exists(obj_menu_sleep)
+			{
+				if obj_menu_sleep.state == VISUAL_STATE.ACTIVE
+				{
+					obj_menu_sleep.state = VISUAL_STATE.INACTIVE;
+				} else {
+					obj_menu_sleep.state = VISUAL_STATE.ACTIVE;
+				}
+			}
+			Print("used bed");
 		}			
 	} else {
 		image_blend = c_white;

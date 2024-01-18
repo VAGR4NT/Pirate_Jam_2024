@@ -27,3 +27,5 @@ var _xstart = 10;
 //_index ++;
 //draw_text(_xstart, _ystart + (_buff * _index),"global.fullscreen: " + string(global.fullscreen));
 //_index ++;
+//draw_text(_xstart, _ystart + (_buff * _index),"menus: " + string(array_length(menus_array)));
+//_index ++;

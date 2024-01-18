@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Objects/Utility Objects/Buttons.yy",
+    "name": "Utility Objects",
+    "path": "folders/Objects/Utility Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,

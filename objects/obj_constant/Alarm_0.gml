@@ -10,10 +10,24 @@ height_ratio = og_height/global.window_height;
 
 display_set_gui_size(global.window_width * (width_ratio * gui_multiplier), global.window_height * (height_ratio * gui_multiplier));
 
-//display_set_gui_size(global.window_width, global.window_height);
+#region Keep Player in place while menus are visible
+var _freeze_player = false;
+if array_length(menus_array) > 0
+{
+	for(var i = 0; i < array_length(menus_array); i ++)
+	{
+		if menus_array[i].state == VISUAL_STATE.ACTIVE
+		{
+			_freeze_player = true;
+		}
+	}
+}
 
+if instance_exists(obj_player)
+{
+	obj_player.can_move = !_freeze_player;
+}
 
-//var pos = application_get_position();
-//display_set_gui_maximise(0.5, 0.5, pos[0], pos[1]);
+#endregion Keep Player in place while menus are visible
 
 alarm[0] = 10;

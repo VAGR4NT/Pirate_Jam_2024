@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_bed",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -10,8 +13,8 @@
     "path": "folders/Objects/Structures.yy",
   },
   "parentObjectId": {
-    "name": "obj_parent_solid",
-    "path": "objects/obj_parent_solid/obj_parent_solid.yy",
+    "name": "obj_interactable",
+    "path": "objects/obj_interactable/obj_interactable.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

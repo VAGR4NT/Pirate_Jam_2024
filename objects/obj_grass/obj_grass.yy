@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Land Management",
-    "path": "folders/Objects/Land Management.yy",
+    "path": "folders/Objects/Structures/Land Management.yy",
   },
   "parentObjectId": {
     "name": "obj_parent_solid",

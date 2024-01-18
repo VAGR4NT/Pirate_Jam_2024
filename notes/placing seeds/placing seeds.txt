@@ -1,0 +1,8 @@
+show square that predicts how many plots need to be used for planning
+show the sprite of the plant
+
+
+when hovering over a plot
+if a seed is selected
+show the outline
+based on the number of plots needed to 

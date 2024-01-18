@@ -1,6 +1,6 @@
 /// @description Change Plot Stats
 
-// If plot has a plant on it then it is no longer passable.
+
 var _is_pass = !occupied || (occupied && occupied_by == "flower");
 if (_is_pass) {
 	passable = true;
@@ -8,6 +8,12 @@ if (_is_pass) {
 	passable = false;
 }
 
+if occupied
+{
+	image_blend = c_grey;
+} else {
+	image_blend = c_white;
+}
 
 #region Create Plant In Plot
 if (occupied_by == "flower" && !occupied)

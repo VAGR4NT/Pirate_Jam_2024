@@ -5,8 +5,15 @@ if instance_exists(obj_player)
 		image_blend = c_grey;
 		if keyboard_check_pressed(ord("E"))
 		{
-			//Shop prompt appears
-			//while prompt is open, in_use = true, obj_player.can_move = false;
+			if instance_exists(obj_menu_shop)
+			{
+				if obj_menu_shop.state == VISUAL_STATE.ACTIVE
+				{
+					obj_menu_shop.state = VISUAL_STATE.INACTIVE;
+				} else {
+					obj_menu_shop.state = VISUAL_STATE.ACTIVE;
+				}
+			}
 			Print("using shop");
 		}
 	} else {

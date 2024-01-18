@@ -44,6 +44,7 @@
   "resources": [
     {"id":{"name":"spr_bush_button","path":"sprites/spr_bush_button/spr_bush_button.yy",},},
     {"id":{"name":"obj_seed_button","path":"objects/obj_seed_button/obj_seed_button.yy",},},
+    {"id":{"name":"obj_layer_trigger","path":"objects/obj_layer_trigger/obj_layer_trigger.yy",},},
     {"id":{"name":"spr_menu_yes","path":"sprites/spr_menu_yes/spr_menu_yes.yy",},},
     {"id":{"name":"spr_well","path":"sprites/spr_well/spr_well.yy",},},
     {"id":{"name":"spr_Bush","path":"sprites/spr_Bush/spr_Bush.yy",},},
@@ -53,6 +54,7 @@
     {"id":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"obj_bush","path":"objects/obj_bush/obj_bush.yy",},},
+    {"id":{"name":"spr_trigger","path":"sprites/spr_trigger/spr_trigger.yy",},},
     {"id":{"name":"spr_tree_sapling_button","path":"sprites/spr_tree_sapling_button/spr_tree_sapling_button.yy",},},
     {"id":{"name":"obj_menu_sleep","path":"objects/obj_menu_sleep/obj_menu_sleep.yy",},},
     {"id":{"name":"spr_park_object","path":"sprites/spr_park_object/spr_park_object.yy",},},

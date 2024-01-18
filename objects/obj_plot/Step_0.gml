@@ -30,12 +30,12 @@ if (occupied_by == "bush" && !occupied)
 	occupied = true;
 	if (has_sprite == false)
 	{
-		plant_object = instance_create_layer(x + 16 ,y - 16,"Plants",obj_bush);
+		plant_object = instance_create_layer(x + plot_size/2 ,y - plot_size/2,"Plants",obj_bush);
 		has_sprite = true;
 		var _near_plots = array_create(3,noone);
-		_near_plots[0] = instance_place(x, y - 32, obj_plot);
-		_near_plots[1] = instance_place(x + 32, y - 32, obj_plot);
-		_near_plots[2] = instance_place(x + 32, y, obj_plot);
+		_near_plots[0] = instance_place(x, y - plot_size, obj_plot);
+		_near_plots[1] = instance_place(x + plot_size, y - plot_size, obj_plot);
+		_near_plots[2] = instance_place(x + plot_size, y, obj_plot);
 			for (var _i = 0; _i < array_length(_near_plots); _i++)
 			{
 				with ( _near_plots[_i])
@@ -58,14 +58,14 @@ if (occupied_by == "tree" && !occupied)
 		plant_object = instance_create_layer(x ,y ,"Plants",obj_tree);
 		has_sprite = true;
 		var _near_plots = array_create(8,noone);
-		_near_plots[0] = instance_place(x     , y - 32, obj_plot);
-		_near_plots[1] = instance_place(x + 32, y - 32, obj_plot);
-		_near_plots[2] = instance_place(x + 32, y     , obj_plot);
-		_near_plots[3] = instance_place(x + 32, y + 32, obj_plot);
-		_near_plots[4] = instance_place(x     , y + 32, obj_plot);
-		_near_plots[5] = instance_place(x - 32, y + 32, obj_plot);
-		_near_plots[6] = instance_place(x - 32, y     , obj_plot);
-		_near_plots[7] = instance_place(x - 32, y - 32, obj_plot);
+		_near_plots[0] = instance_place(x     , y - plot_size, obj_plot);
+		_near_plots[1] = instance_place(x + plot_size, y - plot_size, obj_plot);
+		_near_plots[2] = instance_place(x + plot_size, y     , obj_plot);
+		_near_plots[3] = instance_place(x + plot_size, y + plot_size, obj_plot);
+		_near_plots[4] = instance_place(x     , y + plot_size, obj_plot);
+		_near_plots[5] = instance_place(x - plot_size, y + plot_size, obj_plot);
+		_near_plots[6] = instance_place(x - plot_size, y     , obj_plot);
+		_near_plots[7] = instance_place(x - plot_size, y - plot_size, obj_plot);
 		for (var _i = 0; _i < array_length(_near_plots); _i++)
 		{
 			with (_near_plots[_i])

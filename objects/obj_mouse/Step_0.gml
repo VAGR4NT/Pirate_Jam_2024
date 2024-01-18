@@ -75,7 +75,7 @@ if instance_exists(obj_plot)
 				}
 			break;
 		}
-		if outline_obj.player_contact
+		if outline_obj.player_contact or global.on_seed_button == true
 		{
 			can_place = false;
 		}

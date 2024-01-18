@@ -20,8 +20,8 @@
     "path": "folders/Tile Sets.yy",
   },
   "spriteId": {
-    "name": "Sprite9",
-    "path": "sprites/Sprite9/Sprite9.yy",
+    "name": "spr_tileset",
+    "path": "sprites/spr_tileset/spr_tileset.yy",
   },
   "spriteNoExport": false,
   "textureGroupId": {

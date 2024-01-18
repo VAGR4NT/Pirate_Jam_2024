@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ConvertEmptyPlots(_num_plots){
 	var _plot_array = array_create(0,noone);
-	var _plot_buff = 32
+	var _plot_buff = 16
 	var _issue = false;
 	if _num_plots == 1{
 		//do nothing, we already set the target plot to have the info needed

@@ -26,12 +26,8 @@ enum BUTTON_TYPE{
 }
 
 cash = 100;
-menus_array = array_create(0);
+menus_array = array_create(0); //used in pause menu logic
+global.on_seed_button = false; //used to keep players from accidentally planting seeds as soon as they select them
 
-//enum SEED_TYPE{
-//	FLOWER,
-//	BUSH,
-//	TREE
-//}
 
 alarm[0] = 1;

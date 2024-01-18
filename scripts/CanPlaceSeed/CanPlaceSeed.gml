@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CanPlaceSeed(_num_plots){
 	var _plot_array = array_create(0,noone);
-	var _plot_buff = 32
+	var _plot_buff = 16
 	var _issue = false;
 	_plot_array[0] = instance_place(x + _plot_buff, y, obj_plot);				//right
 	_plot_array[1] = instance_place(x + _plot_buff, y + _plot_buff, obj_plot);	//+1, +1

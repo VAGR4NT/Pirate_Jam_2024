@@ -1,8 +1,8 @@
 if instance_exists(target)
 {
 	image_alpha = 1;
-	x = target.x - 16;
-	y = target.y - 16;
+	x = target.x - plot_size/2;
+	y = target.y - plot_size/2;
 } else {
 	image_alpha = 0;
 }

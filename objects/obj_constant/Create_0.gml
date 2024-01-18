@@ -23,11 +23,9 @@ enum VISUAL_STATE{
 
 enum BUTTON_TYPE{
 	SEED//,
-	//OPTIONS,
-	//PAUSE,
-	//EXIT
 }
 
+cash = 100;
 menus_array = array_create(0);
 
 //enum SEED_TYPE{

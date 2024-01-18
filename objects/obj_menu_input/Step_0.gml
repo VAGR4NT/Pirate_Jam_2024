@@ -1,7 +1,7 @@
 event_inherited();
 
 
-amount = clamp(amount, 0, 99);
+amount = clamp(amount, 0, max_amount);
 
 var _buff = 60;
 var _ystart = 248
@@ -23,7 +23,8 @@ switch(item_option)
 		_index = 0;
 		x = _xstart;
 		y = _ystart + (_index * _buff);
-		parent_menu.num_flowers = amount;
+		parent_menu.num_flower_seeds = amount;
+		amount = clamp(amount, 0, max_amount - obj_park.flower_seeds);
 	break;
 
 	case "bush":
@@ -31,7 +32,8 @@ switch(item_option)
 		_index = 1;
 		x = _xstart;
 		y = _ystart + (_index * _buff);
-		parent_menu.num_bushes = amount;
+		parent_menu.num_bush_seeds = amount;
+		amount = clamp(amount, 0, max_amount - obj_park.bush_seeds);
 	break;
 	
 	case "tree":
@@ -39,7 +41,8 @@ switch(item_option)
 		_index = 2;
 		x = _xstart;
 		y = _ystart + (_index * _buff);
-		parent_menu.num_trees = amount;
+		parent_menu.num_tree_saplings = amount;
+		amount = clamp(amount, 0, max_amount - obj_park.tree_saplings);
 	break;
 }
 
@@ -72,13 +75,14 @@ if instance_exists(parent_menu)
 
 if taking_input
 {
-	image_blend = c_red;	
+	image_blend = c_grey;	
 	if keyboard_string != ""{
 		var _amount_string = string_digits(keyboard_string);
 		if _amount_string != ""{
 			amount = int64(_amount_string);
 		}
 	}
-} else {
+} 
+else {
 	image_blend = c_white;
 }

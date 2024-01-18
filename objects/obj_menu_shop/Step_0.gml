@@ -1,13 +1,40 @@
 /// @desc
 event_inherited();
-total_cost = (num_flowers * flower_price) + (num_bushes * bush_price) + (num_trees * tree_price);
+total_cost = (num_flower_seeds * flower_price) + (num_bush_seeds * bush_price) + (num_tree_saplings * tree_price);
+if obj_constant.cash < total_cost
+{
+	can_buy = false;
+	option_yes.image_blend = c_red;
+} else {
+	can_buy = true;
+	option_yes.image_blend = c_white;
+}
+
+//if can_buy
+//{
+//	text_color = c_white;
+//} else {
+//	text_color = c_red;
+//}
+
+
 
 if choice == 1
 {
-	//purchase script
-	choice = -1;
-	state = VISUAL_STATE.INACTIVE;
-	//add sfx for purchase
+	if can_buy
+	{	
+		obj_park.flower_seeds += num_flower_seeds;
+		obj_park.bush_seeds += num_bush_seeds;
+		obj_park.tree_saplings += num_tree_saplings;
+		obj_constant.cash -= total_cost;
+		choice = -1;
+		state = VISUAL_STATE.INACTIVE;
+		//add sfx for purchase
+	} else {
+		choice = -1;
+		// state stays as active
+	}
+	
 }
 
 if choice = 0

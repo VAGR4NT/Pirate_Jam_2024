@@ -4,9 +4,9 @@
   "name": "spr_player_bark",
   "bbox_bottom": 31,
   "bbox_left": 2,
-  "bbox_right": 31,
-  "bbox_top": 0,
-  "bboxMode": 0,
+  "bbox_right": 29,
+  "bbox_top": 3,
+  "bboxMode": 2,
   "collisionKind": 1,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Player Sprites",
+    "path": "folders/Sprites/Player Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

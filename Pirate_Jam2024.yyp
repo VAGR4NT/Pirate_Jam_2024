@@ -71,6 +71,7 @@
     {"id":{"name":"obj_menu_input","path":"objects/obj_menu_input/obj_menu_input.yy",},},
     {"id":{"name":"obj_tree","path":"objects/obj_tree/obj_tree.yy",},},
     {"id":{"name":"obj_parent_solid","path":"objects/obj_parent_solid/obj_parent_solid.yy",},},
+    {"id":{"name":"spr_npc","path":"sprites/spr_npc/spr_npc.yy",},},
     {"id":{"name":"Print","path":"scripts/Print/Print.yy",},},
     {"id":{"name":"spr_menu_bg","path":"sprites/spr_menu_bg/spr_menu_bg.yy",},},
     {"id":{"name":"SineBetween","path":"scripts/SineBetween/SineBetween.yy",},},

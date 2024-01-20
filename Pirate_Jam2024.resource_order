@@ -50,6 +50,7 @@
     {"name":"ResetDraw","order":5,"path":"scripts/ResetDraw/ResetDraw.yy",},
     {"name":"obj_menu_input","order":5,"path":"objects/obj_menu_input/obj_menu_input.yy",},
     {"name":"obj_tree","order":3,"path":"objects/obj_tree/obj_tree.yy",},
+    {"name":"spr_npc","order":17,"path":"sprites/spr_npc/spr_npc.yy",},
     {"name":"Print","order":3,"path":"scripts/Print/Print.yy",},
     {"name":"spr_menu_bg","order":8,"path":"sprites/spr_menu_bg/spr_menu_bg.yy",},
     {"name":"SineBetween","order":7,"path":"scripts/SineBetween/SineBetween.yy",},

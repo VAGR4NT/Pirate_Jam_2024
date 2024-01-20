@@ -9,7 +9,7 @@ function ProgressDay(){
 		with ( layer_instance_get_instance(planted[_i]) )
 		{
 			#region Progresses Plant Age
-			if(age == PLANT_AGE.SAPLING && days_survived >= germ_day && status == PLANT_STATE.HEALTHY )
+			if(age == PLANT_AGE.SAPLING && days_survived >= maturation_day && status == PLANT_STATE.HEALTHY )
 			{
 				age = PLANT_AGE.MATURE;
 			}
@@ -21,7 +21,17 @@ function ProgressDay(){
 			#endregion
 			
 			#region Updates EOD Plant Status Effects
-			if (status = PLANT_STATE.WITHERED)
+			if (status == PLANT_STATE.DEAD)
+			{
+				watered_perc = 0;
+			}
+			else 
+			{
+				watered_perc -= dhyd_rate;
+				if (watered_perc <= 0) {watered_perc = 0;}
+			}
+			
+			if (status == PLANT_STATE.WITHERED)
 			{
 				if (watered_perc < withering_threshold)
 				{
@@ -34,7 +44,7 @@ function ProgressDay(){
 			}
 			
 			
-			if (days_survived > age_threshold || plant_health <= 0)
+			if (days_survived > age_threshold or plant_health <= 0)
 			{
 				plant_health = 0;
 				status = PLANT_STATE.DEAD;
@@ -43,7 +53,7 @@ function ProgressDay(){
 					day_deceased = obj_park.park_stats.curr_day; 
 				}
 			}
-			else if (watered_perc < withering_threshold || plant_health < (withering_threshold*max_plant_health))
+			else if (watered_perc < withering_threshold or plant_health < (withering_threshold*max_plant_health))
 			{
 				status = PLANT_STATE.WITHERED;
 				days_survived++;
@@ -53,6 +63,7 @@ function ProgressDay(){
 				status = PLANT_STATE.HEALTHY;
 				days_survived++;
 			}
+			
 			#endregion
 		}
 	}
@@ -60,7 +71,7 @@ function ProgressDay(){
 	with (obj_park)
 	{
 		
-		all_days[park_stats.curr_day++] = park_stats;
+		all_days[park_stats.curr_day] = park_stats;
 		park_stats.curr_day++;
 	}
 }

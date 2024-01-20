@@ -1,7 +1,7 @@
 /// @description Change Plot Stats
 
 
-var _is_pass = !occupied || (occupied && occupied_by == "flower");
+var _is_pass = !occupied or (occupied && occupied_by == "flower");
 if (_is_pass) {
 	passable = true;
 } else {
@@ -16,7 +16,7 @@ if occupied
 }
 
 #region Create Plant In Plot
-if (occupied_by == "flower" && !occupied)
+if (occupied_by == "flower" && !has_sprite)
 {
 	occupied = true;
 	if (has_sprite == false)

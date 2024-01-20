@@ -15,4 +15,5 @@ heal_rate = 5;
 wither_rate = 10;
 dhyd_rate = 0.1;
 
-image_index = 1; // Trees begin at sapling stage
+age = PLANT_AGE.SAPLING; // Trees begin at sapling stage
+image_index = 1;

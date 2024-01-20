@@ -36,3 +36,4 @@ status = PLANT_STATE.HEALTHY;
 age = PLANT_AGE.SEED;
 
 image_speed = 0; // Will not Flick Through Image Index
+obj_park.park_stats.daily_planted++;

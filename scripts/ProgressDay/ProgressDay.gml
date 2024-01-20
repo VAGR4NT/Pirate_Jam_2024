@@ -71,7 +71,7 @@ function ProgressDay(){
 	with (obj_park)
 	{
 		
-		all_days[park_stats.curr_day++] = park_stats;
+		all_days[park_stats.curr_day] = park_stats;
 		park_stats.curr_day++;
 	}
 }

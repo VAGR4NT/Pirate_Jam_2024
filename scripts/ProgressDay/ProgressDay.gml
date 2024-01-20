@@ -21,6 +21,15 @@ function ProgressDay(){
 			#endregion
 			
 			#region Updates EOD Plant Status Effects
+			if (status == PLANT_STATE.DEAD)
+			{
+				watered_perc = 0;
+			}
+			else 
+			{
+				watered_perc -= dhyd_rate;
+				if (watered_perc <= 0) {watered_perc = 0;}
+			}
 			
 			if (status == PLANT_STATE.WITHERED)
 			{
@@ -54,6 +63,7 @@ function ProgressDay(){
 				status = PLANT_STATE.HEALTHY;
 				days_survived++;
 			}
+			
 			#endregion
 		}
 	}

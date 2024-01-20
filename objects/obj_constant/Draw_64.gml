@@ -30,5 +30,9 @@ var _xstart = 10;
 //draw_text(_xstart, _ystart + (_buff * _index),"menus: " + string(array_length(menus_array)));
 _index ++;
 draw_text(_xstart, _ystart + (_buff * _index),"CASH: " + string(cash));
+_index ++;
+if instance_exists(obj_park){
+	draw_text(_xstart, _ystart + (_buff * _index),"Day: " + string(obj_park.park_stats.curr_day));
+}
 //_index ++;
 //draw_text(_xstart, _ystart + (_buff * _index),"global.on_seed_button: " + string(global.on_seed_button));

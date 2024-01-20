@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_well",
-    "path": "sprites/spr_well/spr_well.yy",
+    "name": "spr_bed_collision",
+    "path": "sprites/spr_bed_collision/spr_bed_collision.yy",
   },
   "spriteMaskId": null,
   "visible": true,

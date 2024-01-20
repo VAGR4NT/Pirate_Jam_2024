@@ -74,6 +74,7 @@
     {"name":"obj_plot","order":1,"path":"objects/obj_plot/obj_plot.yy",},
     {"name":"obj_npc","order":1,"path":"objects/obj_npc/obj_npc.yy",},
     {"name":"obj_enemy","order":2,"path":"objects/obj_enemy/obj_enemy.yy",},
+    {"name":"spr_bed_collision","order":10,"path":"sprites/spr_bed_collision/spr_bed_collision.yy",},
     {"name":"spr_menu_input","order":12,"path":"sprites/spr_menu_input/spr_menu_input.yy",},
     {"name":"spr_flower_button","order":1,"path":"sprites/spr_flower_button/spr_flower_button.yy",},
     {"name":"obj_interactable","order":1,"path":"objects/obj_interactable/obj_interactable.yy",},

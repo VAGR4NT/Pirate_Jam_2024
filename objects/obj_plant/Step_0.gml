@@ -9,7 +9,14 @@ else {status = PLANT_STATE.HEALTHY;}
 
 #region Plants will change Image with Different Life Stages
 
-if (status == PLANT_STATE.WITHERED and image_number >= 4) {image_index = 3;}
+if (status == PLANT_STATE.WITHERED and image_number >= 4) 
+{
+	if (age == PLANT_AGE.SAPLING) 
+	{
+		image_index = 2;
+	}
+	else {image_index = 4;}
+}
 else if (status == PLANT_STATE.DEAD and image_number >= 4) 
 {
 	image_index = image_number - 1;
@@ -19,11 +26,11 @@ else if (status == PLANT_STATE.DEAD and image_number >= 4)
 		obj_park.park_stats.daily_died++;
 	}
 }
-else if (age == PLANT_AGE.SEED and image_number >= 3) {image_index = 0;}
-else if (age == PLANT_AGE.SAPLING and image_number >= 2) {image_index = 1;}
-else if (age == PLANT_AGE.MATURE and image_number >= 2) 
+else if (age == PLANT_AGE.SEED and image_number >= 3 and status == PLANT_STATE.HEALTHY) {image_index = 0;}
+else if (age == PLANT_AGE.SAPLING and image_number >= 2 and status == PLANT_STATE.HEALTHY) {image_index = 1;}
+else if (age == PLANT_AGE.MATURE and image_number >= 2 and status == PLANT_STATE.HEALTHY) 
 {
-	image_index = 2;
+	image_index = 3;
 	obj_park.park_stats.daily_matured++;
 }
 else {image_index = 0;}

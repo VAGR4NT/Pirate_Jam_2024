@@ -35,4 +35,4 @@ enum PLANT_AGE // Naturally Progresses Along These as Days Pass and Is Healthy
 status = PLANT_STATE.HEALTHY;
 age = PLANT_AGE.SEED;
 
-
+image_speed = 0; // Will not Flick Through Image Index

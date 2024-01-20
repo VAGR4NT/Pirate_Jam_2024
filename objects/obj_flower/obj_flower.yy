@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_FlowerP",
-    "path": "sprites/spr_FlowerP/spr_FlowerP.yy",
+    "name": "spr_Flower",
+    "path": "sprites/spr_Flower/spr_Flower.yy",
   },
   "spriteMaskId": null,
   "visible": true,

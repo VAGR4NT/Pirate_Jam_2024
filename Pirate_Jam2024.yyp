@@ -112,6 +112,7 @@
     {"id":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"spr_player_eat","path":"sprites/spr_player_eat/spr_player_eat.yy",},},
     {"id":{"name":"spr_menu_input","path":"sprites/spr_menu_input/spr_menu_input.yy",},},
     {"id":{"name":"placing seeds","path":"notes/placing seeds/placing seeds.yy",},},
     {"id":{"name":"spr_flower_button","path":"sprites/spr_flower_button/spr_flower_button.yy",},},

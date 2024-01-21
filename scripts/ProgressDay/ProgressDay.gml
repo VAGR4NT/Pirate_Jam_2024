@@ -1,6 +1,9 @@
 /// @desc Progresses the day count and updates all the states that progress with the day/night cycle
 function ProgressDay(){
 	
+	ClosePark();
+	
+	
 	// Update Plant Information For All Plotted Plants
 	planted = layer_get_all_elements("Plants");
 	num_planted = array_length(planted);

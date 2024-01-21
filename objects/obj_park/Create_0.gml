@@ -19,6 +19,8 @@ tree_saplings = 3;
 // NPC Effect Trackers
 green_space = 0; // Variable the brings more npc's into the park
 happiness_rate = 0; //Tracks rate of happiness change in NPCs
+closed = false;
+
 
 // Daily Stat Trackers
 park_stats = 

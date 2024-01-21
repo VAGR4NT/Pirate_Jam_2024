@@ -39,7 +39,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.1.129",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"spr_bush_button","path":"sprites/spr_bush_button/spr_bush_button.yy",},},
@@ -66,6 +66,7 @@
     {"id":{"name":"obj_menu_boolean","path":"objects/obj_menu_boolean/obj_menu_boolean.yy",},},
     {"id":{"name":"GUIMouseDetection","path":"scripts/GUIMouseDetection/GUIMouseDetection.yy",},},
     {"id":{"name":"obj_menu_shop","path":"objects/obj_menu_shop/obj_menu_shop.yy",},},
+    {"id":{"name":"obj_npc_gate","path":"objects/obj_npc_gate/obj_npc_gate.yy",},},
     {"id":{"name":"SineWave","path":"scripts/SineWave/SineWave.yy",},},
     {"id":{"name":"ResetDraw","path":"scripts/ResetDraw/ResetDraw.yy",},},
     {"id":{"name":"obj_menu_input","path":"objects/obj_menu_input/obj_menu_input.yy",},},

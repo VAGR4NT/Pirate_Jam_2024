@@ -8,6 +8,4 @@ if npcs_to_spawn > 0
 	npcs_to_spawn--;
 }
 
-
-
 alarm[0] = 60;

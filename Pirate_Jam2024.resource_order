@@ -46,6 +46,7 @@
     {"name":"obj_menu_boolean","order":4,"path":"objects/obj_menu_boolean/obj_menu_boolean.yy",},
     {"name":"GUIMouseDetection","order":1,"path":"scripts/GUIMouseDetection/GUIMouseDetection.yy",},
     {"name":"obj_menu_shop","order":3,"path":"objects/obj_menu_shop/obj_menu_shop.yy",},
+    {"name":"obj_npc_gate","order":3,"path":"objects/obj_npc_gate/obj_npc_gate.yy",},
     {"name":"SineWave","order":6,"path":"scripts/SineWave/SineWave.yy",},
     {"name":"ResetDraw","order":5,"path":"scripts/ResetDraw/ResetDraw.yy",},
     {"name":"obj_menu_input","order":5,"path":"objects/obj_menu_input/obj_menu_input.yy",},

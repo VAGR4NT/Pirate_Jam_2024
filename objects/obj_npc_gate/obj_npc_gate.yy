@@ -1,17 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_NPC_movement_node",
+  "name": "obj_npc_gate",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Utility Objects",
-    "path": "folders/Objects/Utility Objects.yy",
+    "name": "Land Management",
+    "path": "folders/Objects/Structures/Land Management.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_grass",
+    "path": "objects/obj_grass/obj_grass.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -28,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_NPC_movement_node",
-    "path": "sprites/spr_NPC_movement_node/spr_NPC_movement_node.yy",
+    "name": "spr_wall",
+    "path": "sprites/spr_wall/spr_wall.yy",
   },
   "spriteMaskId": null,
   "visible": true,

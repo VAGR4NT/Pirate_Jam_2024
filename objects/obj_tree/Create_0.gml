@@ -17,3 +17,5 @@ dhyd_rate = 0.1;
 
 age = PLANT_AGE.SAPLING; // Trees begin at sapling stage
 image_index = 1;
+
+obj_park.num_trees ++;

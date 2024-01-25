@@ -1,8 +1,8 @@
 /// @desc
+ResetDraw();
 draw_self();
 
-if target != noone
-{
-	draw_text(x,y, target);
-	draw_line(x,y, target.x, target.y);
-}
+draw_set_color(c_red);
+draw_text(x,y-20, happiness);
+
+ResetDraw();

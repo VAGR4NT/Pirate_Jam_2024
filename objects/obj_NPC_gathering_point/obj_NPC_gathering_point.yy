@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_NPC_movement_node",
+  "name": "obj_NPC_gathering_point",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_NPC_movement_node",
-    "path": "sprites/spr_NPC_movement_node/spr_NPC_movement_node.yy",
+    "name": "spr_NPC_spawner",
+    "path": "sprites/spr_NPC_spawner/spr_NPC_spawner.yy",
   },
   "spriteMaskId": null,
   "visible": true,

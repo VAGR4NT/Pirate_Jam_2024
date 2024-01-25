@@ -5,21 +5,45 @@ if target != noone
 	{
 		mp_potential_step_object(target.x, target.y, move_spd, obj_parent_solid);
 	
-		look_time--;
+		if distance_to_object(target) < 30
+		{
+			look_time--;
+		}
 		//look timer expires. Reset variables
 		if look_time <= 0 
 		{
+			last_target = target;
 			target.empty = true;
 			target = noone;
 		}
 	} else {
-		//Out of park
-		mp_linear_step_object(857, 972, move_spd, obj_parent_solid);
-	}
-	
-	
+		//Move out of the park
+		target.empty = true;
+		last_target = noone;
+		mp_potential_step_object(target.x, target.y, move_spd, obj_parent_solid);
+		//if y >= 565 //below turn
+		//{
+		//	//move out
+		//	mp_linear_step_object(854, 999, move_spd, obj_parent_solid);
+			
+		//} 
+		
+		//if y < 565
+		//{
+		//	mp_linear_step_object(854, 570, move_spd, obj_parent_solid);
+		//}
+		
+		
+	}	
 	move_spd = min(min_move_speed, distance_to_object(target) / 3);
-	
-
 }
 
+
+#region Delete if under map
+
+if y > room_height + sprite_height
+{
+	instance_destroy(self);
+}
+
+#endregion Delete if under map

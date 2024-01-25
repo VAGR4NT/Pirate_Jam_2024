@@ -1,9 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ClosePark(){
-	
-	//Move camera to the park entrance
-	
+	obj_park.closed = true;
 	
 	/// Make NPCs go back to the entrance after this code
 	var _npcs_array = array_create(0);
@@ -13,13 +11,7 @@ function ClosePark(){
 	    _inst.alarm[1] = 1;
 	}
 	
-	/*
-	Once all NPCs have left: 
-	- fade out 
-	- show End of day report
-	- fade in
+	Print("Set cam to gate");
+	obj_camera.follow_target = obj_cam_target_for_EOD;
 	
-	- obj_park.closed = false;
-	
-	*/
 }

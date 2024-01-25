@@ -10,6 +10,7 @@ og_width = 640;
 og_height = 360;
 width_ratio = og_width/global.window_width;
 height_ratio = og_height/global.window_height;
+EOD_menu_shown = false;
 
 global.fullscreen = false;
 
@@ -25,7 +26,7 @@ enum BUTTON_TYPE{
 	SEED//,
 }
 
-cash = 100;
+cash = 200;
 menus_array = array_create(0); //used in pause menu logic
 global.on_seed_button = false; //used to keep players from accidentally planting seeds as soon as they select them
 

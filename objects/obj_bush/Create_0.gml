@@ -14,3 +14,5 @@ withering_threshold = 0.4;
 heal_rate = 4;
 wither_rate = 6;
 dhyd_rate = 0.3;
+
+obj_park.num_bushes ++;

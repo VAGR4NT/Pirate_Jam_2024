@@ -84,3 +84,5 @@ if can_move{ //toggle to false for cutscenes
 if _x_input != 0{
 	image_xscale = _x_input;
 }
+
+y = clamp(y, 0, room_height);

@@ -7,6 +7,7 @@ var _index = 0;
 var _ystart = 10;
 var _xstart = 10;
 
+ResetDraw();
 //draw_text(_xstart, _ystart + (_buff * _index), _display_get_w);
 //_index ++;
 //draw_text(_xstart, _ystart + (_buff * _index),"window_get_width():" + string(_window_get_w));
@@ -28,11 +29,22 @@ var _xstart = 10;
 //draw_text(_xstart, _ystart + (_buff * _index),"global.fullscreen: " + string(global.fullscreen));
 //_index ++;
 //draw_text(_xstart, _ystart + (_buff * _index),"menus: " + string(array_length(menus_array)));
-_index ++;
-draw_text(_xstart, _ystart + (_buff * _index),"CASH: " + string(cash));
-_index ++;
+//_index ++;
+//draw_text(_xstart, _ystart + (_buff * _index),"CASH: " + string(cash));
+
+draw_set_color(c_black);
+//_index ++;
+//draw_text(_xstart, _ystart + (_buff * _index),"NPCs: " + string(instance_number(obj_npc)));
+
 if instance_exists(obj_park){
-	draw_text(_xstart, _ystart + (_buff * _index),"Day: " + string(obj_park.park_stats.curr_day));
+	_index ++;
+	draw_text(_xstart, _ystart + (_buff * _index),"daily_happiness: " + string(obj_park.park_stats.daily_happiness));
+	_index ++;
+	draw_text(_xstart, _ystart + (_buff * _index),"obj_park.closed: " + string(obj_park.closed));
 }
 //_index ++;
 //draw_text(_xstart, _ystart + (_buff * _index),"global.on_seed_button: " + string(global.on_seed_button));
+
+
+
+ResetDraw();

@@ -89,7 +89,7 @@ if instance_exists(obj_plot)
 			if object_held == "bush" obj_park.bush_seeds--;
 			if object_held == "tree" obj_park.tree_saplings--;
 			
-			Print("Planted: " + string(object_held));
+			//Print("Planted: " + string(object_held));
 		}
 		
 	} else {

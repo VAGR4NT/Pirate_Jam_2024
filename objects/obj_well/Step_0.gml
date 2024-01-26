@@ -9,7 +9,7 @@ if instance_exists(obj_player)
 			{
 				obj_player.water_held = obj_player.water_max;
 				used_today = true;
-				Print("using well");
+				//Print("using well");
 			}			
 		}
 	} else {

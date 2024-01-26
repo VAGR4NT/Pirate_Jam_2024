@@ -14,7 +14,7 @@ if instance_exists(obj_player)
 					obj_menu_shop.state = VISUAL_STATE.ACTIVE;
 				}
 			}
-			Print("using shop");
+			//Print("using shop");
 		}
 	} else {
 		image_blend = c_white;

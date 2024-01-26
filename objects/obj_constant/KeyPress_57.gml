@@ -1,0 +1,2 @@
+/// @desc Close Park
+ClosePark();

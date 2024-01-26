@@ -16,3 +16,4 @@ wither_rate = 3;
 dhyd_rate = 0.4;
 
 
+obj_park.num_flowers ++;

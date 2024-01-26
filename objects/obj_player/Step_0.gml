@@ -81,8 +81,16 @@ if can_move{ //toggle to false for cutscenes
 
 
 //look where you are moving
-if _x_input != 0{
+if _x_input != 0 {
 	image_xscale = _x_input;
 }
 
+
 y = clamp(y, 0, room_height);
+
+// Running animation
+if ((abs(_x_input) > 0) or (abs(_y_input) > 0))
+{
+	sprite_index = spr_player_walk;
+}
+else {sprite_index = spr_player;}

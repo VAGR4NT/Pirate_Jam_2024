@@ -1,5 +1,6 @@
 /// @description Runs every frame
 water_held = clamp(water_held, 0, water_max);
+//water_held = 700;
 //water_held -= .05;
 var _x_input = (keyboard_check(ord("D")) or keyboard_check(vk_right)) - (keyboard_check(ord("A")) or keyboard_check(vk_left));
 var _y_input = (keyboard_check(ord("S")) or keyboard_check(vk_down)) -  (keyboard_check(ord("W")) or keyboard_check(vk_up))
@@ -89,8 +90,29 @@ if _x_input != 0 {
 y = clamp(y, 0, room_height);
 
 // Running animation
-if ((abs(_x_input) > 0) or (abs(_y_input) > 0))
+switch(state)
 {
-	sprite_index = spr_player_walk;
+case PLAYER_STATES.WALKING:
+	can_move = true;
+	if ((abs(_x_input) > 0) or (abs(_y_input) > 0))
+	{
+		sprite_index = spr_player_walk;
+	}
+	else {sprite_index = spr_player;}
+break;
+
+case PLAYER_STATES.WATERING:
+	can_move = false;
+	sprite_index = spr_player_water;
+break;
+
+case PLAYER_STATES.INTERACTING:
+	sprite_index = spr_player;
+	can_move = false;
+break;
+
+case PLAYER_STATES.DIGGING:
+	sprite_index = spr_player_eat;
+	can_move = false;
+break;
 }
-else {sprite_index = spr_player;}

@@ -1,3 +1,29 @@
+var round_x = round(x);
+var round_prevx = round(previous_x);
+
+var round_y = round(y);
+var round_prevy = round(previous_y);
+
+if round_prevx > round_x
+{
+	image_xscale = -1;
+}
+
+if round_prevx < round_x
+{
+	image_xscale = 1;
+}
+
+if round_prevx != round_x or round_prevy != round_y
+{
+	image_speed = 1;
+} 
+
+if round_prevx == round_x and round_prevy == round_y{	
+	image_index = 0;
+	image_speed = 0;
+}
+
 if target != noone
 {
 	//move towards target/node
@@ -29,7 +55,7 @@ if target != noone
 
 #region Delete if under map
 
-if y > room_height + sprite_height
+if y > room_height + 10
 {
 	instance_destroy(self);
 }

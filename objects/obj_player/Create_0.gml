@@ -11,3 +11,5 @@ water_level = 0;
 water_level_bonus = 25;
 water_max = 100 + (0 * water_level_bonus);
 water_held = 0;
+
+state = PLAYER_STATES.WALKING;

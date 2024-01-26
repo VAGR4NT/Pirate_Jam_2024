@@ -1,6 +1,5 @@
 /// @description Used for selecting flower seeds to plant
 event_inherited();
-type = BUTTON_TYPE.SEED;
 text = ""; //flower, bush, tree
 quantity = -1;
 alarm[0] = 1;

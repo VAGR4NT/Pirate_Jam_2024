@@ -7,9 +7,5 @@ if num_npcs > 0 and closed == false
 	//define NPC happiness
 	
 	num_npcs--;
-
 }
-
-
-
 alarm[1] = 60;

@@ -7,7 +7,7 @@ if global.fullscreen == false{
 		if _width > 0 and _height > 0
 		{
 			window_set_size(_width, _height);
-			Print("Decreased window size to: " + string(_width) + " x " + string(_height));
+			//Print("Decreased window size to: " + string(_width) + " x " + string(_height));
 		}
 	}
 
@@ -18,7 +18,7 @@ if global.fullscreen == false{
 		if _width > 0 and _height > 0
 		{
 			window_set_size(_width, _height);
-			Print("Increased window size to: " + string(_width) + " x " + string(_height));
+			//Print("Increased window size to: " + string(_width) + " x " + string(_height));
 		}
 	}
 }

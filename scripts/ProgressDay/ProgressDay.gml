@@ -1,6 +1,6 @@
 /// @desc Progresses the day count and updates all the states that progress with the day/night cycle
 function ProgressDay(){
-	
+	//Print("progressing day");
 	// Update Plant Information For All Plotted Plants
 	planted = layer_get_all_elements("Plants");
 	num_planted = array_length(planted);
@@ -70,7 +70,6 @@ function ProgressDay(){
 	// Update Park Stats 
 	with (obj_park)
 	{
-		
 		all_days[park_stats.curr_day] = park_stats;
 		park_stats.curr_day++;
 		alarm[0] = 1; //calculate number of NPCs to spawn

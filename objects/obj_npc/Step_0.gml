@@ -21,18 +21,6 @@ if target != noone
 		target.empty = true;
 		last_target = noone;
 		mp_potential_step_object(target.x, target.y, move_spd, obj_parent_solid);
-		//if y >= 565 //below turn
-		//{
-		//	//move out
-		//	mp_linear_step_object(854, 999, move_spd, obj_parent_solid);
-			
-		//} 
-		
-		//if y < 565
-		//{
-		//	mp_linear_step_object(854, 570, move_spd, obj_parent_solid);
-		//}
-		
 		
 	}	
 	move_spd = min(min_move_speed, distance_to_object(target) / 3);

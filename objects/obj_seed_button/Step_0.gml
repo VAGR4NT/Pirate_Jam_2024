@@ -9,7 +9,7 @@ if mouse_hover == true{
 			case BUTTON_TYPE.SEED:
 				if instance_exists(obj_mouse)
 				{
-					Print(string(text) + " clicked");
+					//Print(string(text) + " clicked");
 					if obj_mouse.object_held != text
 					{
 						var _can_pickup = false;

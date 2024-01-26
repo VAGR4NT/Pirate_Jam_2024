@@ -32,16 +32,20 @@ ResetDraw();
 //_index ++;
 //draw_text(_xstart, _ystart + (_buff * _index),"CASH: " + string(cash));
 
-draw_set_color(c_black);
+//draw_set_color(c_red);
 //_index ++;
 //draw_text(_xstart, _ystart + (_buff * _index),"NPCs: " + string(instance_number(obj_npc)));
 
-if instance_exists(obj_park){
-	_index ++;
-	draw_text(_xstart, _ystart + (_buff * _index),"daily_happiness: " + string(obj_park.park_stats.daily_happiness));
-	_index ++;
-	draw_text(_xstart, _ystart + (_buff * _index),"obj_park.closed: " + string(obj_park.closed));
-}
+//if instance_exists(obj_park){
+//	_index ++;
+//	draw_text(_xstart, _ystart + (_buff * _index),"EOD_menu_shown: " + string(EOD_menu_shown));
+//	_index ++;
+//	draw_text(_xstart, _ystart + (_buff * _index),"obj_park.closed: " + string(obj_park.closed));
+//	_index ++;
+//	draw_text(_xstart, _ystart + (_buff * _index),"instance_number(obj_npc): " + string(instance_number(obj_npc)));
+//	_index ++;
+//	draw_text(_xstart, _ystart + (_buff * _index),"obj_menu_EOD_report.state: " + string(obj_menu_EOD_report.state));
+//}
 //_index ++;
 //draw_text(_xstart, _ystart + (_buff * _index),"global.on_seed_button: " + string(global.on_seed_button));
 

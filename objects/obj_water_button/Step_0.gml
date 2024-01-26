@@ -2,7 +2,7 @@
 event_inherited();
 
 if mouse_hover == true{
-	if mouse_check_button_pressed(mb_left)
+	if mouse_check_button_pressed(mb_left) and obj_player.water_held > 0
 	{
 		if instance_exists(obj_mouse)
 		{

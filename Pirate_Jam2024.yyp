@@ -122,6 +122,7 @@
     {"id":{"name":"obj_plot","path":"objects/obj_plot/obj_plot.yy",},},
     {"id":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
+    {"id":{"name":"watering bug","path":"notes/watering bug/watering bug.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"spr_NPC_spawner","path":"sprites/spr_NPC_spawner/spr_NPC_spawner.yy",},},
     {"id":{"name":"spr_bed_collision","path":"sprites/spr_bed_collision/spr_bed_collision.yy",},},

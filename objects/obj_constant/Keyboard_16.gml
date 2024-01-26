@@ -1,6 +1,7 @@
 /// @desc handle screen size changes
 if global.fullscreen == false{
-	if keyboard_check_pressed(ord(1)){
+	
+	if keyboard_check_pressed(ord("I")){
 		var _width = global.window_width - og_width;
 		var _height = global.window_height - og_height;
 
@@ -11,7 +12,7 @@ if global.fullscreen == false{
 		}
 	}
 
-	if keyboard_check_pressed(ord(2)){
+	if keyboard_check_pressed(ord("O")){
 		var _width = global.window_width + og_width;
 		var _height = global.window_height + og_height;
 

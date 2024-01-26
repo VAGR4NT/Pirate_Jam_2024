@@ -83,6 +83,7 @@
     {"id":{"name":"spr_menu_bg","path":"sprites/spr_menu_bg/spr_menu_bg.yy",},},
     {"id":{"name":"ClosePark","path":"scripts/ClosePark/ClosePark.yy",},},
     {"id":{"name":"SineBetween","path":"scripts/SineBetween/SineBetween.yy",},},
+    {"id":{"name":"obj_water_button","path":"objects/obj_water_button/obj_water_button.yy",},},
     {"id":{"name":"obj_constant","path":"objects/obj_constant/obj_constant.yy",},},
     {"id":{"name":"spr_bush_seed_button","path":"sprites/spr_bush_seed_button/spr_bush_seed_button.yy",},},
     {"id":{"name":"obj_menu_exit","path":"objects/obj_menu_exit/obj_menu_exit.yy",},},

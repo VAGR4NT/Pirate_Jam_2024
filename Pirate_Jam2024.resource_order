@@ -1,6 +1,8 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
+    {"name":"spr_water_button","order":1,"path":"sprites/spr_water_button/spr_water_button.yy",},
+    {"name":"spr_dig_button","order":2,"path":"sprites/spr_dig_button/spr_dig_button.yy",},
     {"name":"obj_water_button","order":1,"path":"objects/obj_water_button/obj_water_button.yy",},
   ],
 }

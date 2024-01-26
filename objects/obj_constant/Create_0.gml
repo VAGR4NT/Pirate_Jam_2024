@@ -22,8 +22,10 @@ enum VISUAL_STATE{
 	INACTIVE
 }
 
-enum BUTTON_TYPE{
-	SEED//,
+enum MOUSE_MODES{
+	WATERING,
+	PLANTING,
+	DIGGING
 }
 
 cash = 200;

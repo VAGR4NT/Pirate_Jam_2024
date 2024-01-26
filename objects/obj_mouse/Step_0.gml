@@ -4,109 +4,184 @@ if mouse_check_button(mb_right)
 	//deselect seed
 	object_held = "";
 	object_sprite = -1;
+	mode = MOUSE_MODES.PLANTING;
 	
 	//sell plant with right click held interaction will be taken care of inside of the plants themselves
 }
 #endregion Clear held item
 
-switch(object_held)
+#region Planting
+if mode == MOUSE_MODES.PLANTING
 {
-	case "flower":
-		//object_sprite = spr_seed_button;
-		quantity = obj_park.flower_seeds;
-	break;
-	
-	case "bush":
-		//object_sprite = spr_bush_button;
-		quantity = obj_park.bush_seeds;
-	break;
-	
-	case "tree":
-		//object_sprite = spr_seed_button;
-		quantity = obj_park.tree_saplings;
-	break;
-	
-}
-
-if quantity <= 0
-{
-	object_held = "";
-	object_sprite = -1;
-}
-
-#region Outline
-if instance_exists(obj_plot)
-{
-	var _plot = instance_place(x,y,obj_plot);
-	if _plot != noone and object_held != ""// and quantity > 0
+	switch(object_held)
 	{
-		show_outline = true;
-		outline_obj.target = _plot;	
-		switch(object_held)
+		case "flower":
+			//object_sprite = spr_seed_button;
+			quantity = obj_park.flower_seeds;
+		break;
+	
+		case "bush":
+			//object_sprite = spr_bush_button;
+			quantity = obj_park.bush_seeds;
+		break;
+	
+		case "tree":
+			//object_sprite = spr_seed_button;
+			quantity = obj_park.tree_saplings;
+		break;
+	
+	}
+
+	if quantity <= 0
+	{
+		object_held = "";
+		object_sprite = -1;
+	}
+
+	#region Outline
+	if instance_exists(obj_plot)
+	{
+		var _plot = instance_place(x,y,obj_plot);
+		if _plot != noone and object_held != ""// and quantity > 0
 		{
-			case "flower":
-				plots_needed = 1;
-				outline_obj.size = 0;
-				if _plot.occupied == false
-				{
-					can_place = true;
-				} else {
-					can_place = false;
-				}
-			break;
+			show_outline = true;
+			outline_obj.target = _plot;	
+			switch(object_held)
+			{
+				case "flower":
+					plots_needed = 1;
+					outline_obj.size = 0;
+					if _plot.occupied == false
+					{
+						can_place = true;
+					} else {
+						can_place = false;
+					}
+				break;
 			
-			case "bush":
-				plots_needed = 4;
-				outline_obj.size = 1;
-				can_place = CanPlaceSeed(plots_needed);
-				if _plot.occupied == true
-				{
-					can_place = false;
-				}
-			break;
+				case "bush":
+					plots_needed = 4;
+					outline_obj.size = 1;
+					can_place = CanPlaceSeed(plots_needed);
+					if _plot.occupied == true
+					{
+						can_place = false;
+					}
+				break;
 				
-			case "tree":
-				plots_needed = 9;
-				outline_obj.size = 2;
-				can_place = CanPlaceSeed(plots_needed);
-				if _plot.occupied == true
-				{
-					can_place = false;
-				}
-			break;
-		}
-		if outline_obj.player_contact or global.on_seed_button == true
-		{
+				case "tree":
+					plots_needed = 9;
+					outline_obj.size = 2;
+					can_place = CanPlaceSeed(plots_needed);
+					if _plot.occupied == true
+					{
+						can_place = false;
+					}
+				break;
+			}
+			if outline_obj.player_contact or global.on_seed_button == true
+			{
+				can_place = false;
+			}
+		
+			if can_place and mouse_check_button_pressed(mb_left)
+			{
+				_plot.occupied = true;
+				_plot.occupied_by = object_held;
+				ConvertEmptyPlots(plots_needed);
+				if object_held == "flower" obj_park.flower_seeds--;
+				if object_held == "bush" obj_park.bush_seeds--;
+				if object_held == "tree" obj_park.tree_saplings--;
+			
+				//Print("Planted: " + string(object_held));
+			}
+		
+		} else {
+			outline_obj.target = noone;
+			show_outline = false;
 			can_place = false;
 		}
-		
-		if can_place and mouse_check_button_pressed(mb_left)
-		{
-			_plot.occupied = true;
-			_plot.occupied_by = object_held;
-			ConvertEmptyPlots(plots_needed);
-			if object_held == "flower" obj_park.flower_seeds--;
-			if object_held == "bush" obj_park.bush_seeds--;
-			if object_held == "tree" obj_park.tree_saplings--;
-			
-			//Print("Planted: " + string(object_held));
-		}
-		
+	}
+
+	if can_place
+	{
+		outline_obj.image_blend = c_green;
 	} else {
-		outline_obj.target = noone;
-		show_outline = false;
-		can_place = false;
+		outline_obj.image_blend = c_red;
+	}
+
+	#endregion Outline
+}
+#endregion Planting
+
+#region Watering
+if mode == MOUSE_MODES.WATERING
+{
+	object_sprite = spr_water_button;
+	if instance_exists(obj_plot)
+	{
+		var _plant = instance_place(x,y,obj_plant);	
+		if _plant != noone
+		{
+			if _plant.watered_perc < 100{
+				if device_mouse_check_button_pressed(0,mb_any) and obj_water_button.mouse_hover == false
+				{
+					var amount_to_pour =  100 - _plant.watered_perc;
+					
+					if amount_to_pour > 0
+					{
+						if obj_player.water_held >= amount_to_pour
+						{
+						
+							//Below full
+							if _plant.watered_perc + amount_to_pour <= 100
+							{
+								_plant.watered_perc += amount_to_pour;
+								//remove water
+								obj_player.water_held -= amount_to_pour;
+								exit;
+							}
+						
+							//Overflow
+							if _plant.watered_perc + amount_to_pour >= 100
+							{	
+								_plant.watered_perc = 100;
+						
+								//remove water
+								obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
+								exit;
+							}
+						} 
+						if obj_player.water_held < amount_to_pour and obj_player.water_held > 0
+						{ //less than 25 water left in player
+							//Below full
+							if _plant.watered_perc + amount_to_pour <= 100
+							{
+								_plant.watered_perc += obj_player.water_held;
+								//remove water
+								obj_player.water_held = 0;
+								exit;
+							}
+						
+							//Overflow
+							if _plant.watered_perc + amount_to_pour >= 100
+							{	
+								_plant.watered_perc = 100;
+						
+								//remove water
+								obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
+								exit;
+							}
+						}
+					}
+					
+				}
+			}
+		}
 	}
 }
+#endregion Watering
 
-if can_place
-{
-	outline_obj.image_blend = c_green;
-} else {
-	outline_obj.image_blend = c_red;
-}
-
-#endregion Outline
 
 x = mouse_x;
 y = mouse_y;

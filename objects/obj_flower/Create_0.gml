@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+type_value = 1;
 max_plant_health = 10;
 plant_health = max_plant_health;
 

@@ -28,10 +28,11 @@ else if (status == PLANT_STATE.DEAD and image_number >= 4)
 }
 else if (age == PLANT_AGE.SEED and image_number >= 3 and status == PLANT_STATE.HEALTHY) {image_index = 0;}
 else if (age == PLANT_AGE.SAPLING and image_number >= 2 and status == PLANT_STATE.HEALTHY) {image_index = 1;}
-else if (age == PLANT_AGE.MATURE and image_number >= 2 and status == PLANT_STATE.HEALTHY) 
+else if (age == PLANT_AGE.MATURE and image_number >= 2 and status == PLANT_STATE.HEALTHY) and maturity_recorded == false
 {
 	image_index = 3;
 	obj_park.park_stats.daily_matured++;
+	maturity_recorded = true;
 }
 else {image_index = 0;}
 

@@ -1,9 +1,22 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
+    {"name":"Approach","order":9,"path":"scripts/Approach/Approach.yy",},
     {"name":"spr_water_button","order":1,"path":"sprites/spr_water_button/spr_water_button.yy",},
     {"name":"spr_dig_button","order":2,"path":"sprites/spr_dig_button/spr_dig_button.yy",},
+    {"name":"obj_water_down","order":3,"path":"objects/obj_water_down/obj_water_down.yy",},
+    {"name":"GUIMouseDetection","order":1,"path":"scripts/GUIMouseDetection/GUIMouseDetection.yy",},
+    {"name":"SineWave","order":2,"path":"scripts/SineWave/SineWave.yy",},
+    {"name":"ResetDraw","order":3,"path":"scripts/ResetDraw/ResetDraw.yy",},
+    {"name":"Print","order":4,"path":"scripts/Print/Print.yy",},
+    {"name":"ClosePark","order":5,"path":"scripts/ClosePark/ClosePark.yy",},
+    {"name":"obj_water_up","order":1,"path":"objects/obj_water_up/obj_water_up.yy",},
+    {"name":"SineBetween","order":6,"path":"scripts/SineBetween/SineBetween.yy",},
     {"name":"obj_water_button","order":1,"path":"objects/obj_water_button/obj_water_button.yy",},
+    {"name":"obj_shop_keeper","order":4,"path":"objects/obj_shop_keeper/obj_shop_keeper.yy",},
+    {"name":"ProgressDay","order":7,"path":"scripts/ProgressDay/ProgressDay.yy",},
+    {"name":"obj_dig_button","order":2,"path":"objects/obj_dig_button/obj_dig_button.yy",},
+    {"name":"CanPlaceSeed","order":8,"path":"scripts/CanPlaceSeed/CanPlaceSeed.yy",},
     {"name":"watering bug","order":1,"path":"notes/watering bug/watering bug.yy",},
   ],
 }

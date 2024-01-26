@@ -118,12 +118,13 @@ if mode == MOUSE_MODES.PLANTING
 if mode == MOUSE_MODES.WATERING
 {
 	object_sprite = spr_water_button;
-	if instance_exists(obj_plot)
+	if instance_exists(obj_plant)
 	{
 		var _plant = instance_place(x,y,obj_plant);	
 		if _plant != noone
 		{
-			if _plant.watered_perc < 100{
+			if _plant.watered_perc < 100 and _plant.status != PLANT_STATE.DEAD{
+				
 				if device_mouse_check_button_pressed(0,mb_any) and obj_water_button.mouse_hover == false
 				{
 					var amount_to_pour =  100 - _plant.watered_perc;
@@ -132,13 +133,19 @@ if mode == MOUSE_MODES.WATERING
 					{
 						if obj_player.water_held >= amount_to_pour
 						{
-						
+							
+							var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
+							_water.target = _plant;
+							//instance_create_layer(_plant.x,_plant.y,"Water",obj_water_up);
 							//Below full
 							if _plant.watered_perc + amount_to_pour <= 100
 							{
 								_plant.watered_perc += amount_to_pour;
 								//remove water
 								obj_player.water_held -= amount_to_pour;
+								obj_player.state = PLAYER_STATES.WATERING;
+								//var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
+								//_water.target = _plant;
 								exit;
 							}
 						
@@ -149,6 +156,9 @@ if mode == MOUSE_MODES.WATERING
 						
 								//remove water
 								obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
+								obj_player.state = PLAYER_STATES.WATERING;
+								//var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
+								//_water.target = _plant;
 								exit;
 							}
 						} 
@@ -160,6 +170,9 @@ if mode == MOUSE_MODES.WATERING
 								_plant.watered_perc += obj_player.water_held;
 								//remove water
 								obj_player.water_held = 0;
+								obj_player.state = PLAYER_STATES.WATERING;
+								//var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
+								//_water.target = _plant;
 								exit;
 							}
 						
@@ -170,6 +183,9 @@ if mode == MOUSE_MODES.WATERING
 						
 								//remove water
 								obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
+								obj_player.state = PLAYER_STATES.WATERING;
+								//var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
+								//_water.target = _plant;
 								exit;
 							}
 						}
@@ -182,6 +198,43 @@ if mode == MOUSE_MODES.WATERING
 }
 #endregion Watering
 
+#region Digging / Selling
+if instance_exists(obj_plant)
+{
+	var _plant = instance_place(x,y,obj_plant);	
+	if _plant != noone
+	{
+		sell_value = _plant.sell_value;	
+	} else {
+		sell_value = 0;
+	}
+}
+
+if mode == MOUSE_MODES.DIGGING
+{
+	object_sprite = spr_dig_button;
+	if instance_exists(obj_plant)
+	{
+		var _plant = instance_place(x,y,obj_plant);	
+		if _plant != noone
+		{
+			//sell_value = _plant.sell_value;	
+			if mouse_check_button_pressed(mb_left)
+			{
+				obj_player.state = PLAYER_STATES.DIGGING;
+				obj_constant.cash += _plant.sell_value;
+				instance_destroy(_plant);
+				//set all plots to open
+			}
+		} 
+		//else {
+		//	sell_value = 0;
+		//}
+	}
+}
+
+
+#endregion Digging / Selling
 
 x = mouse_x;
 y = mouse_y;

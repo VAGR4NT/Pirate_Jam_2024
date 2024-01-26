@@ -9,6 +9,7 @@ can_place = false;
 can_water = false;
 can_dig = false;
 mode = MOUSE_MODES.PLANTING;
+sell_value = 0;
 
 //image_xscale = 2;
 //image_yscale = image_xscale;

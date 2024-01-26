@@ -2,7 +2,7 @@
 // If occupied by bush or tree, no longer passable.
 
 event_inherited();
-
+passable = true;
 occupied_by = "";
 occupied = false;
 plant_object = -1;

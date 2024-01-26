@@ -1,12 +1,12 @@
 /// @description Change Plot Stats
 
 
-var _is_pass = !occupied or (occupied && occupied_by == "flower");
-if (_is_pass) {
-	passable = true;
-} else {
-	passable = false;
-}
+//var _is_pass = !occupied or (occupied && occupied_by == "flower");
+//if (_is_pass) {
+//	passable = true;
+//} else {
+//	passable = false;
+//}
 
 if occupied
 {
@@ -18,6 +18,7 @@ if occupied
 #region Create Plant In Plot
 if (occupied_by == "flower" && !has_sprite)
 {
+	Print("flower");
 	occupied = true;
 	if (has_sprite == false)
 	{
@@ -27,6 +28,7 @@ if (occupied_by == "flower" && !has_sprite)
 }
 if (occupied_by == "bush" && !occupied)
 {
+	Print("bush");
 	occupied = true;
 	if (has_sprite == false)
 	{
@@ -41,7 +43,7 @@ if (occupied_by == "bush" && !occupied)
 				with ( _near_plots[_i])
 				{
 					occupied = true;
-					passable = false;
+					//passable = false;
 					occupied_by = "bush";
 					has_sprite = false;
 					next_to_sprite = true;
@@ -52,11 +54,14 @@ if (occupied_by == "bush" && !occupied)
 }
 if (occupied_by == "tree" && !occupied)
 {
+	Print("bush");
 	occupied = true;
 	if (has_sprite == false)
 	{
 		plant_object = instance_create_layer(x ,y ,"Plants",obj_tree);
 		has_sprite = true;
+		//array_insert()
+		
 		var _near_plots = array_create(8,noone);
 		_near_plots[0] = instance_place(x     , y - plot_size, obj_plot);
 		_near_plots[1] = instance_place(x + plot_size, y - plot_size, obj_plot);
@@ -71,7 +76,7 @@ if (occupied_by == "tree" && !occupied)
 			with (_near_plots[_i])
 				{
 					occupied = true;
-					passable = false;
+					//passable = false;
 					occupied_by = "tree";
 					has_sprite = false;
 					next_to_sprite = true;
@@ -81,3 +86,13 @@ if (occupied_by == "tree" && !occupied)
 	}
 }
 #endregion
+
+if !instance_exists(plant_object)
+{
+	occupied_by = "";
+	occupied = false;
+	plant_object = -1;
+	has_sprite = false;
+	next_to_sprite = false;
+	plant_object = -1;
+}

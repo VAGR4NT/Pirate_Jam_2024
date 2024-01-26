@@ -1,4 +1,8 @@
 /// @description Decsribe shared Plant Behaviour
+alarm[0] = 20; //Calculate value
+sell_value = 1;
+type_value = 1;
+maturity_recorded = false;
 
 max_plant_health = 10; // Maximum Health points of the plant
 plant_health = max_plant_health; // Health points of the plant

@@ -25,6 +25,22 @@ if object_sprite != -1{
 			draw_set_valign(fa_middle);
 			draw_text(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string);
 		break;
+		
+		case MOUSE_MODES.DIGGING:
+			draw_set_halign(fa_center);
+			draw_set_valign(fa_middle);
+			var _sell_string = "Sell Value: " + string(sell_value);
+			var _string = "Digging";
+			
+			if sell_value != 0
+			{
+				draw_text(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_sell_string);
+			} else {
+				draw_text(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string);
+			}
+			
+			
+		break;
 	}
 	
 	

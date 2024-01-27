@@ -27,9 +27,11 @@ if choice == 1
 		obj_park.bush_seeds += num_bush_seeds;
 		obj_park.tree_saplings += num_tree_saplings;
 		obj_constant.cash -= total_cost;
+		var _sound = choose(handleCoins, handleCoins2);
+		audio_play_sound(_sound,1,0);
 		choice = -1;
 		state = VISUAL_STATE.INACTIVE;
-		//add sfx for purchase
+		
 	} else {
 		choice = -1;
 		// state stays as active

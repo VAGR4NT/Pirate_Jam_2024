@@ -15,10 +15,14 @@ var _y_buff = 30;
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text(_x_start, _y_start, main_text);
+draw_text_outline(_x_start, _y_start - 10, main_text,2, c_black, 4);
 draw_text(_x_start, _y_start + (_index * _y_buff), sub_text_1);
 _index++;
-draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_npc) + " people visited the park");
+if obj_park.park_stats.daily_npc == 1{
+	draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_npc) + " person visited the park");
+} else {
+	draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_npc) + " people visited the park");
+}
 _index++;
 draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_planted) + " plants were planted");
 _index++;

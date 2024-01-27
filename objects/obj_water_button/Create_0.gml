@@ -3,7 +3,7 @@ event_inherited();
 ////text = ""; //flower, bush, tree
 //quantity = -1;
 //alarm[0] = 1;
-button_sprite = spr_water_button
+button_sprite = water_button1;
 state = VISUAL_STATE.ACTIVE;
 
 //x_start = -1//10;

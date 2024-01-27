@@ -89,6 +89,7 @@ if (occupied_by == "tree" && !occupied)
 
 if !instance_exists(plant_object)
 {
+	passable = true;
 	occupied_by = "";
 	occupied = false;
 	plant_object = -1;

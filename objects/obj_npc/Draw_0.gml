@@ -10,6 +10,6 @@ draw_self();
 //	draw_text(x,y-60, target);
 //	draw_line(x,y,target.x,target.y);
 //}
-draw_text(x,y-20, happiness);
+//draw_text(x,y-20, happiness);
 
 ResetDraw();

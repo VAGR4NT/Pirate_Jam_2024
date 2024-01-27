@@ -1,6 +1,10 @@
 /// @desc handle screen size changes
+if keyboard_check_pressed(ord("P")){
+	window_set_fullscreen(!global.fullscreen);
+	global.fullscreen = window_get_fullscreen();
+}
+
 if global.fullscreen == false{
-	
 	if keyboard_check_pressed(ord("I")){
 		var _width = global.window_width - og_width;
 		var _height = global.window_height - og_height;

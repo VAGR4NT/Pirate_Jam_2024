@@ -13,6 +13,6 @@ function ClosePark(){
 		}
 	
 		//Print("Set cam to gate");
-		obj_camera.follow_target = obj_cam_target_for_EOD;
+		obj_camera.target = obj_cam_target_for_EOD;
 	}
 }

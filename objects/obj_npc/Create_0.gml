@@ -1,3 +1,4 @@
+obj_park.park_stats.daily_npc++;
 move_spd = 1;
 min_move_speed = move_spd;
 target = noone; //which node to move to

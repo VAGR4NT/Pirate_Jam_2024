@@ -46,7 +46,7 @@ if target != noone
 		//Move out of the park
 		target.empty = true;
 		last_target = noone;
-		mp_potential_step_object(target.x, target.y, move_spd, obj_parent_solid);
+		mp_potential_step_object(target.x, target.y, move_spd * 2, obj_parent_solid);
 		
 	}	
 	move_spd = min(min_move_speed, distance_to_object(target) / 3);

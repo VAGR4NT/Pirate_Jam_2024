@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_water_button",
-    "path": "sprites/spr_water_button/spr_water_button.yy",
+    "name": "water_button1",
+    "path": "sprites/water_button1/water_button1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

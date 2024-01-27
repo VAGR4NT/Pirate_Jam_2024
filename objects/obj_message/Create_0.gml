@@ -1,5 +1,4 @@
-rise_amount = -1//choose(.25,-.25);
-//color_list = c_white;
+rise_amount = -1;
 color = c_white;
 text = ""
 disappear_rate = .05;

@@ -92,6 +92,8 @@ if mode == MOUSE_MODES.PLANTING
 				if object_held == "flower" obj_park.flower_seeds--;
 				if object_held == "bush" obj_park.bush_seeds--;
 				if object_held == "tree" obj_park.tree_saplings--;
+				var _sound = choose(click_001, click_002, click_004, click_005);
+				audio_play_sound(_sound,1,0);
 			
 				//Print("Planted: " + string(object_held));
 			}
@@ -136,7 +138,6 @@ if mode == MOUSE_MODES.WATERING
 							
 							var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
 							_water.target = _plant;
-							//instance_create_layer(_plant.x,_plant.y,"Water",obj_water_up);
 							//Below full
 							if _plant.watered_perc + amount_to_pour <= 100
 							{
@@ -144,8 +145,8 @@ if mode == MOUSE_MODES.WATERING
 								//remove water
 								obj_player.water_held -= amount_to_pour;
 								obj_player.state = PLAYER_STATES.WATERING;
-								//var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
-								//_water.target = _plant;
+								audio_play_sound(watering2,1,0);
+
 								exit;
 							}
 						
@@ -157,8 +158,6 @@ if mode == MOUSE_MODES.WATERING
 								//remove water
 								obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
 								obj_player.state = PLAYER_STATES.WATERING;
-								//var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
-								//_water.target = _plant;
 								exit;
 							}
 						} 
@@ -171,8 +170,6 @@ if mode == MOUSE_MODES.WATERING
 								//remove water
 								obj_player.water_held = 0;
 								obj_player.state = PLAYER_STATES.WATERING;
-								//var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
-								//_water.target = _plant;
 								exit;
 							}
 						
@@ -184,8 +181,7 @@ if mode == MOUSE_MODES.WATERING
 								//remove water
 								obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
 								obj_player.state = PLAYER_STATES.WATERING;
-								//var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
-								//_water.target = _plant;
+
 								exit;
 							}
 						}
@@ -227,6 +223,8 @@ if mode == MOUSE_MODES.DIGGING
 				var _message = instance_create_layer(_plant.x,_plant.y,"UI",obj_message);
 				_message.text = "+" + string(_plant.sell_value);
 				_message.color = c_green;
+				var _sound = choose(handleCoins, handleCoins2);
+				audio_play_sound(_sound,1,0);
 					
 				
 				instance_destroy(_plant);

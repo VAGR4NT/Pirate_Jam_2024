@@ -34,7 +34,7 @@ enum MOUSE_MODES{
 	DIGGING
 }
 
-cash = 200;
+cash = 50;
 menus_array = array_create(0); //used in pause menu logic
 global.on_seed_button = false; //used to keep players from accidentally planting seeds as soon as they select them
 

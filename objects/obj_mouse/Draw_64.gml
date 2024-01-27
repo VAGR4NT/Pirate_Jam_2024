@@ -15,7 +15,7 @@ if object_sprite != -1{
 			_string = _string + _seed_type + string(quantity); 
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_middle);
-			draw_text(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string);
+			draw_text_outline(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string, 2, c_black, 4);
 			//draw_text(global.mouse_gui_x + 20, global.mouse_gui_y + 20,quantity);
 		break;
 		
@@ -23,7 +23,7 @@ if object_sprite != -1{
 			var _string = "Watering";
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_middle);
-			draw_text(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string);
+			draw_text_outline(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string, 2, c_black, 4);
 		break;
 		
 		case MOUSE_MODES.DIGGING:
@@ -34,9 +34,9 @@ if object_sprite != -1{
 			
 			if sell_value != 0
 			{
-				draw_text(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_sell_string);
+				draw_text_outline(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_sell_string, 2, c_black, 4);
 			} else {
-				draw_text(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string);
+				draw_text_outline(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string, 2, c_black, 4);
 			}
 			
 			

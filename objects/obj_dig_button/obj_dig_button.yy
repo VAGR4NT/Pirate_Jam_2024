@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_dig_button",
-    "path": "sprites/spr_dig_button/spr_dig_button.yy",
+    "name": "dig_button1",
+    "path": "sprites/dig_button1/dig_button1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

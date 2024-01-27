@@ -1,3 +1,4 @@
+
 if instance_exists(target)
 {
 	image_alpha = 1;

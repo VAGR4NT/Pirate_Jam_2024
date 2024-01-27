@@ -117,7 +117,7 @@ if mode == MOUSE_MODES.PLANTING
 #region Watering
 if mode == MOUSE_MODES.WATERING
 {
-	object_sprite = spr_water_button;
+	object_sprite = water_button1;
 	if instance_exists(obj_plant)
 	{
 		var _plant = instance_place(x,y,obj_plant);	
@@ -212,7 +212,7 @@ if instance_exists(obj_plant)
 
 if mode == MOUSE_MODES.DIGGING
 {
-	object_sprite = spr_dig_button;
+	object_sprite = dig_button1;
 	if instance_exists(obj_plant)
 	{
 		var _plant = instance_place(x,y,obj_plant);	
@@ -223,6 +223,12 @@ if mode == MOUSE_MODES.DIGGING
 			{
 				obj_player.state = PLAYER_STATES.DIGGING;
 				obj_constant.cash += _plant.sell_value;
+				obj_park.park_stats.daily_sold++;
+				var _message = instance_create_layer(_plant.x,_plant.y,"UI",obj_message);
+				_message.text = "+" + string(_plant.sell_value);
+				_message.color = c_green;
+					
+				
 				instance_destroy(_plant);
 				//set all plots to open
 			}

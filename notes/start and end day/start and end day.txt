@@ -9,7 +9,7 @@ show EOD report
 
 once the user clicks Next
 
-obj_camera.target = obj_player;
+
 //ProgressDay()
 obj_contant.EOD_menu_shown = false;
 obj_menu_EOD_report.state = VISUAL_STATE.INACTIVE;

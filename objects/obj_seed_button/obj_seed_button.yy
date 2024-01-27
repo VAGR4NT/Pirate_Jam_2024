@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_flower_button",
-    "path": "sprites/spr_flower_button/spr_flower_button.yy",
+    "name": "flower_button1",
+    "path": "sprites/flower_button1/flower_button1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

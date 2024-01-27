@@ -3,7 +3,7 @@ event_inherited();
 state = VISUAL_STATE.INACTIVE;
 main_text = "You've made it to the end of day " + string(obj_park.park_stats.curr_day);
 time_diff = 0; //calculate in step event. number of in game hours left until force-sleep
-sub_text_1 = "Here is what happened";
+sub_text_1 = "Here is what happened:";
 
 
 

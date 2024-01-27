@@ -2,7 +2,7 @@
 switch(text)
 {
 	case "flower":
-		button_sprite = spr_flower_button; 
+		button_sprite = flower_button1; 
 		
 		if instance_exists(obj_park)
 		{
@@ -12,7 +12,7 @@ switch(text)
 	break;
 				
 	case "bush":
-		button_sprite = spr_bush_button; //spr_bush_seed_button; //spr_plot//
+		button_sprite = bush_button1; //spr_bush_seed_button; //spr_plot//
 		
 		if instance_exists(obj_park)
 		{
@@ -22,7 +22,7 @@ switch(text)
 	break;
 				
 	case "tree":
-		button_sprite = spr_tree_button; //spr_plot//
+		button_sprite = tree_button1; //spr_plot//
 		
 		if instance_exists(obj_park)
 		{

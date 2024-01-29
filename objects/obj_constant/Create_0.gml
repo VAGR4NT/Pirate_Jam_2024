@@ -27,12 +27,12 @@ enum PLAYER_STATES{
 	DIGGING,
 	INTERACTING
 }
-
 enum MOUSE_MODES{
 	WATERING,
 	PLANTING,
 	DIGGING
 }
+
 
 cash = 50;
 menus_array = array_create(0); //used in pause menu logic

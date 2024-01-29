@@ -13,10 +13,7 @@
     "name": "Land Management",
     "path": "folders/Objects/Structures/Land Management.yy",
   },
-  "parentObjectId": {
-    "name": "obj_parent_solid",
-    "path": "objects/obj_parent_solid/obj_parent_solid.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

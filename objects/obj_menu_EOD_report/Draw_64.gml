@@ -16,26 +16,49 @@ var _y_buff = 30;
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_text_outline(_x_start, _y_start - 10, main_text,2, c_black, 4);
-draw_text(_x_start, _y_start + (_index * _y_buff), sub_text_1);
+draw_text_outline(_x_start, _y_start + (_index * _y_buff), sub_text_1,2, c_black, 4);
 _index++;
 if obj_park.park_stats.daily_npc == 1{
-	draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_npc) + " person visited the park");
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_npc) + " person visited the park",2, c_black, 4);
 } else {
-	draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_npc) + " people visited the park");
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_npc) + " people visited the park",2, c_black, 4);
 }
+
 _index++;
-draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_planted) + " plants were planted");
+if obj_park.park_stats.daily_planted == 1{
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_planted) + " plant was planted",2, c_black, 4);
+} else {
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_planted) + " plants were planted",2, c_black, 4);
+}
+
 _index++;
-draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_matured) + " plants matured");
+if obj_park.park_stats.daily_matured == 1{
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_matured) + " plant matured",2, c_black, 4);
+} else {
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_matured) + " plants matured",2, c_black, 4);
+}
+
 _index++;
-draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_sold) + " plants were sold");
+if obj_park.park_stats.daily_sold == 1{
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_sold) + " plant was sold",2, c_black, 4);
+} else {
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_sold) + " plants were sold",2, c_black, 4);
+}
+
 _index++;
-draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_died) + " plants died");
+if obj_park.park_stats.daily_died == 1{
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_died) + " plant died",2, c_black, 4);
+} else {
+	draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_died) + " plants died",2, c_black, 4);
+}
+
 _index++;
-draw_text(_x_start, _y_start + (_index * _y_buff), string(obj_park.park_stats.daily_happiness) + " happiness spread");
+draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(round(obj_park.park_stats.daily_happiness)) + " happiness spread",2, c_black, 4);
+
+
 _index++;
 _index++;
-draw_text(_x_start, _y_start + (_index * _y_buff),  "Ready for tomorrow?");
+draw_text_outline(_x_start, _y_start + (_index * _y_buff),  "Ready for tomorrow?",2, c_black, 4);
 
 //[YES] button
 

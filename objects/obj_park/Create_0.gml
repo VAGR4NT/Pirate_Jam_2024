@@ -26,6 +26,7 @@ happiness_rate = 0; //Tracks rate of happiness change in NPCs
 closed = false;
 num_npcs = 1;
 
+total_happiness = 0;
 
 // Daily Stat Trackers
 park_stats = 

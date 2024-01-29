@@ -9,7 +9,7 @@ var _xstart = 10;
 
 ResetDraw();
 
-draw_text_outline(_xstart, _ystart + (_buff * _index),"Happiness: " + string(obj_park.park_stats.daily_happiness), 2, c_black, 4);
+draw_text_outline(_xstart, _ystart + (_buff * _index),"Happiness: " + string(round(obj_park.total_happiness) + round(obj_park.park_stats.daily_happiness)), 2, c_black, 4);
 _index ++;
 draw_text_outline(_xstart, _ystart + (_buff * _index),"Cash: " + string(cash), 2, c_black, 4);
 _index ++;

@@ -1,15 +1,15 @@
 {
   "FolderOrderSettings": [
+    {"name":"Particles","order":9,"path":"folders/Objects/Particles.yy",},
     {"name":"Plants","order":1,"path":"folders/Objects/Plants.yy",},
     {"name":"Structures","order":2,"path":"folders/Objects/Structures.yy",},
     {"name":"Utility Objects","order":3,"path":"folders/Objects/Utility Objects.yy",},
+    {"name":"planting_sfx","order":5,"path":"folders/Sounds/planting_sfx.yy",},
     {"name":"functional_objs","order":12,"path":"folders/Sprites/functional_objs.yy",},
     {"name":"GUI","order":13,"path":"folders/Sprites/GUI.yy",},
     {"name":"NPC Sprites","order":14,"path":"folders/Sprites/NPC Sprites.yy",},
     {"name":"Plant Sprites","order":15,"path":"folders/Sprites/Plant Sprites.yy",},
     {"name":"Player Animations","order":16,"path":"folders/Sprites/Player Animations.yy",},
-    {"name":"Particles","order":9,"path":"folders/Objects/Particles.yy",},
-    {"name":"planting_sfx","order":5,"path":"folders/Sounds/planting_sfx.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_bush_button","order":12,"path":"sprites/spr_bush_button/spr_bush_button.yy",},
@@ -57,6 +57,7 @@
     {"name":"spr_flower_seed_button","order":3,"path":"sprites/spr_flower_seed_button/spr_flower_seed_button.yy",},
     {"name":"water_button1","order":3,"path":"sprites/water_button1/water_button1.yy",},
     {"name":"CanPlaceSeed","order":8,"path":"scripts/CanPlaceSeed/CanPlaceSeed.yy",},
+    {"name":"fnt_DPComic_10","order":1,"path":"fonts/fnt_DPComic_10/fnt_DPComic_10.yy",},
     {"name":"watering bug","order":1,"path":"notes/watering bug/watering bug.yy",},
     {"name":"bookOpen","order":10,"path":"sounds/bookOpen/bookOpen.yy",},
     {"name":"spr_NPC_spawner","order":3,"path":"sprites/spr_NPC_spawner/spr_NPC_spawner.yy",},

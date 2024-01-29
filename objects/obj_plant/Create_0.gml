@@ -3,6 +3,7 @@ alarm[0] = 20; //Calculate value
 sell_value = 1;
 type_value = 1;
 maturity_recorded = false;
+inspect = true;
 
 max_plant_health = 10; // Maximum Health points of the plant
 plant_health = max_plant_health; // Health points of the plant
@@ -22,6 +23,9 @@ dhyd_rate = 0.1; // Rate at which this plant naturally loses water per day
 
 // Plant states only apply to saplings and matured plants
 // PLANT_STATE is a measure of plant's health 
+plant_age_text = ["SEED", "SAPLING", "MATURE"];
+plant_status_text = ["HEALTHY", "WITHERED", "DEAD"];
+
 enum PLANT_STATE  
 {
 	HEALTHY, // All is well. Will Progress Naturally

@@ -2,9 +2,7 @@
 if mouse_check_button(mb_right)
 {
 	//deselect seed
-	object_held = "";
-	object_sprite = -1;
-	mode = MOUSE_MODES.PLANTING;
+	mode = MOUSE_MODES.NOTHING;
 	
 	//sell plant with right click held interaction will be taken care of inside of the plants themselves
 }
@@ -119,6 +117,7 @@ if mode == MOUSE_MODES.PLANTING
 #region Watering
 if mode == MOUSE_MODES.WATERING
 {
+	obj_mouse.object_held = noone;
 	if obj_player.water_held <= 0
 	{
 		mode = MOUSE_MODES.NOTHING;
@@ -249,6 +248,7 @@ if instance_exists(obj_plant)
 
 if mode == MOUSE_MODES.DIGGING
 {
+	obj_mouse.object_held = noone;
 	object_sprite = dig_button1;
 	if instance_exists(obj_plant)
 	{
@@ -281,7 +281,12 @@ if mode == MOUSE_MODES.DIGGING
 
 #endregion Digging / Selling
 
-
+if mode == MOUSE_MODES.NOTHING
+{
+	object_held = "";
+	object_sprite = -1;
+	quantity = -1;
+}
 
 x = mouse_x;
 y = mouse_y;

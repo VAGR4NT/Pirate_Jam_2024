@@ -7,7 +7,7 @@ if mouse_hover == true{
 		if instance_exists(obj_mouse)
 		{
 			obj_mouse.mode = MOUSE_MODES.DIGGING;
-			obj_mouse.object_held = noone;
+			
 		}
 	}
 }

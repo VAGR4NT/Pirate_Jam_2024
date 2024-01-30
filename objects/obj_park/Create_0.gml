@@ -4,6 +4,23 @@
 alarm[0] = -1; //calculate number of NPCs to spawn
 alarm[1] = 1; //Trigger Spawning NPCs at the beginning of the day
 alarm[2] = 60; //update park variables once per second
+alarm[3] = game_get_speed(gamespeed_fps) * 2; //update night filter
+time = 1; //6 AM
+time_number = 6;
+max_time = 16; //10 PM
+time_suffix = "AM";
+dark_threshold = 12;
+park_opened = false;
+
+final_time_string = string(time_number) + ":00 " + time_suffix; 
+_fx_tint = fx_create("_filter_tintfilter");
+//fx_set_parameter(_fx_tint, "g_TintCol", [61, 61, 255, (obj_park.time-5)/5]);
+//night_alpha = (time-5)/5;
+night_alpha = 1;
+final_color = color_to_array(merge_color(c_blue,c_white,night_alpha));
+fx_set_parameter(_fx_tint, "g_TintCol", final_color);
+layer_set_fx("Night_Filter", _fx_tint);
+
 
 //Number of Plots
 park_plots = layer_get_all_elements("Plots");

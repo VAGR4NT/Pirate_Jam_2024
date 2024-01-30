@@ -8,7 +8,7 @@ plots_needed = 1; //1,3,9
 can_place = false;
 can_water = false;
 can_dig = false;
-mode = MOUSE_MODES.PLANTING;
+mode = MOUSE_MODES.NOTHING;
 sell_value = 0;
 
 //image_xscale = 2;

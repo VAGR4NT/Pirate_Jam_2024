@@ -1,3 +1,5 @@
+//event_inherited();
+
 if instance_exists(obj_player)
 {
 	if distance_to_object(obj_player) <= range

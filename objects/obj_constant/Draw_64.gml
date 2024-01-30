@@ -14,7 +14,12 @@ _index ++;
 draw_text_outline(_xstart, _ystart + (_buff * _index),"Cash: " + string(cash), 2, c_black, 4);
 _index ++;
 draw_text_outline(_xstart, _ystart + (_buff * _index),"Day: " + string(1 + obj_park.park_stats.curr_day), 2, c_black, 4);
-
+_index ++;
+//if time_number <= 12{
+//	draw_text_outline(_xstart, _ystart + (_buff * _index),"Time: " + string(obj_park.final_time_string), 2, c_black, 4);
+//} else {
+	draw_text_outline(_xstart, _ystart + (_buff * _index),"Time: " + string(obj_park.final_time_string), 2, c_black, 4);
+//}
 //draw_text(_xstart, _ystart + (_buff * _index),"instance_number(obj_npc): " + string(instance_number(obj_npc)));
 //	_index ++;
 //	draw_text(_xstart, _ystart + (_buff * _index),"obj_menu_EOD_report.state: " + string(obj_menu_EOD_report.state));

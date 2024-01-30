@@ -70,6 +70,8 @@ function ProgressDay(){
 	// Update Park Stats 
 	with (obj_park)
 	{
+		time = 1;
+		time_number = 6;
 		all_days[park_stats.curr_day] = park_stats;
 		park_stats.curr_day++;
 		total_happiness += park_stats.daily_happiness; 

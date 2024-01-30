@@ -3,6 +3,7 @@
 function ClosePark(){
 	if obj_park.closed == false{
 		obj_park.closed = true;
+
 	
 		/// Make NPCs go back to the entrance after this code
 		var _npcs_array = array_create(0);

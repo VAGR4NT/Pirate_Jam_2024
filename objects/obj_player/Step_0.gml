@@ -87,6 +87,17 @@ if _x_input != 0 {
 }
 
 
+if instance_exists(obj_interactable){
+	if distance_to_object(obj_interactable) < 5
+	{
+		interact_button.image_alpha = 1;
+	} else {
+		interact_button.image_alpha = 0;
+	}
+} 
+
+
+//Keep Player in room
 y = clamp(y, 0, room_height);
 
 // Running animation

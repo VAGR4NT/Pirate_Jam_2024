@@ -20,6 +20,7 @@ withering_threshold = 0.2; // The percentage of water level at which plants beco
 heal_rate = 2; //Rate at which a plant heals from withering condition if watered enough
 wither_rate = 2; //Rate at which the plants health decreases when dehydrated
 dhyd_rate = 0.1; // Rate at which this plant naturally loses water per day
+days_until_next_phase = 0;
 
 // Plant states only apply to saplings and matured plants
 // PLANT_STATE is a measure of plant's health 

@@ -1,4 +1,4 @@
-
+if obj_mouse.mode == MOUSE_MODES.PLANTING{
 if instance_exists(target)
 {
 	image_alpha = 1;
@@ -15,4 +15,7 @@ if place_meeting(x,y,obj_player)
 	player_contact = true;
 } else {
 	player_contact = false;
+}
+} else {
+	image_alpha = 0;
 }

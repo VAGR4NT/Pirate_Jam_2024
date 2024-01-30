@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_bed_collision",
-    "path": "sprites/spr_bed_collision/spr_bed_collision.yy",
+    "name": "spr_bed",
+    "path": "sprites/spr_bed/spr_bed.yy",
   },
   "spriteMaskId": null,
   "visible": true,

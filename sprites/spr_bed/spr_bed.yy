@@ -1,13 +1,13 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_bed_collision",
+  "name": "spr_bed",
   "bbox_bottom": 47,
   "bbox_left": 0,
   "bbox_right": 47,
   "bbox_top": 0,
   "bboxMode": 0,
-  "collisionKind": 2,
+  "collisionKind": 0,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -20,7 +20,7 @@
   "height": 48,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a5adf77c-2cfe-4be9-8cb3-ca0b24533452","blendMode":0,"displayName":"default","isLocked":false,"opacity":1.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a5adf77c-2cfe-4be9-8cb3-ca0b24533452","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_bed_collision",
+    "name": "spr_bed",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1f048fbc-7625-492e-aa85-e0e3cdc0e433","path":"sprites/spr_bed_collision/spr_bed_collision.yy",},},},"Disabled":false,"id":"ae1e58d0-114d-4e39-b08a-6d37d0f2a946","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1f048fbc-7625-492e-aa85-e0e3cdc0e433","path":"sprites/spr_bed/spr_bed.yy",},},},"Disabled":false,"id":"ae1e58d0-114d-4e39-b08a-6d37d0f2a946","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

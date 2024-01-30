@@ -121,6 +121,34 @@ image_alpha = clamp(image_alpha, .2,1);
 #endregion
 
 
-
+//switch(object_index)
+//{
+//	case obj_flower:
+switch(age)
+{
+	case PLANT_AGE.SEED:
+			if days_survived <= germ_day
+			{
+				days_until_next_phase = (germ_day - days_survived) +1;
+			}
+	break;
+	
+	case PLANT_AGE.SAPLING:
+			if days_survived <= maturation_day
+			{
+				days_until_next_phase = (maturation_day - days_survived) +1;
+			}
+	break;
+	
+	case PLANT_AGE.MATURE:
+			if days_survived <= age_threshold
+			{
+				days_until_next_phase = (age_threshold - days_survived) +1;
+			}
+	break;
+}
+	
+//	break;
+//}
 
 

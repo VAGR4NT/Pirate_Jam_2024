@@ -34,10 +34,25 @@ if time_number > 12
 	final_time_string = string(time_number) + ":00 " + time_suffix; 
 }
 
+//Open Park
 if time_number == 10
 {
 	park_opened = true;
 	alarm[0] = 1;
 }
 
-alarm[3] = game_get_speed(gamespeed_fps) * 2;
+//Force Player sleep
+if time_number == 12 + 10
+{
+	obj_constant.EOD_menu_shown = false;
+	ClosePark();
+	
+	//Move player to bed?
+	layer_set_visible("TilesTop", false);
+	obj_player.x = obj_bed.x;
+	obj_player.y = obj_bed.y;
+}
+
+
+///EOF
+alarm[3] = hour_update

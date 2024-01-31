@@ -75,7 +75,7 @@ function ProgressDay(){
 		all_days[park_stats.curr_day] = park_stats;
 		park_stats.curr_day++;
 		total_happiness += park_stats.daily_happiness; 
-		alarm[0] = 1; //calculate number of NPCs to spawn
+		//alarm[0] = 1; //calculate number of NPCs to spawn //look here
 		//reset park_stat variables
 	}
 }

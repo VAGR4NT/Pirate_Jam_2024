@@ -80,8 +80,8 @@ case PLAYER_STATES.WALKING:
 break;
 
 case PLAYER_STATES.WATERING:
-	can_move = false;
 	sprite_index = spr_player_water;
+	can_move = false;
 break;
 
 case PLAYER_STATES.INTERACTING:

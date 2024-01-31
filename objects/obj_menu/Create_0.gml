@@ -6,10 +6,9 @@ enum menu_type
 	SHOP
 }
 
-stop_player_movement = true;
 state = VISUAL_STATE.ACTIVE;
 
-if object_index != obj_menu_EOD_report{
+if object_index != obj_menu_EOD_report and object_index != obj_pause_button{
 	exit_button = instance_create_layer(x,y,"UI",obj_menu_exit);
 	exit_button.parent_menu = self;
 }

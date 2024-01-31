@@ -32,8 +32,9 @@ if mode == MOUSE_MODES.PLANTING
 
 	if quantity <= 0
 	{
-		object_held = "";
-		object_sprite = -1;
+		//object_held = "";
+		//object_sprite = -1;
+		mode = MOUSE_MODES.NOTHING;
 	}
 
 	#region Outline

@@ -2,3 +2,4 @@
 io_clear();
 Print("Pause Created");
 instance_deactivate_all(true);
+//instance_activate_layer("PauseLayer");

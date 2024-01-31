@@ -1,12 +1,11 @@
 /// @description Change Plot Stats
 
-
-//var _is_pass = !occupied or (occupied && occupied_by == "flower");
-//if (_is_pass) {
-//	passable = true;
-//} else {
-//	passable = false;
-//}
+if obj_mouse.mode == MOUSE_MODES.PLANTING
+{
+	image_alpha = 1;
+} else {
+	image_alpha = .01;
+}
 
 if occupied
 {

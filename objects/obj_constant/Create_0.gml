@@ -5,6 +5,8 @@ layer_set_visible("UI", true);
 
 global.window_width = window_get_width();
 global.window_height = window_get_height();
+global.true_width = 0;
+global.true_height = 0;
 gui_multiplier = 2;
 og_width = 640;
 og_height = 360;

@@ -12,7 +12,7 @@ switch(status)
 	break;
 	
 	case PLANT_STATE.HEALTHY:
-		_status_value = 3;
+		_status_value = 2;
 	break;
 }
 
@@ -28,7 +28,7 @@ switch(age)
 	break;
 	
 	case PLANT_AGE.MATURE:
-		_age_value = 3
+		_age_value = 6
 	break;
 }
 

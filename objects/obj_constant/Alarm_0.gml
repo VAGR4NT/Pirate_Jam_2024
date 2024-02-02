@@ -19,7 +19,7 @@ if array_length(menus_array) > 0
 {
 	for(var i = 0; i < array_length(menus_array); i ++)
 	{
-		if menus_array[i].state == VISUAL_STATE.ACTIVE and menus_array[i].object_index != obj_pause_button
+		if menus_array[i].state == VISUAL_STATE.ACTIVE and menus_array[i].dismissable == true
 		{
 			_freeze_player = true;
 		}

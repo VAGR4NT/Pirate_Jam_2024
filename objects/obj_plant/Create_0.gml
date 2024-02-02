@@ -2,11 +2,14 @@
 alarm[0] = 20; //Calculate value
 sell_value = 1;
 type_value = 1;
+death_recorded = false;
 maturity_recorded = false;
 inspect = false;
+mouse_on = false;
 
 max_plant_health = 10; // Maximum Health points of the plant
 plant_health = max_plant_health; // Health points of the plant
+
 watered_perc = 1.0; // Watered Percentage
 day_planted = obj_park.park_stats.curr_day; // Tracks the day planted
 days_survived = 0; // Tracks the number of days

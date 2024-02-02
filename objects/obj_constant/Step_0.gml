@@ -53,4 +53,11 @@ if obj_menu_shop.state == VISUAL_STATE.INACTIVE
 		obj_mouse.object_held = "";
 		
 	}
+	
+	if keyboard_check_pressed(ord(6))
+	{
+		obj_mouse.mode = MOUSE_MODES.INSPECTING
+		obj_mouse.object_held = "";
+		
+	}
 }

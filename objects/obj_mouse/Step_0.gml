@@ -283,6 +283,17 @@ if mode == MOUSE_MODES.DIGGING
 
 #endregion Digging / Selling
 
+#region Inspecting
+if mode == MOUSE_MODES.INSPECTING
+{
+	obj_mouse.object_held = noone;
+	object_sprite = spr_inspect_button;
+	
+	
+}
+
+#endregion Inspecting
+
 if mode == MOUSE_MODES.NOTHING
 {
 	object_held = "";

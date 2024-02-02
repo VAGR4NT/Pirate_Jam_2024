@@ -3,6 +3,7 @@ alarm[0] = 20; //Calculate value
 sell_value = 1;
 type_value = 1;
 maturity_recorded = false;
+inspect = false;
 
 max_plant_health = 10; // Maximum Health points of the plant
 plant_health = max_plant_health; // Health points of the plant
@@ -19,9 +20,13 @@ withering_threshold = 0.2; // The percentage of water level at which plants beco
 heal_rate = 2; //Rate at which a plant heals from withering condition if watered enough
 wither_rate = 2; //Rate at which the plants health decreases when dehydrated
 dhyd_rate = 0.1; // Rate at which this plant naturally loses water per day
+days_until_next_phase = 0;
 
 // Plant states only apply to saplings and matured plants
 // PLANT_STATE is a measure of plant's health 
+plant_age_text = ["SEED", "SAPLING", "MATURE"];
+plant_status_text = ["HEALTHY", "WITHERED", "DEAD"];
+
 enum PLANT_STATE  
 {
 	HEALTHY, // All is well. Will Progress Naturally

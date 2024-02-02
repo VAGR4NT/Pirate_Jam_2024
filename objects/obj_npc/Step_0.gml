@@ -52,6 +52,14 @@ if target != noone
 	move_spd = min(min_move_speed, distance_to_object(target) / 3);
 }
 
+if obj_park.time_number = 12 + 8 and leaving_park == false{
+	//leaving_park = true; //happens in alarm[1]
+	alarm[1] = 1;
+	
+	//Create message that NPCs are leaving
+	obj_park.alarm[4] = 1;
+	
+}
 
 #region Delete if under map
 

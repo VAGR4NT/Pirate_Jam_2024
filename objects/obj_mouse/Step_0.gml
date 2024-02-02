@@ -1,10 +1,9 @@
+if can_interact{
 #region Clear held item
 if mouse_check_button(mb_right)
 {
 	//deselect seed
-	object_held = "";
-	object_sprite = -1;
-	mode = MOUSE_MODES.PLANTING;
+	mode = MOUSE_MODES.NOTHING;
 	
 	//sell plant with right click held interaction will be taken care of inside of the plants themselves
 }
@@ -34,8 +33,9 @@ if mode == MOUSE_MODES.PLANTING
 
 	if quantity <= 0
 	{
-		object_held = "";
-		object_sprite = -1;
+		//object_held = "";
+		//object_sprite = -1;
+		mode = MOUSE_MODES.NOTHING;
 	}
 
 	#region Outline
@@ -119,79 +119,121 @@ if mode == MOUSE_MODES.PLANTING
 #region Watering
 if mode == MOUSE_MODES.WATERING
 {
+	obj_mouse.object_held = noone;
+	if obj_player.water_held <= 0
+	{
+		mode = MOUSE_MODES.NOTHING;
+	}
+	
 	object_sprite = water_button1;
 	if instance_exists(obj_plant)
 	{
-		var _plant = instance_place(x,y,obj_plant);	
-		if _plant != noone
+		if device_mouse_check_button_pressed(0,mb_any)
 		{
-			if _plant.watered_perc < 100 and _plant.status != PLANT_STATE.DEAD{
-				
-				if device_mouse_check_button_pressed(0,mb_any) and obj_water_button.mouse_hover == false
-				{
-					var amount_to_pour =  100 - _plant.watered_perc;
+			var _plant = instance_place(x,y,obj_plant);	
+			if _plant != noone
+			{
+				if _plant.watered_perc < 100 {
+			
+					if _plant.status != PLANT_STATE.DEAD{
 					
-					if amount_to_pour > 0
-					{
-						if obj_player.water_held >= amount_to_pour
+						if obj_water_button.mouse_hover == false
 						{
-							
-							var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
-							_water.target = _plant;
-							//Below full
-							if _plant.watered_perc + amount_to_pour <= 100
+							var amount_to_pour =  100 - _plant.watered_perc;
+							var watered = false;
+							if amount_to_pour > 0
 							{
-								_plant.watered_perc += amount_to_pour;
-								//remove water
-								obj_player.water_held -= amount_to_pour;
-								obj_player.state = PLAYER_STATES.WATERING;
-								audio_play_sound(watering2,1,0);
-
-								exit;
-							}
+								var _water = instance_create_layer(obj_player.x,obj_player.y-33,"Water",obj_water_up)
+									_water.target = _plant;
+								if obj_player.water_held >= amount_to_pour
+								{	
+									//Below full
+									if _plant.watered_perc + amount_to_pour <= 100 and watered = false
+									{
+										_plant.watered_perc += amount_to_pour;
+										//remove water
+										obj_player.water_held -= amount_to_pour;
+										obj_player.state = PLAYER_STATES.WATERING;
+										audio_play_sound(watering2,1,0);
+										watered = true;
+									}
 						
-							//Overflow
-							if _plant.watered_perc + amount_to_pour >= 100
-							{	
-								_plant.watered_perc = 100;
+									//Overflow
+									if _plant.watered_perc + amount_to_pour >= 100 and watered = false
+									{	
+										_plant.watered_perc = 100;
 						
-								//remove water
-								obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
-								obj_player.state = PLAYER_STATES.WATERING;
-								exit;
-							}
+										//remove water
+										obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
+										obj_player.state = PLAYER_STATES.WATERING;
+										audio_play_sound(watering2,1,0);
+										watered = true;
+									}
+								} 
+								if obj_player.water_held < amount_to_pour and obj_player.water_held > 0 
+								{ //less than 25 water left in player
+									//Below full
+									if _plant.watered_perc + amount_to_pour <= 100 and watered = false
+									{
+										_plant.watered_perc += obj_player.water_held;
+										//remove water
+										obj_player.water_held = 0;
+										obj_player.state = PLAYER_STATES.WATERING;
+										audio_play_sound(watering2,1,0);
+										watered = true;
+									}
+						
+									//Overflow
+									if _plant.watered_perc + amount_to_pour >= 100 and watered = false
+									{	
+										_plant.watered_perc = 100;
+										//remove water
+										obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
+										obj_player.state = PLAYER_STATES.WATERING;
+										audio_play_sound(watering2,1,0);
+										watered = true;
+									}
+								}
+							}				
 						} 
-						if obj_player.water_held < amount_to_pour and obj_player.water_held > 0
-						{ //less than 25 water left in player
-							//Below full
-							if _plant.watered_perc + amount_to_pour <= 100
-							{
-								_plant.watered_perc += obj_player.water_held;
-								//remove water
-								obj_player.water_held = 0;
-								obj_player.state = PLAYER_STATES.WATERING;
-								exit;
-							}
-						
-							//Overflow
-							if _plant.watered_perc + amount_to_pour >= 100
-							{	
-								_plant.watered_perc = 100;
-						
-								//remove water
-								obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
-								obj_player.state = PLAYER_STATES.WATERING;
-
-								exit;
-							}
+					} else { // plant is dead
+						if obj_water_button.mouse_hover == false{
+							var _message = instance_create_layer(x,y,"UI",obj_message);
+							_message.text = "Plant is dead";
+							_message.color = c_red;
+							_message.disappear_rate = .01;
+							_message.rise_amount = -.3;
 						}
 					}
-					
+				} else { // water is full
+					if obj_water_button.mouse_hover == false{
+						var _message = instance_create_layer(x,y,"UI",obj_message);
+						_message.text = "Plant is fully watered";
+						_message.color = c_red;
+						_message.disappear_rate = .01;
+						_message.rise_amount = -.3;
+						}  
 				}
+			} else { // must hover over a plant
+				if obj_water_button.mouse_hover == false{
+					var _message = instance_create_layer(x,y,"UI",obj_message);
+					_message.text = "Hover over a plant and click to use water";
+					_message.color = c_red;
+					_message.disappear_rate = .01;
+					_message.rise_amount = -.3;
+					}
 			}
-		}
+		} 
+	} else if mouse_check_button_pressed(mb_left) and obj_water_button.mouse_hover == false
+	{
+		var _message = instance_create_layer(x,y,"UI",obj_message);
+			_message.text = "Plant something first!";
+			_message.color = c_red;
+			_message.disappear_rate = .01;
+			_message.rise_amount = -.3;
 	}
-}
+} //Watering mode
+
 #endregion Watering
 
 #region Digging / Selling
@@ -208,6 +250,7 @@ if instance_exists(obj_plant)
 
 if mode == MOUSE_MODES.DIGGING
 {
+	obj_mouse.object_held = noone;
 	object_sprite = dig_button1;
 	if instance_exists(obj_plant)
 	{
@@ -240,5 +283,12 @@ if mode == MOUSE_MODES.DIGGING
 
 #endregion Digging / Selling
 
+if mode == MOUSE_MODES.NOTHING
+{
+	object_held = "";
+	object_sprite = -1;
+	quantity = -1;
+}
+}
 x = mouse_x;
 y = mouse_y;

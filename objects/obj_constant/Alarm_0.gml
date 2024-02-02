@@ -8,6 +8,9 @@ global.fullscreen = window_get_fullscreen();
 width_ratio = og_width/global.window_width;
 height_ratio = og_height/global.window_height;
 
+global.true_width = global.window_width * (width_ratio * gui_multiplier);
+global.true_height = global.window_height * (height_ratio * gui_multiplier);
+
 display_set_gui_size(global.window_width * (width_ratio * gui_multiplier), global.window_height * (height_ratio * gui_multiplier));
 
 #region Keep Player in place while menus are visible
@@ -16,7 +19,7 @@ if array_length(menus_array) > 0
 {
 	for(var i = 0; i < array_length(menus_array); i ++)
 	{
-		if menus_array[i].state == VISUAL_STATE.ACTIVE
+		if menus_array[i].state == VISUAL_STATE.ACTIVE and menus_array[i].object_index != obj_pause_button
 		{
 			_freeze_player = true;
 		}

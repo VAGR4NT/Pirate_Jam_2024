@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_well",
-    "path": "sprites/spr_well/spr_well.yy",
+    "name": "spr_shopdesk",
+    "path": "sprites/spr_shopdesk/spr_shopdesk.yy",
   },
   "spriteMaskId": null,
   "visible": true,

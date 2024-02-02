@@ -1,3 +1,4 @@
+if can_interact{
 if object_sprite != -1{
 	ResetDraw();
 	draw_sprite_ext(object_sprite, 0,MOUSE_GUI_X, MOUSE_GUI_Y + 64, 1,1,0,c_white,1);
@@ -37,15 +38,9 @@ if object_sprite != -1{
 				draw_text_outline(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_sell_string, 2, c_black, 4);
 			} else {
 				draw_text_outline(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string, 2, c_black, 4);
-			}
-			
-			
+			}			
 		break;
-	}
-	
-	
-	ResetDraw();
-
-	
-	
+	}	
+	ResetDraw();	
 }
+}//can interact

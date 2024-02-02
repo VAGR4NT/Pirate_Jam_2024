@@ -1,5 +1,14 @@
 /// @desc
 event_inherited();
+if state == VISUAL_STATE.ACTIVE{
+	obj_mouse.can_interact = false;
+	obj_mouse.mode = MOUSE_MODES.NOTHING;
+	
+}
+num_flower_seeds = clamp(num_flower_seeds, 0, 99);
+num_bush_seeds = clamp(num_bush_seeds, 0, 99);
+num_tree_saplings = clamp(num_tree_saplings, 0, 99);
+
 total_cost = (num_flower_seeds * flower_price) + (num_bush_seeds * bush_price) + (num_tree_saplings * tree_price);
 if obj_constant.cash < total_cost
 {
@@ -9,15 +18,6 @@ if obj_constant.cash < total_cost
 	can_buy = true;
 	option_yes.image_blend = c_white;
 }
-
-//if can_buy
-//{
-//	text_color = c_white;
-//} else {
-//	text_color = c_red;
-//}
-
-
 
 if choice == 1
 {
@@ -30,6 +30,10 @@ if choice == 1
 		var _sound = choose(handleCoins, handleCoins2);
 		audio_play_sound(_sound,1,0);
 		choice = -1;
+		num_flower_seeds = 0;
+		num_bush_seeds = 0;
+		num_tree_saplings = 0;
+		obj_mouse.can_interact = true;
 		state = VISUAL_STATE.INACTIVE;
 		
 	} else {
@@ -43,14 +47,32 @@ if choice = 0
 {
 	choice = -1;
 	state = VISUAL_STATE.INACTIVE;
+	obj_mouse.can_interact = true;
+	num_flower_seeds = 0;
+	num_bush_seeds = 0;
+	num_tree_saplings = 0;
+
 }
 
 #region Set child objects to active when parent object is active
 if state = VISUAL_STATE.ACTIVE
 {
-	flower_input_button.state = VISUAL_STATE.ACTIVE;
-	bush_input_button.state = VISUAL_STATE.ACTIVE;
-	tree_input_button.state = VISUAL_STATE.ACTIVE;
+	flower_minus_1_button.state = VISUAL_STATE.ACTIVE;
+	flower_minus_10_button.state = VISUAL_STATE.ACTIVE;
+	flower_plus_1_button.state = VISUAL_STATE.ACTIVE;
+	flower_plus_10_button.state = VISUAL_STATE.ACTIVE;
+	
+	bush_minus_1_button.state = VISUAL_STATE.ACTIVE;
+	bush_minus_10_button.state = VISUAL_STATE.ACTIVE;
+	bush_plus_1_button.state = VISUAL_STATE.ACTIVE;
+	bush_plus_10_button.state = VISUAL_STATE.ACTIVE;
+	
+	tree_minus_1_button.state = VISUAL_STATE.ACTIVE;
+	tree_minus_10_button.state = VISUAL_STATE.ACTIVE;
+	tree_plus_1_button.state = VISUAL_STATE.ACTIVE;
+	tree_plus_10_button.state = VISUAL_STATE.ACTIVE;
+	
+	
 	option_yes.state = VISUAL_STATE.ACTIVE;
 	option_no.state = VISUAL_STATE.ACTIVE;
 }

@@ -1,3 +1,3 @@
 /// @desc
-layer_name = "TilesTop";
+layer_names = ["TilesTop"]; //, "InRoomEffect1","InRoomEffect2"]
 show_layer = false;

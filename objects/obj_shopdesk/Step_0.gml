@@ -1,3 +1,4 @@
+//event_inherited();
 if instance_exists(obj_player)
 {
 	if distance_to_object(obj_player) <= range
@@ -7,12 +8,7 @@ if instance_exists(obj_player)
 		{
 			if instance_exists(obj_menu_shop)
 			{
-				if obj_menu_shop.state == VISUAL_STATE.ACTIVE
-				{
-					obj_menu_shop.state = VISUAL_STATE.INACTIVE;
-				} else {
-					obj_menu_shop.state = VISUAL_STATE.ACTIVE;
-				}
+				obj_menu_shop.state = VISUAL_STATE.ACTIVE;
 			}
 			//Print("using shop");
 		}

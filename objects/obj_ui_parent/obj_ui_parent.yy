@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Utility Objects",
-    "path": "folders/Objects/Utility Objects.yy",
+    "name": "Menu_Items",
+    "path": "folders/Objects/Utility Objects/Menu_Items.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -2,6 +2,11 @@
 function ProgressDay(){
 	//Print("progressing day");
 	// Update Plant Information For All Plotted Plants
+	
+	//Since player is in the room
+	layer_set_visible("InRoomEffect1", true);
+	layer_set_visible("InRoomEffect2", true);
+	
 	planted = layer_get_all_elements("Plants");
 	num_planted = array_length(planted);
 	for (var _i = 0; _i < num_planted; _i++)
@@ -74,8 +79,22 @@ function ProgressDay(){
 		time_number = 6;
 		all_days[park_stats.curr_day] = park_stats;
 		park_stats.curr_day++;
+		Print("adding daily happiness to total");
 		total_happiness += park_stats.daily_happiness; 
+		park_stats.daily_happiness = 0;
+		
+		#region Set night time filter before player goes to their house
+		if time < dark_threshold
+		{
+			night_alpha = 1;
+		} else {
+			night_alpha = 1 - ((time/max_time)*.85);
+		}
+		night_alpha = clamp(night_alpha, 0, 1);
+		final_color = color_to_array(merge_color(c_blue,c_white,night_alpha));
+		fx_set_parameter(_fx_tint, "g_TintCol", final_color);
+		#endregion Set night time filter before player goes to their house
+		
 		//alarm[0] = 1; //calculate number of NPCs to spawn //look here
-		//reset park_stat variables
 	}
 }

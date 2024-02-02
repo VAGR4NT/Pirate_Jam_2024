@@ -3,7 +3,7 @@ if state == VISUAL_STATE.ACTIVE{
 ResetDraw();
 draw_set_alpha(.3);
 draw_set_color(c_black);
-draw_rectangle(-10,-10,global.window_width + 10, global.window_height+10,false);
+draw_rectangle(-10,-10,global.true_width + 10, global.true_height+10,false);
 ResetDraw();
 
 draw_self();

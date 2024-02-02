@@ -6,7 +6,7 @@ time_diff = 0; //calculate in step event. number of in game hours left until for
 sub_text_1 = "Here is what happened:";
 
 
-
+dismissable = false;
 option_yes = instance_create_layer(x,y, "UI", obj_menu_boolean);
 option_yes.parent_menu = self;
 option_yes.option = 1;

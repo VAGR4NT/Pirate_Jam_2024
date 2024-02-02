@@ -1,0 +1,21 @@
+-watering bug --> fixed
+-plants died goes to infinite number 
+-length of days: Good
+
+
+ADD:
+Inspect Mode
+Bark to move birds
+Sell whole plot when interacting with sign
+Picture mode
+rare flowers
+rare visitors
+size impact on sell value
+bush impact
+EOD bonus
+reduce sell value
+add soundtrack
+add happy hour on even days
+drag to mass sell/plant option
+sleep before park opens
+bird variance

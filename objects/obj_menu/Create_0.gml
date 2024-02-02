@@ -7,11 +7,9 @@ enum menu_type
 }
 
 state = VISUAL_STATE.ACTIVE;
+dismissable = true;
 
-if object_index != obj_menu_EOD_report and object_index != obj_pause_button{
-	exit_button = instance_create_layer(x,y,"UI",obj_menu_exit);
-	exit_button.parent_menu = self;
-}
+alarm[0] = 1;
 var _found_in_array = false;
 for(var i = 0; i < array_length(obj_constant.menus_array); i++)
 {

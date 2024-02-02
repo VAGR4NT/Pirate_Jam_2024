@@ -14,6 +14,10 @@ function ClosePark(){
 		}
 	
 		//Print("Set cam to gate");
+		layer_set_visible("InRoomEffect1",false);
+		layer_set_visible("InRoomEffect2",false);
+		obj_mouse.can_interact = false;
+		obj_mouse.mode = MOUSE_MODES.NOTHING;
 		obj_camera.target = obj_cam_target_for_EOD;
 	}
 }

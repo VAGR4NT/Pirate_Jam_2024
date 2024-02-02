@@ -10,6 +10,7 @@ can_water = false;
 can_dig = false;
 mode = MOUSE_MODES.NOTHING;
 sell_value = 0;
+can_interact = true;
 
 //image_xscale = 2;
 //image_yscale = image_xscale;

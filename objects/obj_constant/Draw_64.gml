@@ -17,6 +17,9 @@ draw_text_outline(_xstart, _ystart + (_buff * _index),"Day: " + string(1 + obj_p
 _index ++;
 draw_text_outline(_xstart, _ystart + (_buff * _index),"Time: " + string(obj_park.final_time_string), 2, c_black, 4);
 
+//_index ++;
+//draw_text_outline(_xstart, _ystart + (_buff * _index),"can interact: " + string(obj_mouse.can_interact), 2, c_black, 4);
+
 
 
 

@@ -11,7 +11,7 @@ if time < dark_threshold
 {
 	night_alpha = 1;
 } else {
-	night_alpha = 1 - ((time/max_time)*.75);
+	night_alpha = 1 - ((time/max_time)*.85);
 }
 night_alpha = clamp(night_alpha, 0, 1);
 final_color = color_to_array(merge_color(c_blue,c_white,night_alpha));
@@ -51,6 +51,7 @@ if time_number == 12 + 10
 	layer_set_visible("TilesTop", false);
 	obj_player.x = obj_bed.x;
 	obj_player.y = obj_bed.y;
+	obj_well.used_today = false;
 }
 
 

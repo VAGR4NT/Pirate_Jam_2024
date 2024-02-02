@@ -1,7 +1,6 @@
 /// @desc
 event_inherited();
 
-
 //close parent menu and self
 image_index = mouse_hover;
 

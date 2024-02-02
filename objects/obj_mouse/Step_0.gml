@@ -1,3 +1,4 @@
+if can_interact{
 #region Clear held item
 if mouse_check_button(mb_right)
 {
@@ -288,6 +289,6 @@ if mode == MOUSE_MODES.NOTHING
 	object_sprite = -1;
 	quantity = -1;
 }
-
+}
 x = mouse_x;
 y = mouse_y;

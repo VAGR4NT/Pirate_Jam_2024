@@ -16,7 +16,7 @@ if mouse_hover == true{
 	{
 		if obj_player.water_held > 0
 		{
-			if instance_exists(obj_mouse)
+			if instance_exists(obj_mouse)  and obj_mouse.can_interact
 			{
 				obj_mouse.mode = MOUSE_MODES.WATERING;
 				obj_mouse.object_held = noone;

@@ -1,7 +1,7 @@
 /// @description Tracks Park Stats + Spawns things
 //Tracks park states like day/night, number of NPC's visiting, tracks green space number, and spawns NPCs
 hour_update = game_get_speed(gamespeed_fps) * 10;
-//hour_update = game_get_speed(gamespeed_fps) * 2;
+//hour_update = game_get_speed(gamespeed_fps) * 1;
 
 alarm[0] = -1; //calculate number of NPCs to spawn
 alarm[1] = 1; //Trigger Spawning NPCs at the beginning of the day

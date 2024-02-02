@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Utility Objects",
-    "path": "folders/Objects/Utility Objects.yy",
+    "name": "Menu_Items",
+    "path": "folders/Objects/Utility Objects/Menu_Items.yy",
   },
   "parentObjectId": {
     "name": "obj_menu",
@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_menu_bg",
-    "path": "sprites/spr_menu_bg/spr_menu_bg.yy",
+    "name": "spr_shop_menu_bg",
+    "path": "sprites/spr_shop_menu_bg/spr_shop_menu_bg.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -44,5 +44,7 @@ enum PLANT_AGE // Naturally Progresses Along These as Days Pass and Is Healthy
 status = PLANT_STATE.HEALTHY;
 age = PLANT_AGE.SEED;
 
+obj_park.green_space++;
+
 image_speed = 0; // Will not Flick Through Image Index
 obj_park.park_stats.daily_planted++;

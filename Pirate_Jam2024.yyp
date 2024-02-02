@@ -44,7 +44,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.108",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"spr_bush_button","path":"sprites/spr_bush_button/spr_bush_button.yy",},},

@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_menu_yes",
-    "path": "sprites/spr_menu_yes/spr_menu_yes.yy",
+    "name": "spr_menu_drink",
+    "path": "sprites/spr_menu_drink/spr_menu_drink.yy",
   },
   "spriteMaskId": null,
   "visible": true,

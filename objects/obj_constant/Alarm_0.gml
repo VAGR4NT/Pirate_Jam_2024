@@ -33,12 +33,14 @@ if instance_exists(obj_player)
 
 #endregion Keep Player in place while menus are visible
 
-if obj_park.closed == true
-{
-	if instance_number(obj_npc) == 0 and EOD_menu_shown == false //and obj_menu_EOD_report.state == VISUAL_STATE.INACTIVE
+if instance_exists(obj_park){
+	if obj_park.closed == true
 	{
-		EOD_menu_shown = true;
-		obj_menu_EOD_report.state = VISUAL_STATE.ACTIVE;
+		if instance_number(obj_npc) == 0 and EOD_menu_shown == false //and obj_menu_EOD_report.state == VISUAL_STATE.INACTIVE
+		{
+			EOD_menu_shown = true;
+			obj_menu_EOD_report.state = VISUAL_STATE.ACTIVE;
+		}
 	}
 }
 

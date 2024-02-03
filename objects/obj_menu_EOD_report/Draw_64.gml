@@ -54,7 +54,8 @@ if obj_park.park_stats.daily_died == 1{
 
 _index++;
 draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(round(obj_park.park_stats.daily_happiness)) + " happiness spread",2, c_black, 4);
-
+_index++;
+draw_text_outline(_x_start, _y_start + (_index * _y_buff),"End of day BONUS: " +  string(obj_park.EOD_bonus),2, c_black, 4);
 
 _index++;
 _index++;

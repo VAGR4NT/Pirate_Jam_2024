@@ -12,14 +12,14 @@ age_threshold = 30;
 
 withering_threshold = 0.4;
 heal_rate = 5;
-wither_rate = 10;
+wither_rate = 10/2;
 dhyd_rate = 0.1;
 
 age = PLANT_AGE.SAPLING; // Trees begin at sapling stage
 image_index = 1;
-
+type = PLANT_TYPE.TREE;
 obj_park.num_trees ++;
 
-var _size_variation = random_range(1.5, 2.25);
-image_xscale = _size_variation;
-image_yscale = _size_variation;
+size_variation = choose(1, 1.5, 2.25); //add to value
+size_bonus = round(size_variation);
+

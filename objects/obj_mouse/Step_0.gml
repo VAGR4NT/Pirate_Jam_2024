@@ -56,6 +56,7 @@ if mode == MOUSE_MODES.PLANTING
 						can_place = true;
 					} else {
 						can_place = false;
+						//Print("plot occupied: flower")
 					}
 				break;
 			
@@ -66,6 +67,7 @@ if mode == MOUSE_MODES.PLANTING
 					if _plot.occupied == true
 					{
 						can_place = false;
+						//Print("plot occupied: bush")
 					}
 				break;
 				
@@ -76,6 +78,7 @@ if mode == MOUSE_MODES.PLANTING
 					if _plot.occupied == true
 					{
 						can_place = false;
+						//Print("plot occupied: tree")
 					}
 				break;
 			}
@@ -102,6 +105,7 @@ if mode == MOUSE_MODES.PLANTING
 			outline_obj.target = noone;
 			show_outline = false;
 			can_place = false;
+			//Print("not on plot" + string(date_time_string(date_current_datetime())));
 		}
 	}
 
@@ -258,7 +262,7 @@ if mode == MOUSE_MODES.DIGGING
 		if _plant != noone
 		{
 			//sell_value = _plant.sell_value;	
-			if mouse_check_button_pressed(mb_left)
+			if mouse_check_button_pressed(mb_left) or (global.painting_enabled and mouse_check_button(mb_left))
 			{
 				obj_player.state = PLAYER_STATES.DIGGING;
 				obj_constant.cash += _plant.sell_value;

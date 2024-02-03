@@ -1,4 +1,8 @@
 /// @description Plant Behaviour on a Frame by Frame Basis
+//image_blend = blend_list[blend];
+image_xscale = size_variation;
+image_yscale = size_variation;
+size_bonus = round(size_variation);
 
 if mouse_on
 {
@@ -105,9 +109,7 @@ image_alpha = clamp(image_alpha, .2,1);
 #endregion
 
 
-//switch(object_index)
-//{
-//	case obj_flower:
+
 switch(age)
 {
 	case PLANT_AGE.SEED:
@@ -131,8 +133,3 @@ switch(age)
 			}
 	break;
 }
-	
-//	break;
-//}
-
-

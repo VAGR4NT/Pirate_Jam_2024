@@ -1,20 +1,29 @@
 /// @description Tracks Park Stats + Spawns things
 //Tracks park states like day/night, number of NPC's visiting, tracks green space number, and spawns NPCs
 hour_update = game_get_speed(gamespeed_fps) * 10;
+//hour_update = game_get_speed(gamespeed_fps) * 5;
 //hour_update = game_get_speed(gamespeed_fps) * 1;
-
+EOD_bonus = 0;
+randomize();
 alarm[0] = -1; //calculate number of NPCs to spawn
 alarm[1] = 1; //Trigger Spawning NPCs at the beginning of the day
 alarm[2] = 60; //update park variables once per second
 alarm[3] = hour_update; //update night filter
 alarm[4] = -1;
+alarm[5] = -1;
 
+sale_popup_created = false;
+
+#region Time
 time = 1; //6 AM
 time_number = 6;
 max_time = 19; //10 PM
 time_suffix = "AM";
 dark_threshold = 12;
 park_opened = false;
+
+happy_hour_day = false;
+happy_hour = 0;
 
 final_time_string = string(time_number) + ":00 " + time_suffix; 
 _fx_tint = fx_create("_filter_tintfilter");
@@ -24,7 +33,7 @@ night_alpha = 1;
 final_color = color_to_array(merge_color(c_blue,c_white,night_alpha));
 fx_set_parameter(_fx_tint, "g_TintCol", final_color);
 layer_set_fx("Night_Filter", _fx_tint);
-
+#endregion Time
 
 //Number of Plots
 park_plots = layer_get_all_elements("Plots");

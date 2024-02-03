@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_npc_birb",
-    "path": "sprites/spr_npc_birb/spr_npc_birb.yy",
+    "name": "spr_npc_birb_white",
+    "path": "sprites/spr_npc_birb_white/spr_npc_birb_white.yy",
   },
   "spriteMaskId": null,
   "visible": true,

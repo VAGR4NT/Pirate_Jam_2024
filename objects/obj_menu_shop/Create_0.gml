@@ -6,13 +6,13 @@ main_text = "Welcome to the shop!";
 //hours_left_warning = "You still have " + string(time_diff) + " hours left until the end of the day";
 
 num_flower_seeds = 0;
-flower_price = 1;
+flower_price = 1 - (global.two_for_1 * .5);
 
 num_bush_seeds = 0;
-bush_price = 2;
+bush_price = 2 - (global.two_for_1 * .5);
 
 num_tree_saplings = 0;
-tree_price = 3;
+tree_price = 3 - (global.two_for_1 * .5);
 
 total_cost = (num_flower_seeds * flower_price) + (num_bush_seeds * bush_price) + (num_tree_saplings * tree_price);
 can_buy = true;

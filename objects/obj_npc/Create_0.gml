@@ -11,6 +11,7 @@ leaving_park = false;
 color = 0;
 previous_x = 0;
 previous_y = 0;
+sprite_index = choose(spr_npc_birb_blue, spr_npc_birb_red, spr_npc_birb_white)
 alarm[0] = 1;
 alarm[1] = -1;
 alarm[2] = 120;

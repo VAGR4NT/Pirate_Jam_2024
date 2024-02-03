@@ -26,7 +26,7 @@ if choice == 1
 	obj_constant.EOD_menu_shown = false;
 	ClosePark();
 	obj_mouse.can_interact = true;
-	obj_well.used_today = false;
+	obj_well.alarm[0] = 1;
 }
 if choice == 0
 {

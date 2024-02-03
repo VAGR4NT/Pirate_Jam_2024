@@ -5,6 +5,19 @@ if state == VISUAL_STATE.ACTIVE{
 	obj_mouse.mode = MOUSE_MODES.NOTHING;
 	
 }
+
+if global.two_for_1
+{
+	flower_price = .5;
+	bush_price = 1;
+	tree_price = 1.5;
+} else {
+	flower_price = 1;
+	bush_price = 2;
+	tree_price = 3;
+}
+
+
 num_flower_seeds = clamp(num_flower_seeds, 0, 99);
 num_bush_seeds = clamp(num_bush_seeds, 0, 99);
 num_tree_saplings = clamp(num_tree_saplings, 0, 99);

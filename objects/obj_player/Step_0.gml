@@ -1,4 +1,5 @@
 /// @description Runs every frame
+water_max = 200 + (water_level * water_level_bonus);
 water_held = clamp(water_held, 0, water_max);
 //water_held = 700;
 //water_held -= .05;

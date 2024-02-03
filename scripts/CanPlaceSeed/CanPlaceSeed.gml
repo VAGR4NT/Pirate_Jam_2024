@@ -22,14 +22,16 @@ function CanPlaceSeed(_num_plots){
 		if _plot_array[i] != noone {
 			if _plot_array[i].occupied == true{
 				_issue = true; //plot is occupied --> there is an issue and cannot place
+				//Print("space is occupied")
 			}
 		} else { //no plot found --> there is an issue and cannot place
 			_issue = true;
+			//Print("no plot found here")
 		}
 	}
 				
 	if _issue == false{ //if no issues are found, you can place
-		//Print(string(!_issue))
+		//Print("No issues with placement from CanPlaceSeed()")
 		return !_issue;
 		
 	}

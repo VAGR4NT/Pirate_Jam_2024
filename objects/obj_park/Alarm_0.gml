@@ -11,7 +11,6 @@ _message.gui_x = global.true_width/2;
 _message.gui_y = global.true_height/3;
 
 obj_park.num_npcs = 1 + (obj_park.num_trees + round(green_space*2/num_plots) + round(park_stats.curr_day/5));
-
 obj_park.closed = false;
 
 park_stats.daily_npc = 0; //Number of NPCs 

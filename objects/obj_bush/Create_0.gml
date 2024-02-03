@@ -12,10 +12,11 @@ age_threshold = 20;
 
 withering_threshold = 0.4;
 heal_rate = 4;
-wither_rate = 6;
+wither_rate = 6/2;
 dhyd_rate = 0.3;
-
+type = PLANT_TYPE.BUSH;
 obj_park.num_bushes ++;
-var _size_variation = random_range(1.25, 1.75);
-image_xscale = _size_variation;
-image_yscale = _size_variation;
+size_variation = choose(1, 1.25, 1.5, 1.75); //add to value
+size_bonus = round(size_variation);
+image_xscale = size_variation;
+image_yscale = size_variation;

@@ -17,6 +17,7 @@ if instance_exists(obj_player)
 		if obj_menu_shop.state == VISUAL_STATE.ACTIVE
 		{
 			obj_menu_shop.state = VISUAL_STATE.INACTIVE;
+			obj_mouse.can_interact = true;
 		}
 	}
 }

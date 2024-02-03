@@ -41,6 +41,19 @@ if time_number == 10
 	alarm[0] = 1;
 }
 
+if happy_hour_day == true and (happy_hour == time_number or  happy_hour == time_number+1)
+{
+	global.two_for_1 = true;
+	if sale_popup_created == false
+	{
+		alarm[5] = 1;
+		sale_popup_created = true;
+	}
+} else {
+	global.two_for_1 = false;
+	sale_popup_created = false;
+}
+
 //Force Player sleep
 if time_number == 12 + 10
 {
@@ -51,7 +64,7 @@ if time_number == 12 + 10
 	layer_set_visible("TilesTop", false);
 	obj_player.x = obj_bed.x;
 	obj_player.y = obj_bed.y;
-	obj_well.used_today = false;
+	obj_well.alarm[0] = 1;
 }
 
 

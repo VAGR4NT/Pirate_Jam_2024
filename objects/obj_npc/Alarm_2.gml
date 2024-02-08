@@ -1,9 +1,20 @@
 /// @desc Add Happiness
 
-if happiness < 100
+//if happiness < 100
+//{
+//	happiness += obj_park.happiness_rate;
+//	obj_park.park_stats.daily_happiness += obj_park.happiness_rate;
+//}
+
+//fits well
+if happiness + obj_park.happiness_rate <= 100
 {
 	happiness += obj_park.happiness_rate;
 	obj_park.park_stats.daily_happiness += obj_park.happiness_rate;
+} else {
+	var _overhang = happiness + obj_park.happiness_rate - 100;
+	happiness = 100;
+	obj_park.park_stats.daily_happiness += obj_park.happiness_rate - _overhang;
 }
 
 

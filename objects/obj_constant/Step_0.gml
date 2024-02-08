@@ -131,7 +131,7 @@ if global.happy_goal_level < array_length(global.happy_goal_checkpoints)
 	global.happy_goals_complete = true;
 }
 
-if obj_park.total_happiness >= global.happy_goal and global.happy_goal_popup == false
+if obj_park.total_happiness + obj_park.park_stats.daily_happiness >= global.happy_goal and global.happy_goal_popup == false
 {
 	global.happy_goal_popup = true;
 	audio_play_sound(snd_goal_reached, 1, 0);

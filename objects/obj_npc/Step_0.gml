@@ -52,6 +52,20 @@ if target != noone
 	move_spd = min(min_move_speed, distance_to_object(target) / 3);
 }
 
+if instance_exists(obj_mouse)
+{
+	if obj_mouse.mode == MOUSE_MODES.INSPECTING
+	{
+		if distance_to_object(obj_mouse) == 0
+		{
+			show_happiness = true;
+		} else {
+			show_happiness = false;
+		}
+	}
+}
+
+///Leave Park
 if obj_park.time_number = 12 + 8 and leaving_park == false{
 	//leaving_park = true; //happens in alarm[1]
 	alarm[1] = 1;

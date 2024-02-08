@@ -10,6 +10,8 @@ draw_self();
 //	draw_text(x,y-60, target);
 //	draw_line(x,y,target.x,target.y);
 //}
-//draw_text(x,y-20, happiness);
-
+if show_happiness == true{
+	//draw_set_font(fnt_DPComic_10);
+	draw_text_outline(x,y-32, string(round(happiness)) + "%" , 2, c_black, 4);
+}
 ResetDraw();

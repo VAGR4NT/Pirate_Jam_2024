@@ -23,6 +23,7 @@ if choice == 1 //UPGRADE
 	option_toss_coins.state = state;
 	option_drink.state = state;
 	
+	//spend money
 	if obj_constant.cash >= cost{
 	obj_constant.cash -= cost;
 	obj_well.upgrade_level++;
@@ -32,6 +33,17 @@ if choice == 1 //UPGRADE
 	
 	obj_mouse.can_interact = true;
 	}
+	
+	////
+	var _message = instance_create_layer(obj_well.x,obj_well.y,"UI",obj_message);
+	_message.text = "Well upgraded to hold " + string(obj_well.upgrade_level) + " buckets!";
+	_message.color = c_white;
+	_message.disappear_rate = .005;
+	_message.rise_amount = 0;
+	_message.on_gui_layer = false;
+	_message.rise_amount = -.3;
+	_message.size = 40;
+	
 }
 if choice == 0 //DRINK
 {
@@ -43,6 +55,17 @@ if choice == 0 //DRINK
 			obj_player.water_held = obj_player.water_max;
 			obj_well.uses_left--;
 			obj_well.used_today = true;
+			
+			var _message = instance_create_layer(obj_well.x,obj_well.y,"UI",obj_message);
+			_message.text = "Water meter filled. " + string(obj_well.uses_left) + " buckets left";
+			_message.color = c_white;
+			_message.disappear_rate = .005;
+			_message.rise_amount = 0;
+			_message.on_gui_layer = false;
+			_message.rise_amount = -.3;
+			_message.size = 40;
+			
+			
 		} else {
 			var _message = instance_create_layer(obj_well.x,obj_well.y,"UI",obj_message);
 			_message.text = "The well will refill tomorrow";

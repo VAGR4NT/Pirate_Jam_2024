@@ -8,10 +8,12 @@ if state == VISUAL_STATE.ACTIVE{
 
 if global.two_for_1
 {
+	cost_color = c_green;
 	flower_price = .5;
 	bush_price = 1;
 	tree_price = 1.5;
 } else {
+	cost_color = c_white;
 	flower_price = 1;
 	bush_price = 2;
 	tree_price = 3;

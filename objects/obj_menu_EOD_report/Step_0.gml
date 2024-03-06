@@ -26,6 +26,11 @@ if choice == 1
 {
 	choice = -1;
 	obj_constant.cash += obj_park.EOD_bonus;
+	if audio_is_playing(closing_park)
+	{
+		audio_stop_sound(closing_park);
+	}
+	
 	var _sound = choose(handleCoins, handleCoins2);
 	audio_play_sound(_sound,1,0);
 	obj_camera.target = obj_player;

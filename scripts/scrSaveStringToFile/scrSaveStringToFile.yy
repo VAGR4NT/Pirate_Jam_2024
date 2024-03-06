@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scrSaveStringToFile",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Save, Load, Delete File",
-    "path": "folders/Scripts/Save, Load, Delete File.yy",
+  "$GMScript":"",
+  "%Name":"scrSaveStringToFile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrSaveStringToFile",
+  "parent":{
+    "name":"Save, Load, Delete File",
+    "path":"folders/Scripts/Save, Load, Delete File.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

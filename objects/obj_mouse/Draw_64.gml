@@ -1,3 +1,4 @@
+if room == rm_game{
 if can_interact{
 if object_sprite != -1{
 	ResetDraw();
@@ -51,3 +52,4 @@ if object_sprite != -1{
 	ResetDraw();	
 }
 }//can interact
+}//room == rm_game

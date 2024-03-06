@@ -1,12 +1,5 @@
 /// @desc Add Happiness
 
-//if happiness < 100
-//{
-//	happiness += obj_park.happiness_rate;
-//	obj_park.park_stats.daily_happiness += obj_park.happiness_rate;
-//}
-
-//fits well
 if happiness + obj_park.happiness_rate <= 100
 {
 	happiness += obj_park.happiness_rate;

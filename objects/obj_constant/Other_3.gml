@@ -1,4 +1,6 @@
 /// @desc scrSave();
-//if global.build_target != BUILDS.HTML{
+if room == rm_game{
+//if global.build_target != BUILD_TARGET.HTML{
 	scrSave();
 //}
+}

@@ -1,4 +1,7 @@
 /// @desc
+time_diff = obj_park.sleep_time - obj_park.time; //calculate in step event. number of in game hours left until force-sleep
+hours_left_warning = "You still have " + string(time_diff) + " hours left until the end of the day";
+
 event_inherited();
 if state == VISUAL_STATE.ACTIVE{
 	obj_mouse.can_interact = false;

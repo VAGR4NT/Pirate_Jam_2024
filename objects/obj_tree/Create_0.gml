@@ -20,6 +20,7 @@ image_index = 1;
 type = PLANT_TYPE.TREE;
 obj_park.num_trees ++;
 
-size_variation = choose(1, 1.5, 2.25); //add to value
+//size_variation = choose(1, 1.5, 2.25); //add to value
+size_variation = 1; //add to value
 size_bonus = round(size_variation);
 

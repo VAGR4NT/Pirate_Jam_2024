@@ -5,11 +5,12 @@
 //}
 if mouse_on and mouse_check_button_pressed(mb_left)
 {
-	layer_enable_fx("Night_Filter", true);
+	//layer_enable_fx("Night_Filter", true);
+	room_goto(rm_game);
 }
 
 
 if mouse_on and mouse_check_button_pressed(mb_right)
 {
-	layer_enable_fx("Night_Filter", false);
+	//("Night_Filter", false);
 }

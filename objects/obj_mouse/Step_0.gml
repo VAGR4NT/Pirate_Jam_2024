@@ -1,3 +1,5 @@
+#region In Game
+if room == rm_game {
 if can_interact{
 #region Clear held item
 if mouse_check_button(mb_right)
@@ -109,7 +111,7 @@ if mode == MOUSE_MODES.PLANTING
 		}
 	}
 
-	if can_place
+	if can_place 
 	{
 		outline_obj.image_blend = c_green;
 	} else {
@@ -123,10 +125,13 @@ if mode == MOUSE_MODES.PLANTING
 #region Watering
 if mode == MOUSE_MODES.WATERING
 {
-	obj_mouse.object_held = noone;
-	if obj_player.water_held <= 0
+	object_held = noone;
+	if instance_exists(obj_player)
 	{
-		mode = MOUSE_MODES.NOTHING;
+		if obj_player.water_held <= 0
+		{
+			mode = MOUSE_MODES.NOTHING;
+		}
 	}
 	
 	object_sprite = water_button1;
@@ -305,5 +310,7 @@ if mode == MOUSE_MODES.NOTHING
 	quantity = -1;
 }
 }
+} 
+#endregion In Game
 x = mouse_x;
 y = mouse_y;

@@ -1,7 +1,9 @@
 /// @description Tracks Park Stats + Spawns things
 //Tracks park states like day/night, number of NPC's visiting, tracks green space number, and spawns NPCs
+hour_update = game_get_speed(gamespeed_fps) * 11;
 //hour_update = game_get_speed(gamespeed_fps) * 10;
-hour_update = game_get_speed(gamespeed_fps) * 5;
+//hour_update = game_get_speed(gamespeed_fps) * 5;
+//hour_update = game_get_speed(gamespeed_fps) * 3;
 //hour_update = game_get_speed(gamespeed_fps) * 1;
 EOD_bonus = 0;
 randomize();
@@ -18,6 +20,7 @@ sale_popup_created = false;
 time = 1; //6 AM
 time_number = 6;
 max_time = 19; //10 PM
+sleep_time = 17;
 time_suffix = "AM";
 dark_threshold = 12;
 park_opened = false;

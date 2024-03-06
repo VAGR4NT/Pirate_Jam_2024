@@ -1,3 +1,6 @@
+#region In Game
+if room == rm_game{
+	
 var _buff = 30;
 var _index = 0;
 var _ystart = 10;
@@ -18,8 +21,10 @@ if !global.picture_mode
 	_index ++;
 	//draw_text_outline(_xstart, _ystart + (_buff * _index),"global.money_goal_level: " + string(global.money_goal_level), 2, c_black, 4);
 	//_index ++;
-	//draw_text_outline(_xstart, _ystart + (_buff * _index),"# objects: " + string(instance_count), 2, c_black, 4);
-	//_index ++;
+	draw_text_outline(_xstart, _ystart + (_buff * _index),"global.current_song " + string(global.current_song), 2, c_black, 4);
+	_index ++;
+	draw_text_outline(_xstart, _ystart + (_buff * _index),"global.looping_music " + string(global.looping_music), 2, c_black, 4);
+	_index ++;
 	//if instance_exists(obj_plot)
 	//{
 	//draw_text_outline(_xstart, _ystart + (_buff * _index),"# plots: " + string(instance_number(obj_plot)), 2, c_black, 4);
@@ -109,3 +114,5 @@ if !global.picture_mode
 	#endregion HUD RIGHT
 }
 ResetDraw();
+} //in room rm_game
+#endregion In Game

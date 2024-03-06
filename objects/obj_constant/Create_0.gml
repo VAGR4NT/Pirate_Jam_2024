@@ -3,6 +3,13 @@
 //global.mouse_gui_y = window_mouse_get_y();
 layer_set_visible("UI", true);
 
+enum BUILD_TARGET
+{
+	WINDOWS,
+	HTML
+}
+global.build_target = BUILD_TARGET.WINDOWS;
+
 global.window_width = window_get_width();
 global.window_height = window_get_height();
 global.true_width = 0;
@@ -40,12 +47,7 @@ enum MOUSE_MODES{
 	INSPECTING,
 	NOTHING
 }
-enum BUILD_TARGET
-{
-	WINDOWS,
-	HTML
-}
-global.build_target = BUILD_TARGET.WINDOWS;
+
 
 cash = 50;
 menus_array = array_create(0); //used in pause menu logic
@@ -82,5 +84,15 @@ global.happy_goal_level = 0;
 global.happy_goal_popup = false;
 global.happy_goal_checkpoints = [10, 50, 200, 500, 1000, 3000, 7000, 20000, 50000, 100000];
 global.happy_goals_complete = false;
+
+global.music_credits_array= array_create(0);
+global.music_credits_array[0] = "Shop Theme (Buy Something!) - Cleyton Kauffman - https://soundcloud.com/cleytonkauffman";
+global.music_credits_array[1] = "Cutie Pie - FrancisLeeMusic - https://opengameart.org/content/cutie-pie License: CC-BY 3.0  Original Audio";
+
+global.in_game_music = array_create(0);
+global.in_game_music[0] = snd_shop_theme;
+global.in_game_music[1] = snd_cutie_pie;
+global.current_song = global.in_game_music[irandom(array_length(global.in_game_music)-1)];
+global.looping_music = true;
 
 alarm[0] = 1;

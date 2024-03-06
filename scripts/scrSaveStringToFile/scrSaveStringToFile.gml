@@ -9,4 +9,4 @@ function scrSaveStringToFile(argument0, argument1) {
 	///C:\Users\Spencer\AppData\Local\Space_Ace
 
 }
-show_debug_message("scrSaveStringToFile: " + string(argument0))
+//show_debug_message("scrSaveStringToFile: " + string(argument0))

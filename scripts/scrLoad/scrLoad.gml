@@ -1,9 +1,9 @@
 ///If the file exists pull up the data from the slot i choose
 ///Havent checked if that data is there yet
 function scrLoad() {
-	show_debug_message("Start scrLoad function: \n")
+	//show_debug_message("Start scrLoad function: \n")
 	if (file_exists("savedgame.sav")){///global.file_choice
-		show_debug_message("savedgame.sav exists")
+		//show_debug_message("savedgame.sav exists")
 		var _wrapper = scrLoadJsonFromFile("savedgame.sav");
 		var _list = _wrapper[? "ROOT"]; //"ROOT" ///string(global.file_choice)
 		{
@@ -32,12 +32,12 @@ function scrLoad() {
 					var _plants_string = _map[? "plants_list"];
 					
 					var _plants_array = string_split(_plants_string, "-");
-					Print("Num Plants: ");
-					Print(array_length(_plants_array));
+					//Print("Num Plants: ");
+					//Print(array_length(_plants_array));
 					var _num_plants = array_length(_plants_array);
 					for (var j=0; j < _num_plants; j++)
 					{
-						Print(_plants_array[j]);
+						//Print(_plants_array[j]);
 						var _plant_info = string_split(_plants_array[j], ",");
 						
 						#region Show each piece of plant info
@@ -53,7 +53,7 @@ function scrLoad() {
 					
 						if _plant_info[0] != ""{
 							var _name = string_replace(_plant_info[0],"-","");		
-							Print(_name);
+							//Print(_name);
 							var _age = _plant_info[1];
 							var _x = int64(_plant_info[2]);					
 							var _y = int64(_plant_info[3]);
@@ -89,9 +89,9 @@ function scrLoad() {
 		//}
 		} 
 	} else { //No file exists
-		show_debug_message("savedgame.sav does not exist");
+		//show_debug_message("savedgame.sav does not exist");
 		//scrSave();
 		//room_goto(rm_settings);
 	}
 }
-show_debug_message("End scrLoad function")
+//show_debug_message("End scrLoad function")

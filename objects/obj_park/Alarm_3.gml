@@ -41,13 +41,14 @@ if time_number == 10
 	alarm[0] = 1;
 }
 
-if happy_hour_day == true and (happy_hour == time_number or  happy_hour == time_number+1)
+if happy_hour_day == true and (happy_hour == time_number or  happy_hour == time_number+1  or  happy_hour == time_number+2)
 {
 	global.two_for_1 = true;
 	if sale_popup_created == false
 	{
 		alarm[5] = 1;
 		sale_popup_created = true;
+		audio_play_sound(sale_begins,1,0);
 	}
 } else {
 	global.two_for_1 = false;
@@ -57,6 +58,7 @@ if happy_hour_day == true and (happy_hour == time_number or  happy_hour == time_
 //Force Player sleep
 if time_number == 12 + 10
 {
+	Print("forcing player to sleep at: " + string(time));
 	obj_constant.EOD_menu_shown = false;
 	ClosePark();
 	

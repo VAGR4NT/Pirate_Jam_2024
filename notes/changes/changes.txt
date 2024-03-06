@@ -9,6 +9,11 @@ rare flowers
 rare visitors
 add soundtrack
 
+
+
+
+
+-------------change when the well sounds play (attach to well menu instead of buttons)
 -------------size impact on sell value
 -------------bush impact
 -------------EOD bonus

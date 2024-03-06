@@ -1,6 +1,4 @@
-/// @desc bring up pause menu
-
-//Exit picture mode
+/// @desc Exit picture mode
 alarm[2] = 1;
 
 //if array_length(menus_array) > 0

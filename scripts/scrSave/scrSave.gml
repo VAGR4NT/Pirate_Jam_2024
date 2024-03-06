@@ -68,7 +68,7 @@ function scrSave(){
 	ds_map_destroy(_wrapper);
 #endregion
 
-	show_debug_message("scrSave")
+	//show_debug_message("scrSave")
 	//}
 
 }

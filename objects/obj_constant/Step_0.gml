@@ -1,4 +1,5 @@
-
+/// @desc Handle achievements
+if room == rm_game{
 #region Goals
 #region Cash
 if global.money_goal_level < array_length(global.money_goal_checkpoints){
@@ -22,7 +23,7 @@ if cash >= global.money_goal and global.money_goal_popup == false
 	_message.on_gui_layer = true;
 	_message.size = 40;
 	_message.gui_x = global.true_width/2;
-	_message.gui_y = global.true_height/3;
+	_message.gui_y = global.true_height/8;
 	
 	global.money_goal_level++;	
 }
@@ -53,7 +54,7 @@ if obj_park.total_plants >= global.planting_goal and global.planting_goal_popup 
 	_message.on_gui_layer = true;
 	_message.size = 40;
 	_message.gui_x = global.true_width/2;
-	_message.gui_y = global.true_height/3;
+	_message.gui_y = global.true_height/8;
 	
 	global.planting_goal_level++;
 }
@@ -83,7 +84,7 @@ if obj_park.park_stats.daily_npc >= global.visitor_goal and global.visitor_goal_
 	_message.on_gui_layer = true;
 	_message.size = 40;
 	_message.gui_x = global.true_width/2;
-	_message.gui_y = global.true_height/3;
+	_message.gui_y = global.true_height/8;
 	
 	global.visitor_goal_level++;
 }
@@ -113,7 +114,7 @@ if obj_park.park_stats.curr_day >= global.day_goal and global.day_goal_popup == 
 	_message.on_gui_layer = true;
 	_message.size = 40;
 	_message.gui_x = global.true_width/2;
-	_message.gui_y = global.true_height/3;
+	_message.gui_y = global.true_height/8;
 	
 	global.day_goal_level++;
 
@@ -144,7 +145,7 @@ if obj_park.total_happiness + obj_park.park_stats.daily_happiness >= global.happ
 	_message.on_gui_layer = true;
 	_message.size = 40;
 	_message.gui_x = global.true_width/2;
-	_message.gui_y = global.true_height/3;
+	_message.gui_y = global.true_height/8;
 	
 	global.happy_goal_level++;
 
@@ -174,6 +175,7 @@ for (var i = 0; i < instance_number(obj_seed_button); ++i;)
 }
 #endregion make sure you dont place a seed as soon as you select it
 
+#region Shortcuts
 if obj_menu_shop.state == VISUAL_STATE.INACTIVE
 {
 	if keyboard_check_pressed(ord(1))
@@ -226,4 +228,7 @@ if obj_menu_shop.state == VISUAL_STATE.INACTIVE
 		obj_mouse.object_held = "";
 		
 	}
+}
+#endregion Shortcuts
+
 }

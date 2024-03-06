@@ -1,6 +1,6 @@
 /// @desc Progresses the day count and updates all the states that progress with the day/night cycle
 function ProgressDay(){
-	//if global.build_target != BUILDS.HTML{
+	//if global.build_target != BUILD_TARGET.HTML{
 		scrSave();
 	//}
 	//Print("progressing day");

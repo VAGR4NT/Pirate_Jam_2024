@@ -16,7 +16,8 @@ wither_rate = 6/2;
 dhyd_rate = 0.3;
 type = PLANT_TYPE.BUSH;
 obj_park.num_bushes ++;
-size_variation = choose(1, 1.25, 1.5, 1.75); //add to value
+//size_variation = choose(1, 1.25, 1.5, 1.75); //add to value
+size_variation = 1; //add to value
 size_bonus = round(size_variation);
 image_xscale = size_variation;
 image_yscale = size_variation;

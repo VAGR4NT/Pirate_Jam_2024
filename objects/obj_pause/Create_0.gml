@@ -1,5 +1,5 @@
 /// @description Disables objects in certain layers until turned off
 io_clear();
-Print("Pause Created");
+//Print("Pause Created");
 instance_deactivate_all(true);
 //instance_activate_layer("PauseLayer");

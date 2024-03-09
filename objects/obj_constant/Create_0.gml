@@ -85,10 +85,18 @@ global.happy_goal_popup = false;
 global.happy_goal_checkpoints = [10, 50, 200, 500, 1000, 3000, 7000, 20000, 50000, 100000];
 global.happy_goals_complete = false;
 
+global.programming_credits_array= array_create(0);
+global.programming_credits_array[0] = "SpencaSlim - https://closed-bracket-studios.itch.io/";
+global.programming_credits_array[1] = "Vagrant - https://github.com/VAGR4NT";
+
 global.music_credits_array= array_create(0);
 global.music_credits_array[0] = "Shop Theme (Buy Something!) - Cleyton Kauffman - https://soundcloud.com/cleytonkauffman";
 global.music_credits_array[1] = "Cutie Pie - FrancisLeeMusic - https://opengameart.org/content/cutie-pie License: CC-BY 3.0  Original Audio";
 global.music_credits_array[2] = "Along The Way - congusbongus - https://opengameart.org/users/congusbongus License: CC-BY 4.0  Original Audio";
+
+global.art_credits_array= array_create(0);
+global.art_credits_array[0] = "Plush Pilla - https://plush-pilla.itch.io/";
+global.art_credits_array[1] = "Kenney - https://www.kenney.nl/";
 
 global.in_game_music = array_create(0);
 global.in_game_music[0] = snd_shop_theme;

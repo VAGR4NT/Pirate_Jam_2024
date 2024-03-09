@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"StartMusic",
+  "%Name":"ToggleMusic",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"StartMusic",
+  "name":"ToggleMusic",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

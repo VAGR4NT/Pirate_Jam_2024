@@ -19,7 +19,7 @@ if instance_exists(parent_menu) and state != VISUAL_STATE.INACTIVE
 		if mouse_check_button_pressed(mb_any)
 		{
 			parent_menu.choice = option;
-			audio_play_sound(bookOpen,1,0);
+			audio_play_sound(snd_bookOpen,1,0);
 		}
 	}
 	

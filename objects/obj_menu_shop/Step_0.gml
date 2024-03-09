@@ -42,7 +42,7 @@ if choice == 1
 		obj_park.bush_seeds += num_bush_seeds;
 		obj_park.tree_saplings += num_tree_saplings;
 		obj_constant.cash -= total_cost;
-		var _sound = choose(handleCoins, handleCoins2);
+		var _sound = choose(snd_handleCoins, snd_handleCoins2);
 		audio_play_sound(_sound,1,0);
 		choice = -1;
 		num_flower_seeds = 0;

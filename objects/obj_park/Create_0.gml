@@ -3,7 +3,7 @@
 hour_update = game_get_speed(gamespeed_fps) * 11;
 //hour_update = game_get_speed(gamespeed_fps) * 10;
 //hour_update = game_get_speed(gamespeed_fps) * 5;
-//hour_update = game_get_speed(gamespeed_fps) * 3;
+//hour_update = game_get_speed(gamespeed_fps) * 1;
 //hour_update = game_get_speed(gamespeed_fps) * 1;
 EOD_bonus = 0;
 randomize();

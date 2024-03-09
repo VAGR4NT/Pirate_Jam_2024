@@ -1,5 +1,11 @@
 /// @desc Progresses the day count and updates all the states that progress with the day/night cycle
 function ProgressDay(){
+	//End night music and start day music
+	audio_stop_sound(global.night_song);
+	audio_resume_sound(global.current_song);
+	
+	//ShuffleSong();
+	
 	//if global.build_target != BUILD_TARGET.HTML{
 		scrSave();
 	//}

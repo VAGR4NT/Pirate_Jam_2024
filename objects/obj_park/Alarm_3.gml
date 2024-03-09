@@ -48,13 +48,21 @@ if happy_hour_day == true and (happy_hour == time_number or  happy_hour == time_
 	{
 		alarm[5] = 1;
 		sale_popup_created = true;
-		audio_play_sound(sale_begins,1,0);
+		audio_play_sound(snd_sale_begins,1,0);
 	}
 } else {
 	global.two_for_1 = false;
 	sale_popup_created = false;
 }
 
+//Start Nighttime music
+if time_number == 12 + 6
+{
+var _song = choose(snd_night1, snd_night2);
+audio_pause_sound(global.current_song);
+audio_play_sound(_song, 1, 1);
+global.night_song = _song;
+}
 //Force Player sleep
 if time_number == 12 + 10
 {

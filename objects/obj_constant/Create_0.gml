@@ -91,16 +91,18 @@ global.music_credits_array[1] = "Cutie Pie - FrancisLeeMusic - https://opengamea
 global.music_credits_array[2] = "Along The Way - congusbongus - https://opengameart.org/users/congusbongus License: CC-BY 4.0  Original Audio";
 
 global.in_game_music = array_create(0);
-//global.in_game_music[0] = snd_shop_theme;
-//global.in_game_music[1] = snd_cutie_pie;
-//global.in_game_music[2] = snd_along_the_way;
+global.in_game_music[0] = snd_shop_theme;
+global.in_game_music[1] = snd_cutie_pie;
+global.in_game_music[2] = snd_along_the_way;
+global.in_game_music[3] = snd_train_station;
 
-global.in_game_music[0] = bookOpen;
-global.in_game_music[1] = watering2;
-global.in_game_music[2] = coin_flip;
-global.in_game_music[3] = closing_park;
+//global.in_game_music[0] = bookOpen;
+//global.in_game_music[1] = watering2;
+//global.in_game_music[2] = coin_flip;
+//global.in_game_music[3] = closing_park;
 
 global.current_song = global.in_game_music[irandom(array_length(global.in_game_music)-1)];
+global.night_song = snd_night1;
 global.looping_music = false;
 global.shuffle = false;
 

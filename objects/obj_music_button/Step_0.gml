@@ -8,5 +8,8 @@ if global.current_song != undefined
 }
 if mouse_hover and mouse_check_button_pressed(mb_any)
 {
-	ToggleMusic("button")
+	if obj_park.time_number < 12 + 6
+	{
+		ToggleMusic("button")
+	}
 }

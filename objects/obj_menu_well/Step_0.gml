@@ -29,7 +29,7 @@ if choice == 1 //UPGRADE
 	obj_well.upgrade_level++;
 	obj_well.uses_left += 1; //double check this
 	
-	audio_play_sound(coin_flip,1,0);
+	audio_play_sound(snd_coin_flip,1,0);
 	
 	obj_mouse.can_interact = true;
 	
@@ -66,7 +66,7 @@ if choice == 0 //DRINK
 			obj_well.uses_left--;
 			obj_well.used_today = true;
 			
-			audio_play_sound(water_splash,1,0);
+			audio_play_sound(snd_water_splash,1,0);
 						
 			var _message = instance_create_layer(obj_well.x,obj_well.y,"UI",obj_message);
 			_message.text = "Water meter filled. " + string(obj_well.uses_left) + " buckets left";

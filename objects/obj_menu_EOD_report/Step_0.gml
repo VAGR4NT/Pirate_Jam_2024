@@ -26,12 +26,12 @@ if choice == 1
 {
 	choice = -1;
 	obj_constant.cash += obj_park.EOD_bonus;
-	if audio_is_playing(closing_park)
+	if audio_is_playing(snd_closing_park)
 	{
-		audio_stop_sound(closing_park);
+		audio_stop_sound(snd_closing_park);
 	}
 	
-	var _sound = choose(handleCoins, handleCoins2);
+	var _sound = choose(snd_handleCoins, snd_handleCoins2);
 	audio_play_sound(_sound,1,0);
 	obj_camera.target = obj_player;
 	ProgressDay();

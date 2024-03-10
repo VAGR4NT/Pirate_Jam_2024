@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"ToggleMusic",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ToggleMusic",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

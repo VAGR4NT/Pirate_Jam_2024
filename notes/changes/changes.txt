@@ -1,21 +1,111 @@
--watering bug --> fixed
--plants died goes to infinite number 
 -length of days: Good
 
 
 ADD:
-Inspect Mode
+
 Bark to move birds
-Sell whole plot when interacting with sign
-Picture mode
+xxxxxxSell whole plot when interacting with sign
 rare flowers
 rare visitors
-size impact on sell value
-bush impact
-EOD bonus
-reduce sell value
 add soundtrack
-add happy hour on even days
-drag to mass sell/plant option
-sleep before park opens
-bird variance
+
+
+
+
+
+-------------change when the well sounds play (attach to well menu instead of buttons)
+-------------size impact on sell value
+-------------bush impact
+-------------EOD bonus
+-------------reduce sell value
+-------------Picture mode
+-------------add happy hour on even days
+-------------drag to mass sell/plant option
+-------------sleep before park opens
+-------------bird variance
+-------------upgradable well
+-------------Inspect Mode
+-------------watering bug
+-------------plants died goes to infinite number 
+
+
+
+
+-=-=-=-=-=-=-
+
+to-do:
+-add rain storms that water all plots
+---------------delay screenshot until 1 sec past switching views
+---------------add popup each time the user upgrades
+---------------add popup each time the user drinks
+---------------add bark interaction and SFX
+---------------add game music
+---------------Add title screen with buttons (Play, Quit, Site, Credits, How-To-Play)
+---------------Add room checks for each of the obj_constant events
+---------------Change load and save timing
+
+-Regression after adding additional Room + changes to obj_constant
+-Add 'water' text to mouse over state of plants
+-fix bug where plots are not occupied --> add to save/load flow
+
+///Save Function
+var _plots_string = "";
+//plots are created at runtime, instead of creating them at runtime we should edit them at runtime.
+var _num_plots = instance_number/instance_count(obj_plot);
+for(var i =0; i < _num_plots; i++)
+{
+	//Create a list of non-empty plots
+	var _plot_inst = instance_find(obj_plot, i);
+	if _plot_inst != -1
+	{
+		if _plot_inst.occupied == true
+		{
+			_plots_string += string(x) + ",";
+			_plots_string += string(y) + ",";
+			_plots_string += string(occupied) + ",";
+			_plots_string += string(occupied_by) + ",";
+			_plots_string += string(plant_object) + ",";
+			_plots_string += ":";
+		}
+	}
+}
+
+///Load Function
+Could use some sort of reloaded variable so that certain plots are created, then when they are all (1200) created some of them will delete themselves if they
+overlap with one of the saved + loaded plots
+
+var _all_plots_str_array = string_split(map["plots_string"], ":");
+for (var i = 0; i < array_length(_all_plots_str_array); i++)
+{
+	var _single_plot_array = string_split((_all_plots_str_array)[i], ",");
+	var _x = _single_plot_array[0];
+	var _y = _single_plot_array[1];
+	var _occupied = _single_plot_array[2];
+	var _occupied_by = _single_plot_array[3];
+	var _plant_object = _single_plot_array[4];
+	
+//////////// if updating:
+	var _plot = instance_find(obj_plot, _x, _y);
+	_plot.occupied = _occupied;
+	_plot.occupied_by = _occupied_by;
+	_plot.occupied_by = _occupied_by;
+	_plot.loaded_in = true;
+
+
+////////// 
+///////////if creating
+	with(instance_create_layer(_x, _y, "Plots", obj_plot))
+	{
+		occupied = _occupied;
+		occupied_by = _occupied_by;
+		occupied_by = _occupied_by;
+		loaded_in = true;
+
+	}
+	////in alarm[] if loaded_in
+	
+
+}
+
+
+

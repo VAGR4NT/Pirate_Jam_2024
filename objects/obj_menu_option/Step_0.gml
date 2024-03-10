@@ -1,23 +1,26 @@
 event_inherited();
 
+switch (option)
+{
+	case MENU_OPTIONS.DRINK:
+		sprite_index = spr_menu_drink;
+		message_text = "Drinks left: " + string(obj_well.uses_left);
+	break;
+	case MENU_OPTIONS.TOSS_COINS:
+		sprite_index = spr_menu_toss_coin;
+		message_text = "Toss " + string(obj_menu_well.cost) + " coins?";
+	break;
+}
 image_index = mouse_hover;
 
-if option == 1
+if instance_exists(parent_menu) and state != VISUAL_STATE.INACTIVE
 {
-	x = 464;
-	y = 496;
-	sprite_index = spr_menu_yes;
-} else {
-	x= 704;
-	y = 496;
-	sprite_index = spr_menu_no;
-}
-
-if instance_exists(parent_menu)
-{
-	if mouse_hover and mouse_check_button_pressed(mb_any)
-	{
-		parent_menu.choice = option;
+	if mouse_hover{ 
+		if mouse_check_button_pressed(mb_any)
+		{
+			parent_menu.choice = option;
+			audio_play_sound(snd_bookOpen,1,0);
+		}
 	}
 	
 	state = parent_menu.state;

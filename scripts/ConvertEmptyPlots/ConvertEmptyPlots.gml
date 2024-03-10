@@ -38,12 +38,10 @@ function ConvertEmptyPlots(_num_plots){
 		{
 			_plot_array[i].occupied_by = object_held;
 			_plot_array[i].occupied = true;
-			_plot_array[i].passable = false;
 		}
 		else 
 		{
 			_plot_array[i].occupied = true;
-			_plot_array[i].passable = false;
 		}
 	}
 }

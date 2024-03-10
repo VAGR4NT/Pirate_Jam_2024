@@ -1,5 +1,16 @@
 /// @desc Progresses the day count and updates all the states that progress with the day/night cycle
 function ProgressDay(){
+	//End night music and start day music
+	audio_stop_sound(global.night_song);
+	//slowly begin playing the new song	
+	audio_resume_sound(global.current_song);
+	audio_sound_gain(global.current_song, 1, 3 * 1000);
+	
+	//ShuffleSong();
+	
+	//if global.build_target != BUILD_TARGET.HTML{
+		scrSave();
+	//}
 	//Print("progressing day");
 	// Update Plant Information For All Plotted Plants
 	
@@ -33,20 +44,23 @@ function ProgressDay(){
 			else 
 			{
 				watered_perc -= dhyd_rate;
-				if (watered_perc <= 0) {watered_perc = 0;}
+				watered_perc = clamp(watered_perc, 0, 100);
 			}
 			
-			if (status == PLANT_STATE.WITHERED)
-			{
+			//if (status == PLANT_STATE.WITHERED)
+			//{
 				if (watered_perc < withering_threshold)
 				{
 					plant_health -= wither_rate;
 				}
 				else
 				{
-					plant_health += heal_rate;
+					if plant_health < max_plant_health
+					{
+						plant_health += heal_rate;
+					}
 				}
-			}
+			//}
 			
 			
 			if (days_survived > age_threshold or plant_health <= 0)
@@ -79,7 +93,19 @@ function ProgressDay(){
 		time_number = 6;
 		all_days[park_stats.curr_day] = park_stats;
 		park_stats.curr_day++;
-		Print("adding daily happiness to total");
+		#region Happy Hour
+		if IsOdd(park_stats.curr_day){
+			var _chance = irandom(99);
+			if _chance <= 60
+			{
+				happy_hour_day = true;
+				happy_hour = irandom_range(13, max_time-4);
+			} else {
+				happy_hour_day = false;
+			}
+	
+		}
+		#endregion Happy Hour
 		total_happiness += park_stats.daily_happiness; 
 		park_stats.daily_happiness = 0;
 		

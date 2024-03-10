@@ -1,7 +1,7 @@
 /// @description Contains growing plant
 // If occupied by bush or tree, no longer passable.
 
-event_inherited();
+//event_inherited();
 passable = true;
 occupied_by = "";
 occupied = false;

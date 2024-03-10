@@ -56,6 +56,10 @@ _index++;
 draw_text_outline(_x_start, _y_start + (_index * _y_buff), string(round(obj_park.park_stats.daily_happiness)) + " happiness spread",2, c_black, 4);
 
 
+draw_set_color(c_green);
+_index++;
+draw_text_outline(_x_start, _y_start + (_index * _y_buff),"END OF DAY BONUS: " +  string(obj_park.EOD_bonus),2, c_black, 4);
+draw_set_color(c_white);
 _index++;
 _index++;
 draw_text_outline(_x_start, _y_start + (_index * _y_buff),  "Ready for tomorrow?",2, c_black, 4);

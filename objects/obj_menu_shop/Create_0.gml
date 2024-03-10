@@ -2,17 +2,18 @@
 event_inherited();
 state = VISUAL_STATE.INACTIVE;
 main_text = "Welcome to the shop!";
+discount_text = "All seeds are two for one during sale!";
 //time_diff = 0; //calculate in step event. number of in game hours left until force-sleep
 //hours_left_warning = "You still have " + string(time_diff) + " hours left until the end of the day";
-
+cost_color = c_white;
 num_flower_seeds = 0;
-flower_price = 1;
+flower_price = 1 - (global.two_for_1 * .5);
 
 num_bush_seeds = 0;
-bush_price = 2;
+bush_price = 2 - (global.two_for_1 * .5);
 
 num_tree_saplings = 0;
-tree_price = 3;
+tree_price = 3 - (global.two_for_1 * .5);
 
 total_cost = (num_flower_seeds * flower_price) + (num_bush_seeds * bush_price) + (num_tree_saplings * tree_price);
 can_buy = true;

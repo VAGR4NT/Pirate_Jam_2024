@@ -13,3 +13,4 @@ option_yes.option = 1;
 option_yes.x = 589;
 option_yes.y = 511;
 choice = -1;
+obj_constant.alarm[2] = 1;

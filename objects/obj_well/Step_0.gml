@@ -1,4 +1,19 @@
 //event_inherited();
+if distance_to_object(obj_player) > 150
+{
+	image_index = 2; //sleep
+}
+
+if distance_to_object(obj_player) <= 150
+and distance_to_object(obj_player) > 50
+{
+	image_index = 1; //timid
+}
+
+if distance_to_object(obj_player) <= 50
+{
+	image_index = 0; //alert
+}
 
 if instance_exists(obj_player)
 {
@@ -7,29 +22,12 @@ if instance_exists(obj_player)
 		image_blend = c_grey;
 		if keyboard_check_pressed(ord("E"))
 		{
-			if obj_player.water_held < obj_player.water_max
-			{
-				if used_today == false
-				{
-					obj_player.water_held = obj_player.water_max;
-					used_today = true;
-					//Print("using well");
-				} else {
-					var _message = instance_create_layer(x,y,"UI",obj_message);
-					_message.text = "The well will refill tomorrow";
-					_message.color = c_red;
-					_message.disappear_rate = .01;
-					_message.rise_amount = -.3;
-				}
-			} else {
-					var _message = instance_create_layer(x,y,"UI",obj_message);
-					_message.text = "Water meter already full!";
-					_message.color = c_red;
-					_message.disappear_rate = .01;
-					_message.rise_amount = -.3;
-			}
+			obj_menu_well.state = VISUAL_STATE.ACTIVE;
+
 		}
 	} else {
 		image_blend = c_white;
+		obj_menu_well.state = VISUAL_STATE.INACTIVE;
+		obj_mouse.can_interact = true;
 	}
 }

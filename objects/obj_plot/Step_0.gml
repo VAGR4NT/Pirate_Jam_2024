@@ -17,7 +17,7 @@ if occupied
 #region Create Plant In Plot
 if (occupied_by == "flower" && !has_sprite)
 {
-	Print("flower");
+	//Print("flower");
 	occupied = true;
 	if (has_sprite == false)
 	{
@@ -27,7 +27,7 @@ if (occupied_by == "flower" && !has_sprite)
 }
 if (occupied_by == "bush" && !occupied)
 {
-	Print("bush");
+	//Print("bush");
 	occupied = true;
 	if (has_sprite == false)
 	{
@@ -53,7 +53,7 @@ if (occupied_by == "bush" && !occupied)
 }
 if (occupied_by == "tree" && !occupied)
 {
-	Print("bush");
+	//Print("bush");
 	occupied = true;
 	if (has_sprite == false)
 	{

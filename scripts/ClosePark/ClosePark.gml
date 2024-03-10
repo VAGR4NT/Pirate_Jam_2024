@@ -3,6 +3,7 @@
 function ClosePark(){
 	if obj_park.closed == false{
 		obj_park.closed = true;
+		audio_play_sound(snd_closing_park,1,0);
 
 	
 		/// Make NPCs go back to the entrance after this code

@@ -1,3 +1,5 @@
+#region In Game
+if room == rm_game {
 if can_interact{
 #region Clear held item
 if mouse_check_button(mb_right)
@@ -56,6 +58,7 @@ if mode == MOUSE_MODES.PLANTING
 						can_place = true;
 					} else {
 						can_place = false;
+						//Print("plot occupied: flower")
 					}
 				break;
 			
@@ -66,6 +69,7 @@ if mode == MOUSE_MODES.PLANTING
 					if _plot.occupied == true
 					{
 						can_place = false;
+						//Print("plot occupied: bush")
 					}
 				break;
 				
@@ -76,6 +80,7 @@ if mode == MOUSE_MODES.PLANTING
 					if _plot.occupied == true
 					{
 						can_place = false;
+						//Print("plot occupied: tree")
 					}
 				break;
 			}
@@ -92,7 +97,7 @@ if mode == MOUSE_MODES.PLANTING
 				if object_held == "flower" obj_park.flower_seeds--;
 				if object_held == "bush" obj_park.bush_seeds--;
 				if object_held == "tree" obj_park.tree_saplings--;
-				var _sound = choose(click_001, click_002, click_004, click_005);
+				var _sound = choose(snd_click_001, snd_click_002, snd_click_004, snd_click_005);
 				audio_play_sound(_sound,1,0);
 			
 				//Print("Planted: " + string(object_held));
@@ -102,10 +107,11 @@ if mode == MOUSE_MODES.PLANTING
 			outline_obj.target = noone;
 			show_outline = false;
 			can_place = false;
+			//Print("not on plot" + string(date_time_string(date_current_datetime())));
 		}
 	}
 
-	if can_place
+	if can_place 
 	{
 		outline_obj.image_blend = c_green;
 	} else {
@@ -119,10 +125,13 @@ if mode == MOUSE_MODES.PLANTING
 #region Watering
 if mode == MOUSE_MODES.WATERING
 {
-	obj_mouse.object_held = noone;
-	if obj_player.water_held <= 0
+	object_held = noone;
+	if instance_exists(obj_player)
 	{
-		mode = MOUSE_MODES.NOTHING;
+		if obj_player.water_held <= 0
+		{
+			mode = MOUSE_MODES.NOTHING;
+		}
 	}
 	
 	object_sprite = water_button1;
@@ -154,7 +163,7 @@ if mode == MOUSE_MODES.WATERING
 										//remove water
 										obj_player.water_held -= amount_to_pour;
 										obj_player.state = PLAYER_STATES.WATERING;
-										audio_play_sound(watering2,1,0);
+										audio_play_sound(snd_watering2,1,0);
 										watered = true;
 									}
 						
@@ -166,7 +175,7 @@ if mode == MOUSE_MODES.WATERING
 										//remove water
 										obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
 										obj_player.state = PLAYER_STATES.WATERING;
-										audio_play_sound(watering2,1,0);
+										audio_play_sound(snd_watering2,1,0);
 										watered = true;
 									}
 								} 
@@ -179,7 +188,7 @@ if mode == MOUSE_MODES.WATERING
 										//remove water
 										obj_player.water_held = 0;
 										obj_player.state = PLAYER_STATES.WATERING;
-										audio_play_sound(watering2,1,0);
+										audio_play_sound(snd_watering2,1,0);
 										watered = true;
 									}
 						
@@ -190,7 +199,7 @@ if mode == MOUSE_MODES.WATERING
 										//remove water
 										obj_player.water_held -= _plant.watered_perc + amount_to_pour - 100;
 										obj_player.state = PLAYER_STATES.WATERING;
-										audio_play_sound(watering2,1,0);
+										audio_play_sound(snd_watering2,1,0);
 										watered = true;
 									}
 								}
@@ -258,7 +267,7 @@ if mode == MOUSE_MODES.DIGGING
 		if _plant != noone
 		{
 			//sell_value = _plant.sell_value;	
-			if mouse_check_button_pressed(mb_left)
+			if mouse_check_button_pressed(mb_left) or (global.painting_enabled and mouse_check_button(mb_left))
 			{
 				obj_player.state = PLAYER_STATES.DIGGING;
 				obj_constant.cash += _plant.sell_value;
@@ -266,7 +275,7 @@ if mode == MOUSE_MODES.DIGGING
 				var _message = instance_create_layer(_plant.x,_plant.y,"UI",obj_message);
 				_message.text = "+" + string(_plant.sell_value);
 				_message.color = c_green;
-				var _sound = choose(handleCoins, handleCoins2);
+				var _sound = choose(snd_handleCoins, snd_handleCoins2);
 				audio_play_sound(_sound,1,0);
 					
 				
@@ -283,6 +292,17 @@ if mode == MOUSE_MODES.DIGGING
 
 #endregion Digging / Selling
 
+#region Inspecting
+if mode == MOUSE_MODES.INSPECTING
+{
+	obj_mouse.object_held = noone;
+	object_sprite = spr_inspect_button;
+	
+	
+}
+
+#endregion Inspecting
+
 if mode == MOUSE_MODES.NOTHING
 {
 	object_held = "";
@@ -290,5 +310,7 @@ if mode == MOUSE_MODES.NOTHING
 	quantity = -1;
 }
 }
+} 
+#endregion In Game
 x = mouse_x;
 y = mouse_y;

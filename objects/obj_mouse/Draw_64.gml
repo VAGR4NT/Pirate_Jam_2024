@@ -1,3 +1,4 @@
+if room == rm_game{
 if can_interact{
 if object_sprite != -1{
 	ResetDraw();
@@ -40,7 +41,15 @@ if object_sprite != -1{
 				draw_text_outline(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string, 2, c_black, 4);
 			}			
 		break;
+		
+		case MOUSE_MODES.INSPECTING:
+			var _string = "Inspecting";
+			draw_set_halign(fa_center);
+			draw_set_valign(fa_middle);
+			draw_text_outline(MOUSE_GUI_X , MOUSE_GUI_Y + 20,_string, 2, c_black, 4);
+		break;
 	}	
 	ResetDraw();	
 }
 }//can interact
+}//room == rm_game

@@ -19,7 +19,7 @@ if array_length(menus_array) > 0
 {
 	for(var i = 0; i < array_length(menus_array); i ++)
 	{
-		if menus_array[i].state == VISUAL_STATE.ACTIVE and menus_array[i].object_index != obj_pause_button
+		if menus_array[i].state == VISUAL_STATE.ACTIVE and menus_array[i].dismissable == true
 		{
 			_freeze_player = true;
 		}
@@ -33,13 +33,30 @@ if instance_exists(obj_player)
 
 #endregion Keep Player in place while menus are visible
 
-if obj_park.closed == true
-{
-	if instance_number(obj_npc) == 0 and EOD_menu_shown == false //and obj_menu_EOD_report.state == VISUAL_STATE.INACTIVE
+if instance_exists(obj_park){
+	if obj_park.closed == true
 	{
-		EOD_menu_shown = true;
-		obj_menu_EOD_report.state = VISUAL_STATE.ACTIVE;
+		if instance_number(obj_npc) == 0 and EOD_menu_shown == false //and obj_menu_EOD_report.state == VISUAL_STATE.INACTIVE
+		{
+			EOD_menu_shown = true;
+			obj_menu_EOD_report.state = VISUAL_STATE.ACTIVE;
+		}
 	}
+}
+
+
+//Pause song after muting (Night Shift)
+if audio_sound_get_gain(global.current_song) == 0
+{
+	if audio_is_playing(global.current_song)
+	{
+		audio_pause_sound(global.current_song);
+	}
+}
+
+if !audio_group_is_loaded(music_group)
+{
+    audio_group_load(music_group);
 }
 
 alarm[0] = 10;

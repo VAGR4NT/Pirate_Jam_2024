@@ -41,9 +41,37 @@ if time_number == 10
 	alarm[0] = 1;
 }
 
+if happy_hour_day == true and (happy_hour == time_number or  happy_hour == time_number+1  or  happy_hour == time_number+2)
+{
+	global.two_for_1 = true;
+	if sale_popup_created == false
+	{
+		alarm[5] = 1;
+		sale_popup_created = true;
+		audio_play_sound(snd_sale_begins,1,0);
+	}
+} else {
+	global.two_for_1 = false;
+	sale_popup_created = false;
+}
+
+//Start Nighttime music
+if time_number == 12 + 6
+{
+
+//slowly taper off the current song
+audio_sound_gain(global.current_song, 0, 3 * 1000);
+
+//slowly begin playing the new song
+var _song = choose(snd_night1, snd_night2);
+audio_play_sound(_song, 1, 1, .1);
+audio_sound_gain(_song, 10, 3 * 1000);
+global.night_song = _song;
+}
 //Force Player sleep
 if time_number == 12 + 10
 {
+	Print("forcing player to sleep at: " + string(time));
 	obj_constant.EOD_menu_shown = false;
 	ClosePark();
 	
@@ -51,7 +79,7 @@ if time_number == 12 + 10
 	layer_set_visible("TilesTop", false);
 	obj_player.x = obj_bed.x;
 	obj_player.y = obj_bed.y;
-	obj_well.used_today = false;
+	obj_well.alarm[0] = 1;
 }
 
 

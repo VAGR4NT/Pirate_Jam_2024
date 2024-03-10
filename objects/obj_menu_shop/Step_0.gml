@@ -8,11 +8,13 @@ if state == VISUAL_STATE.ACTIVE{
 
 if global.two_for_1
 {
+	discount_text = "All seeds are two for one! Hurry!";
 	cost_color = c_green;
 	flower_price = .5;
 	bush_price = 1;
 	tree_price = 1.5;
 } else {
+	discount_text = "Seeds are full price. Sales to come!";
 	cost_color = c_white;
 	flower_price = 1;
 	bush_price = 2;

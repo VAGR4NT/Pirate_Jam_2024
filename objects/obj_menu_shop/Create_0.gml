@@ -2,6 +2,7 @@
 event_inherited();
 state = VISUAL_STATE.INACTIVE;
 main_text = "Welcome to the shop!";
+discount_text = "All seeds are two for one during sale!";
 //time_diff = 0; //calculate in step event. number of in game hours left until force-sleep
 //hours_left_warning = "You still have " + string(time_diff) + " hours left until the end of the day";
 cost_color = c_white;

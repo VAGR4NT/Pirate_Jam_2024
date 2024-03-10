@@ -11,27 +11,28 @@ var _y_buff = 15;
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-
 if global.build_target != BUILD_TARGET.HTML{
 	draw_text_outline(_x_start, _y_start, main_text,2,c_black,4);
-
+	draw_set_color(cost_color);
+	draw_text_outline(_x_start, _y_start + 50, discount_text,2,c_black,4);
+	draw_set_color(cost_color);
 	draw_text_outline(flower_text_x, flower_text_y, "Flower Seeds: ",2,c_black,4);
 	draw_text_outline(flower_text_x, flower_amount_text_y,  num_flower_seeds,2,c_black,4);
 	draw_set_color(cost_color);
 	draw_text_outline(flower_text_x, flower_cost_text_y, "Cost: " + string(num_flower_seeds * flower_price),2,c_black,4);
-	draw_set_color(c_white);
+	draw_set_color(cost_color);
 
 	draw_text_outline(bush_text_x, bush_text_y, "Bush Seeds: ",2,c_black,4);
 	draw_text_outline(bush_text_x, bush_amount_text_y,  num_bush_seeds,2,c_black,4);
 	draw_set_color(cost_color);
 	draw_text_outline(bush_text_x, bush_cost_text_y, "Cost: " + string(num_bush_seeds * bush_price),2,c_black,4);
-	draw_set_color(c_white);
+	draw_set_color(cost_color);
 
 	draw_text_outline(tree_text_x, tree_text_y, "Tree Saplings: ",2,c_black,4);
 	draw_text_outline(tree_text_x, tree_amount_text_y,  num_tree_saplings,2,c_black,4);
 	draw_set_color(cost_color);
 	draw_text_outline(tree_text_x, tree_cost_text_y, "Cost: " + string(num_tree_saplings * tree_price),2,c_black,4);
-	draw_set_color(c_white);
+	draw_set_color(cost_color);
 
 	if can_buy
 	{	
@@ -46,7 +47,9 @@ if global.build_target != BUILD_TARGET.HTML{
 	//[YES] [NO] buttons
 } else {
 	draw_text(_x_start, _y_start, main_text);
-
+	draw_set_color(cost_color);
+	draw_text_outline(_x_start, _y_start + 50, discount_text,2,c_black,4);
+	draw_set_color(cost_color);
 	draw_text(flower_text_x, flower_text_y, "Flower Seeds: ");
 	draw_text(flower_text_x, flower_amount_text_y,  num_flower_seeds);
 	draw_text(flower_text_x, flower_cost_text_y, "Cost: " + string(num_flower_seeds * flower_price));

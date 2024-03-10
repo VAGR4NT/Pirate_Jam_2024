@@ -118,6 +118,12 @@ if !global.picture_mode
 	
 	
 	#endregion HUD RIGHT
+} else {
+	draw_set_font(fnt_DPComic_20);
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text_outline(global.true_width/2, 20, "Press ESC to Exit Picture Mode", 2, c_black, 4);
 }
 ResetDraw();
 } //in room rm_game

@@ -7,7 +7,8 @@ max_plant_health = 50;
 plant_health = max_plant_health;
 
 germ_day = 0;
-maturation_day = 8;
+//maturation_day = 8;
+maturation_day = 1;
 age_threshold = 30;
 
 withering_threshold = 0.4;
@@ -21,6 +22,6 @@ type = PLANT_TYPE.TREE;
 obj_park.num_trees ++;
 
 //size_variation = choose(1, 1.5, 2.25); //add to value
-size_variation = 1; //add to value
+size_variation = 1.5; //add to value
 size_bonus = round(size_variation);
 

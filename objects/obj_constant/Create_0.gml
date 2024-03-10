@@ -2,6 +2,8 @@
 //global.mouse_gui_x = window_mouse_get_x();
 //global.mouse_gui_y = window_mouse_get_y();
 layer_set_visible("UI", true);
+audio_group_load(music_group);
+//audio_group_set_gain(music_group,1,1);
 
 enum BUILD_TARGET
 {
@@ -109,10 +111,9 @@ global.in_game_music[3] = snd_train_station;
 //global.in_game_music[2] = coin_flip;
 //global.in_game_music[3] = closing_park;
 
+global.music_paused = false;
 global.current_song = global.in_game_music[irandom(array_length(global.in_game_music)-1)];
-global.current_song_gain = 0;
 global.night_song = snd_night1;
-global.night_song_gain = 0;
 global.looping_music = false;
 global.shuffle = false;
 

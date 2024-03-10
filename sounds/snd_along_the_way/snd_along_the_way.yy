@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"snd_along_the_way",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"music_group",
+    "path":"audiogroups/music_group",
   },
   "bitDepth":1,
   "bitRate":128,

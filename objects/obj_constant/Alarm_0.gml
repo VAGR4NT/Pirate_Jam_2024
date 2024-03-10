@@ -55,12 +55,12 @@ if audio_sound_get_gain(global.current_song) == 0
 }
 
 //Resume song after unmuting
-if audio_sound_get_gain(global.current_song) == 1
-{
-	if audio_is_paused(global.current_song)
-	{
-		audio_resume_sound(global.current_song);
-	}
-}
+//if audio_sound_get_gain(global.current_song) == 1
+//{
+//	if audio_is_paused(global.current_song)
+//	{
+//		audio_resume_sound(global.current_song);
+//	}
+//}
 
 alarm[0] = 10;

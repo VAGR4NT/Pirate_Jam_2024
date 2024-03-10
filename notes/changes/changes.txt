@@ -39,10 +39,10 @@ to-do:
 ---------------add popup each time the user upgrades
 ---------------add popup each time the user drinks
 ---------------add bark interaction and SFX
--add game music
-	-Add title screen with buttons (Play, Quit, Site, Credits, How-To-Play)
-	-Add room checks for each of the obj_constant events
-	-Change load and save timing
+---------------add game music
+---------------Add title screen with buttons (Play, Quit, Site, Credits, How-To-Play)
+---------------Add room checks for each of the obj_constant events
+---------------Change load and save timing
 
 -Regression after adding additional Room + changes to obj_constant
 -Add 'water' text to mouse over state of plants

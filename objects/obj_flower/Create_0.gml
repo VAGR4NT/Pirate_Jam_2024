@@ -5,10 +5,10 @@ event_inherited();
 type_value = 1;
 max_plant_health = 10;
 plant_health = max_plant_health;
-germ_day = 1;
-//germ_day = 2;
-//maturation_day = 4;
-maturation_day = 2;
+
+germ_day = 2;
+maturation_day = 4;
+
 age_threshold = 10;
 
 withering_threshold = 0.6;

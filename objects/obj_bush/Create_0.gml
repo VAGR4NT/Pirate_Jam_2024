@@ -6,10 +6,10 @@ type_value = 2;
 max_plant_health = 20;
 plant_health = max_plant_health;
 
-germ_day = 1;
-//germ_day = 4;
-//maturation_day = 6;
-maturation_day = 2;
+
+germ_day = 4;
+maturation_day = 6;
+
 age_threshold = 20;
 
 withering_threshold = 0.4;

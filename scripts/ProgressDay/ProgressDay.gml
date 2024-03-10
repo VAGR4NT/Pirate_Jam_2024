@@ -2,7 +2,9 @@
 function ProgressDay(){
 	//End night music and start day music
 	audio_stop_sound(global.night_song);
+	//slowly begin playing the new song	
 	audio_resume_sound(global.current_song);
+	audio_sound_gain(global.current_song, 1, 3 * 1000);
 	
 	//ShuffleSong();
 	

@@ -19,6 +19,10 @@ if !global.picture_mode
 	_index ++;
 	draw_text_outline(_xstart, _ystart + (_buff * _index),"Time: " + string(obj_park.final_time_string), 2, c_black, 4);
 	_index ++;
+	//draw_text_outline(_xstart, _ystart + (_buff * _index),"current_song_gain: " + string(global.current_song_gain), 2, c_black, 4);
+	//_index ++;
+	//draw_text_outline(_xstart, _ystart + (_buff * _index),"night_song_gain: " + string(global.night_song_gain), 2, c_black, 4);
+	//_index ++;
 	//draw_text_outline(_xstart, _ystart + (_buff * _index),"global.money_goal_level: " + string(global.money_goal_level), 2, c_black, 4);
 	//_index ++;
 	//draw_text_outline(_xstart, _ystart + (_buff * _index),"global.current_song " + string(global.current_song), 2, c_black, 4);

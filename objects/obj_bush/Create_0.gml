@@ -7,7 +7,7 @@ max_plant_health = 20;
 plant_health = max_plant_health;
 
 germ_day = 4;
-maturation_day = 8;
+maturation_day = 6;
 age_threshold = 20;
 
 withering_threshold = 0.4;

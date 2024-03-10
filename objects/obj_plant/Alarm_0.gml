@@ -44,9 +44,8 @@ else if status == PLANT_STATE.DEAD
 else if object_index == obj_tree and age == PLANT_AGE.SAPLING
 {
 	sell_value = 2;
-}
-else {
-	sell_value = _status_value + _age_value + type_value + size_bonus;
+} else {
+	sell_value = _status_value + _age_value + type_value// + size_bonus;
 }
 
 

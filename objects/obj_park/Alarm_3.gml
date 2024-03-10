@@ -58,9 +58,14 @@ if happy_hour_day == true and (happy_hour == time_number or  happy_hour == time_
 //Start Nighttime music
 if time_number == 12 + 6
 {
+
+//slowly taper off the current song
+audio_sound_gain(global.current_song, 0, 3 * 1000);
+
+//slowly begin playing the new song
 var _song = choose(snd_night1, snd_night2);
-audio_pause_sound(global.current_song);
-audio_play_sound(_song, 1, 1);
+audio_play_sound(_song, 1, 1, .1);
+audio_sound_gain(_song, 10, 3 * 1000);
 global.night_song = _song;
 }
 //Force Player sleep

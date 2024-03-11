@@ -3,6 +3,11 @@
 
 ADD:
 
+Tutorial
+global.tutorial = true;
+global.tutorial_current_phase = true;
+global.tutorial_phases = true;
+
 Bark to move birds
 xxxxxxSell whole plot when interacting with sign
 rare flowers

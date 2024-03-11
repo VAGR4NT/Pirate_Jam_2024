@@ -27,6 +27,10 @@ global.fullscreen = false;
 global.test_num = 0;
 global.two_for_1 = false;
 global.picture_mode = false;
+global.tutorial = true;
+global.tutorial_current_phase = true;
+global.tutorial_phases = true;
+
 effect_return_value = 0;
 
 #macro MOUSE_GUI_X device_mouse_x_to_gui(0)
